@@ -66,6 +66,7 @@ namespace Core
 
             foreach (DataRow row in dt.Rows)
             {
+                listBox1.Items.Clear();
                 if (!listBox1.Items.Contains(row[1]))
                 {
                     listBox1.Items.Add(row[1].ToString());
