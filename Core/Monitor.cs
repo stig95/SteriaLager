@@ -72,7 +72,6 @@ namespace Core
                     listBox1.Items.Add(row[1].ToString());
                 }
             }
-            
         }
     }
 }
