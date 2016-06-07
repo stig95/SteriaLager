@@ -14,7 +14,7 @@ namespace Core.Version
         {
             DataTable dt = new DataTable("Version Controller");
 
-            dt = Select("SELECT * FROM versioncontrol WHERE ID=1");
+            dt = Select("SELECT * FROM VControll WHERE ID=1");
 
             _Major = dt.Rows[0].Field<int>(1);
 
@@ -35,7 +35,7 @@ namespace Core.Version
                 {
                     rev++;
 
-                    Update("UPDATE versioncontrol SET revision=" + rev + " WHERE ID=1");
+                    Update("UPDATE VControll SET revision=" + rev + " WHERE ID=1");
 
                 }
                 else if (rev == 30)
@@ -43,7 +43,7 @@ namespace Core.Version
                     rev = 0;
                     bui++;
 
-                    Update("UPDATE versioncontrol SET build=" + bui + ",revision=" + rev + " WHERE ID=1");
+                    Update("UPDATE VControll SET build=" + bui + ",revision=" + rev + " WHERE ID=1");
                 }
 
                 if (bui == 10)
@@ -51,7 +51,7 @@ namespace Core.Version
                     min++;
                     bui = 0;
 
-                    Update("UPDATE versioncontrol SET minor=" + min + ",build=" + bui + " WHERE ID =1");
+                    Update("UPDATE VControll SET minor=" + min + ",build=" + bui + " WHERE ID =1");
                 }
 
                 if (min == 4)
@@ -59,7 +59,7 @@ namespace Core.Version
                     maj++;
                     min = 0;
 
-                    Update("UPDATE versioncontrol SET major=" + maj + ",minor=" + min + " WHERE ID=1");
+                    Update("UPDATE VControll SET major=" + maj + ",minor=" + min + " WHERE ID=1");
                 }
 
             }

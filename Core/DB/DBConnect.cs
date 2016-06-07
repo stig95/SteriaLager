@@ -15,10 +15,10 @@ namespace Core.DB
     {
 
         private MySqlConnection con;
-        private string server = "Colargol.tilhde.org";
-        private string database = "stigkr";
-        private string uid = "stigkr";
-        private string password = "Test123";
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
 
         //Constructor
         public DBConnect()
@@ -29,10 +29,10 @@ namespace Core.DB
         //Initialize values
         private void Initialize()
         {
-            server = "localhost";
-            database = "database";
-            uid = "username";
-            password = "password";
+            server = "colargol.tihlde.org";
+            database = "stigkr";
+            uid = "stigkr";
+            password = "Test123";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";

@@ -31,11 +31,17 @@ namespace Launcher
             Text = "Sopra Steria Lager";
         }
 
+        private void CoreMonitor()
+        {
+            Application.Run(new Monitor());
+        }
+        
         private void frmLaunch_Load(object sender, EventArgs e)
         {
             if (Debugger.IsAttached)
             {
-
+                System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
+                t.Start();
             }
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.Image = Core.Properties.Resources.sslogotransparent;
