@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CPU\get.cs" />
     <Compile Include="DB\DBConnect.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
@@ -85,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="IMG\sslogotransparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
