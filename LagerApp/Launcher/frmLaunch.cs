@@ -13,6 +13,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Core;
+using System.Diagnostics;
 
 namespace Launcher
 {
@@ -21,6 +23,22 @@ namespace Launcher
         public frmLaunch()
         {
             InitializeComponent();
+
+            CenterToScreen();
+            ShowIcon = false;
+            CaptionBarHeight = 48;
+
+            Text = "Sopra Steria Lager";
+        }
+
+        private void frmLaunch_Load(object sender, EventArgs e)
+        {
+            if (Debugger.IsAttached)
+            {
+
+            }
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Image = Core.Properties.Resources.sslogotransparent;
         }
     }
 }
