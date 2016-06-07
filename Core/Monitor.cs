@@ -42,6 +42,8 @@ namespace Core
 
         private void coreTick_Tick(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt.Clear();
             double mm = GC.GetTotalMemory(false) / 1024 / 1024;
 
             label1.Text = Convert.ToString(mm) + "MB Allocated GC";
@@ -59,6 +61,16 @@ namespace Core
             label6.Text = "Server Version: " + db.DBv();
 
             label7.Text = "Server State: " + db.States();
+
+            dt = db.Select("SELECT * FROM online");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!listBox1.Items.Contains(row[1]))
+                {
+                    listBox1.Items.Add(row[1].ToString());
+                }
+            }
             
         }
     }

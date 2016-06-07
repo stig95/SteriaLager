@@ -27,9 +27,12 @@ namespace Launcher
             CenterToScreen();
             ShowIcon = false;
             CaptionBarHeight = 48;
+            Font = new Font("Segoe UI", 11, FontStyle.Regular);
 
             Text = "Sopra Steria Lager";
         }
+
+        Core.DB.DBConnect db = new Core.DB.DBConnect();
 
         private void CoreMonitor()
         {
@@ -43,8 +46,17 @@ namespace Launcher
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
                 t.Start();
             }
+
+            db.Insert("INSERT IGNORE INTO `online`(`user`, `online`) VALUES ('" + Environment.MachineName + "',1)");
+
+
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.Image = Core.Properties.Resources.sslogotransparent;
+        }
+
+        private void frmLaunch_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            db.Delete("DELETE FROM `online` WHERE user='" + Environment.MachineName + "'");
         }
     }
 }

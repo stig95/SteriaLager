@@ -70,6 +70,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Security\Encrypt.cs" />
+    <Compile Include="User\Login.cs" />
     <Compile Include="Version\Controller.cs" />
   </ItemGroup>
   <ItemGroup>

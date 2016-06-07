@@ -12,7 +12,7 @@ using System.Net.NetworkInformation;
 
 namespace Core.DB
 {
-    class DBConnect
+    public class DBConnect
     {
 
         private MySqlConnection con;
