@@ -1,33 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.InteropServices;
-using ComTypes = System.Runtime.InteropServices.ComTypes;
-using System.Threading;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Threading;
+using ComTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace Core.CPU
 {
-    class get
+    internal class get
     {
         [DllImport("kernel32.dll", SetLastError = true)]
-
-        static extern bool GetSystemTimes(
+        private static extern bool GetSystemTimes(
                     out ComTypes.FILETIME lpIdleTime,
                     out ComTypes.FILETIME lpKernelTime,
                     out ComTypes.FILETIME lpUserTime
                     );
 
-        ComTypes.FILETIME _prevSysKernel;
-        ComTypes.FILETIME _prevSysUser;
+        private ComTypes.FILETIME _prevSysKernel;
+        private ComTypes.FILETIME _prevSysUser;
 
-        TimeSpan _prevProcTotal;
+        private TimeSpan _prevProcTotal;
 
-        Int16 _cpuUsage;
-        DateTime _lastRun;
-        long _runCount;
+        private Int16 _cpuUsage;
+        private DateTime _lastRun;
+        private long _runCount;
 
         public get()
         {
@@ -88,7 +83,6 @@ namespace Core.CPU
             Interlocked.Decrement(ref _runCount);
 
             return cpuCopy;
-
         }
 
         private UInt64 SubtractTimes(ComTypes.FILETIME a, ComTypes.FILETIME b)
