@@ -15,10 +15,10 @@ namespace Core.DB
     {
 
         private MySqlConnection con;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
+        private string server = "Colargol.tilhde.org";
+        private string database = "stigkr";
+        private string uid = "stigkr";
+        private string password = "Test123";
 
         //Constructor
         public DBConnect()
