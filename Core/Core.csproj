@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="CPU\get.cs" />
     <Compile Include="DB\DBConnect.cs" />
+    <Compile Include="DB\get.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +85,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="IMG\sslogo.jpeg" />
   </ItemGroup>
   <ItemGroup>
