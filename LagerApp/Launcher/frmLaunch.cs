@@ -15,6 +15,7 @@ using System.Text;
 using System.Windows.Forms;
 using Core;
 using System.Diagnostics;
+using System.Net.NetworkInformation;
 
 namespace Launcher
 {
@@ -46,6 +47,13 @@ namespace Launcher
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
                 t.Start();
             }
+
+            var macAddr =
+    (
+                from nic in NetworkInterface.GetAllNetworkInterfaces()
+                where nic.OperationalStatus == OperationalStatus.Up
+                select nic.GetPhysicalAddress().ToString()
+    ).          FirstOrDefault();
 
             db.Insert("INSERT IGNORE INTO `online`(`user`, `online`) VALUES ('" + Environment.MachineName + "',1)");
 

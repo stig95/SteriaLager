@@ -1,0 +1,21 @@
+Liste over tabeller i databasen, med navn på tabeller og kolonner samt hvilke verdier.
+
+Brukere
+	bruker_id			int(11)			AUTO_INCREMENT
+	brukernavn			varchar(20)
+	passord				varchar(255)
+	sodium_chloride		varchar(255)
+	kontor				int(11)
+	online				BOOL
+
+Kontor
+	kontorID			int(11)			AUTO_INCREMENT
+	by					varchar(255)
+
+Online (Debug - Core Purposes Only)
+	ID					int(11)			AUTO_INCREMENT
+	user				varchar(255)
+	online				BOOL
+	IP(local)			varchar(45)
+	IP(External)		varchar(45)
+	MAC					varchar(18)
