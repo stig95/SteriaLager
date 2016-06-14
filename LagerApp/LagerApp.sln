@@ -9,6 +9,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher", "Launcher\Launcher.csproj", "{08E25D6F-58A5-4FD1-B683-A2C8285EBF1D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{CD1B105F-F1B7-4BEE-9320-9267575B0231}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumentasjon", "Dokumentasjon", "{ED76F64A-606A-4A16-8030-97EE01814881}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modeller", "Modeller", "{E061ADC4-AE1B-49ED-8819-7E96DC6C2A16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{44B0A805-26F7-41F5-8191-DFD4367B0C8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SSD", "SSD", "{5A2113EC-5C74-48B2-9ADF-F00D05453FD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prosjektløsning", "Prosjektløsning", "{B3A6D166-65B3-46BA-B4F9-61622DA5FCA7}"
+	ProjectSection(SolutionItems) = preProject
+		SopraSteriaLager.txt = SopraSteriaLager.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +45,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E09BB60-F00E-4D7C-A9C2-6776B6830401} = {CD1B105F-F1B7-4BEE-9320-9267575B0231}
+		{BE5477B8-E71F-4B69-B8AC-6D5E34B6BDF4} = {CD1B105F-F1B7-4BEE-9320-9267575B0231}
+		{08E25D6F-58A5-4FD1-B683-A2C8285EBF1D} = {CD1B105F-F1B7-4BEE-9320-9267575B0231}
+		{E061ADC4-AE1B-49ED-8819-7E96DC6C2A16} = {ED76F64A-606A-4A16-8030-97EE01814881}
+		{44B0A805-26F7-41F5-8191-DFD4367B0C8C} = {E061ADC4-AE1B-49ED-8819-7E96DC6C2A16}
+		{5A2113EC-5C74-48B2-9ADF-F00D05453FD4} = {E061ADC4-AE1B-49ED-8819-7E96DC6C2A16}
+		{B3A6D166-65B3-46BA-B4F9-61622DA5FCA7} = {ED76F64A-606A-4A16-8030-97EE01814881}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 4e57de61-70b4-4886-8762-9376aedb18d3

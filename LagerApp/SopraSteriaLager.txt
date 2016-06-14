@@ -1,0 +1,18 @@
+Sopra Steria Lager applikasjon
+
+Lag en applikasjon hvor man har kontroll over inventar v/ hjelp av en database.
+Vi trenger å vite hvilke produkter som skal inn i databasen, hvilket lager de tilhører og hvem som skal ha tilgang til de,
+vedkommende som skal ha tilgang til nevne inventar trenger ett brukernavn og passord (krypter stand).
+
+Applikasjonen skal holde følge med hva som er i produktdatabasen, hvor mange enheter av hvert produkt som er tilgjengelig,
+aktører med tilgang skal ha muligheten til å legge til, endre og fjerne fra databasen 
+samt få en oversikt over hva som er tilgjengelig og hva som har blitt endret iløpet av en viss tidsperiode. (Generere rapporter)
+
+Sjefen for hver avdeling som blir å bruke denne applikasjonen vil få muligheten til å legge til, endre og fjerne brukere.
+Muligheten for å scanne EAN strekkode og finne produkter basert på dette(?)
+
+Krav:
+	- Liste over produkter
+	- Liste over lager
+	- Brukerinnlogging
+	- Rapportgenerering
