@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
+using System.Configuration;
 
 namespace Core.DB
 {
@@ -37,7 +38,7 @@ namespace Core.DB
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
+            
             con = new MySqlConnection(connectionString);
         }
 

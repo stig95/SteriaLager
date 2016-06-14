@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using Microsoft.Win32;
 
 
 namespace Core
@@ -32,6 +34,11 @@ namespace Core
             toolStripLabel3.Text = "Launcher: 0.0.0.5a15";
 
             gridDataBoundGrid1.DataSource = db.Select("SHOW GLOBAL STATUS");
+
+            label8.Text = Core.Network.ExternalIP.Get();
+            label9.Text = Core.Network.LocalIP.Get();
+            label10.Text = Core.Network.MAC.Get();
+            label11.Text = Core.Network.User.Get();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -64,14 +71,8 @@ namespace Core
 
             dt = db.Select("SELECT * FROM online");
 
-            foreach (DataRow row in dt.Rows)
-            {
-                listBox1.Items.Clear();
-                if (!listBox1.Items.Contains(row[1]))
-                {
-                    listBox1.Items.Add(row[1].ToString());
-                }
-            }
+            gridDataBoundGrid2.DataSource = dt;
+
         }
     }
 }

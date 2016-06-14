@@ -15,6 +15,7 @@ using System.Text;
 using System.Windows.Forms;
 using Core;
 using System.Diagnostics;
+using System.Security.Principal;
 using System.Net.NetworkInformation;
 
 namespace Launcher
@@ -42,21 +43,22 @@ namespace Launcher
         
         private void frmLaunch_Load(object sender, EventArgs e)
         {
+
+
             if (Debugger.IsAttached)
             {
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
                 t.Start();
             }
-
-            var macAddr =
-    (
-                from nic in NetworkInterface.GetAllNetworkInterfaces()
-                where nic.OperationalStatus == OperationalStatus.Up
-                select nic.GetPhysicalAddress().ToString()
-    ).          FirstOrDefault();
-
-            db.Insert("INSERT IGNORE INTO `online`(`user`, `online`) VALUES ('" + Environment.MachineName + "',1)");
-
+            
+            try
+            {
+                db.Insert("INSERT INTO `online`(`user`, `IP(local)`, `IP(external)`, `MAC`) VALUES('" + Core.Network.User.Get() + "','" + Core.Network.LocalIP.Get() + "','" + Core.Network.ExternalIP.Get() + "','" + Core.Network.MAC.Get() + "')");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ":" + ex.HResult);
+            }
 
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.Image = Core.Properties.Resources.sslogotransparent;
@@ -64,7 +66,7 @@ namespace Launcher
 
         private void frmLaunch_FormClosing(object sender, FormClosingEventArgs e)
         {
-            db.Delete("DELETE FROM `online` WHERE user='" + Environment.MachineName + "'");
+            db.Delete("DELETE FROM `online` WHERE user='" + Core.Network.User.Get() + "'");
         }
     }
 }
