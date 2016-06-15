@@ -76,24 +76,14 @@ namespace Core
         }
         #endregion
 
-        #region Meny
-
-        private void mHomepage_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.vcskicks.com/");
-        }
-
-        private void mExit_Click(object sender, EventArgs e)
-        {
-            Close(); //no extra commands are required
-        }
-        #endregion
-
         #region FORM 
 
         private void frmSplash_Load(object sender, EventArgs e)
         {
             UpdateFormDisplay(BackgroundImage);
+            Logging.Write.SetLogFile(logDir: ".\\Logfiles", prefix: "SSLagerLogg_", writeText: false);
+
+            Logging.Write.Info("Splashscreen Loading - Logging initiated");
         }
 
         protected override void OnPaint(PaintEventArgs e)

@@ -29,14 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle13 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle14 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle15 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle16 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle1 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle5 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle6 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle7 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle8 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,18 +68,17 @@
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.onlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coreTick = new System.Windows.Forms.Timer(this.components);
             this.gridDataBoundGrid2 = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.coreTick = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,9 +88,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridDataBoundGrid1)).BeginInit();
             this.toolStripEx2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.onlineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridDataBoundGrid2)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +107,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -129,6 +138,55 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(590, 141);
             this.panel3.TabIndex = 1;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Location = new System.Drawing.Point(337, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(248, 133);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Station";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 72);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "label11";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "label10";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "label9";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "label8";
             // 
             // groupBox2
             // 
@@ -281,7 +339,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(344, 187);
+            this.tabPage2.Size = new System.Drawing.Size(596, 187);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "DB Global Status";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -292,42 +350,42 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(338, 141);
+            this.panel2.Size = new System.Drawing.Size(590, 141);
             this.panel2.TabIndex = 2;
             // 
             // gridDataBoundGrid1
             // 
             this.gridDataBoundGrid1.AllowDragSelectedCols = true;
             this.gridDataBoundGrid1.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
-            gridBaseStyle13.Name = "Column Header";
-            gridBaseStyle13.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle13.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle13.StyleInfo.Enabled = false;
-            gridBaseStyle13.StyleInfo.Font.Bold = true;
-            gridBaseStyle13.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle14.Name = "Header";
-            gridBaseStyle14.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.CellType = "Header";
-            gridBaseStyle14.StyleInfo.Font.Bold = true;
-            gridBaseStyle14.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle14.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle15.Name = "Standard";
-            gridBaseStyle15.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle15.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle15.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle16.Name = "Row Header";
-            gridBaseStyle16.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle16.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle16.StyleInfo.Enabled = true;
-            gridBaseStyle16.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle1.Name = "Column Header";
+            gridBaseStyle1.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle1.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle1.StyleInfo.Enabled = false;
+            gridBaseStyle1.StyleInfo.Font.Bold = true;
+            gridBaseStyle1.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle2.Name = "Header";
+            gridBaseStyle2.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.CellType = "Header";
+            gridBaseStyle2.StyleInfo.Font.Bold = true;
+            gridBaseStyle2.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle2.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle3.Name = "Standard";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle3.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle4.Name = "Row Header";
+            gridBaseStyle4.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle4.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle4.StyleInfo.Enabled = true;
+            gridBaseStyle4.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.gridDataBoundGrid1.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle13,
-            gridBaseStyle14,
-            gridBaseStyle15,
-            gridBaseStyle16});
+            gridBaseStyle1,
+            gridBaseStyle2,
+            gridBaseStyle3,
+            gridBaseStyle4});
             this.gridDataBoundGrid1.DefaultRowHeight = 20;
             this.gridDataBoundGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridDataBoundGrid1.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Metro;
@@ -341,7 +399,7 @@
             this.gridDataBoundGrid1.Properties.MarkColHeader = false;
             this.gridDataBoundGrid1.Properties.MarkRowHeader = false;
             this.gridDataBoundGrid1.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.gridDataBoundGrid1.Size = new System.Drawing.Size(338, 141);
+            this.gridDataBoundGrid1.Size = new System.Drawing.Size(590, 141);
             this.gridDataBoundGrid1.SmartSizeBox = false;
             this.gridDataBoundGrid1.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
             this.gridDataBoundGrid1.TabIndex = 0;
@@ -360,7 +418,7 @@
             this.toolStripEx2.Location = new System.Drawing.Point(3, 3);
             this.toolStripEx2.Name = "toolStripEx2";
             this.toolStripEx2.Office12Mode = false;
-            this.toolStripEx2.Size = new System.Drawing.Size(338, 40);
+            this.toolStripEx2.Size = new System.Drawing.Size(590, 40);
             this.toolStripEx2.TabIndex = 1;
             this.toolStripEx2.Text = "Database Global";
             this.toolStripEx2.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
@@ -381,29 +439,58 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(466, 187);
+            this.tabPage3.Size = new System.Drawing.Size(596, 187);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Users Online";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // coreTick
-            // 
-            this.coreTick.Enabled = true;
-            this.coreTick.Interval = 500;
-            this.coreTick.Tick += new System.EventHandler(this.coreTick_Tick);
             // 
             // gridDataBoundGrid2
             // 
             this.gridDataBoundGrid2.AllowDragSelectedCols = true;
             this.gridDataBoundGrid2.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
+            gridBaseStyle5.Name = "Column Header";
+            gridBaseStyle5.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle5.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle5.StyleInfo.Enabled = false;
+            gridBaseStyle5.StyleInfo.Font.Bold = true;
+            gridBaseStyle5.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle6.Name = "Header";
+            gridBaseStyle6.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.CellType = "Header";
+            gridBaseStyle6.StyleInfo.Font.Bold = true;
+            gridBaseStyle6.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle6.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle7.Name = "Standard";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle7.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle8.Name = "Row Header";
+            gridBaseStyle8.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle8.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle8.StyleInfo.Enabled = true;
+            gridBaseStyle8.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            this.gridDataBoundGrid2.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
+            gridBaseStyle5,
+            gridBaseStyle6,
+            gridBaseStyle7,
+            gridBaseStyle8});
+            this.gridDataBoundGrid2.DefaultRowHeight = 20;
             this.gridDataBoundGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridDataBoundGrid2.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Metro;
             this.gridDataBoundGrid2.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
             this.gridDataBoundGrid2.Location = new System.Drawing.Point(3, 3);
+            this.gridDataBoundGrid2.MetroScrollBars = true;
             this.gridDataBoundGrid2.Name = "gridDataBoundGrid2";
             this.gridDataBoundGrid2.OptimizeInsertRemoveCells = true;
+            this.gridDataBoundGrid2.Properties.ForceImmediateRepaint = false;
+            this.gridDataBoundGrid2.Properties.GridLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.gridDataBoundGrid2.Properties.MarkColHeader = false;
+            this.gridDataBoundGrid2.Properties.MarkRowHeader = false;
             this.gridDataBoundGrid2.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.gridDataBoundGrid2.Size = new System.Drawing.Size(460, 181);
+            this.gridDataBoundGrid2.Size = new System.Drawing.Size(590, 181);
             this.gridDataBoundGrid2.SmartSizeBox = false;
             this.gridDataBoundGrid2.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
             this.gridDataBoundGrid2.TabIndex = 0;
@@ -413,54 +500,51 @@
             this.gridDataBoundGrid2.UseListChangedEvent = true;
             this.gridDataBoundGrid2.UseRightToLeftCompatibleTextBox = true;
             // 
-            // groupBox4
+            // tabPage4
             // 
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Location = new System.Drawing.Point(337, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(248, 133);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Station";
+            this.tabPage4.Controls.Add(this.panel4);
+            this.tabPage4.Controls.Add(this.toolStripEx3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(596, 187);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Event Log";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // panel4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "label8";
+            this.panel4.Controls.Add(this.listBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 43);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(590, 141);
+            this.panel4.TabIndex = 1;
             // 
-            // label9
+            // listBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "label9";
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(590, 141);
+            this.listBox1.TabIndex = 0;
             // 
-            // label10
+            // toolStripEx3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 53);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "label10";
+            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx3.Image = null;
+            this.toolStripEx3.Location = new System.Drawing.Point(3, 3);
+            this.toolStripEx3.Name = "toolStripEx3";
+            this.toolStripEx3.Size = new System.Drawing.Size(590, 40);
+            this.toolStripEx3.TabIndex = 0;
+            this.toolStripEx3.Text = "toolStripEx3";
             // 
-            // label11
+            // coreTick
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 72);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "label11";
+            this.coreTick.Enabled = true;
+            this.coreTick.Interval = 500;
+            this.coreTick.Tick += new System.EventHandler(this.coreTick_Tick);
             // 
             // Monitor
             // 
@@ -476,6 +560,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -491,10 +577,10 @@
             this.toolStripEx2.ResumeLayout(false);
             this.toolStripEx2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.onlineBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridDataBoundGrid2)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -528,12 +614,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.BindingSource onlineBindingSource;
         private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid gridDataBoundGrid2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ListBox listBox1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
     }
 }

@@ -49,8 +49,13 @@ namespace Launcher
             {
                 System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
                 t.Start();
+
+                Core.Logging.Write.Info("Debugger attached - Launching Core.Monitor");
+
             }
-            
+
+            Core.Logging.Write.Info("Main Launcher Initiated");
+
             try
             {
                 db.Insert("INSERT INTO `online`(`user`, `IP(local)`, `IP(external)`, `MAC`) VALUES('" + Core.Network.User.Get() + "','" + Core.Network.LocalIP.Get() + "','" + Core.Network.ExternalIP.Get() + "','" + Core.Network.MAC.Get() + "')");
