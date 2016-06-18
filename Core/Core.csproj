@@ -90,6 +90,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Security\Encrypt.cs" />
+    <Compile Include="User\Create.cs" />
     <Compile Include="User\Login.cs" />
     <Compile Include="Version\Controller.cs" />
   </ItemGroup>

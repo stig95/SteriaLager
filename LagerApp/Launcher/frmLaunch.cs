@@ -89,5 +89,22 @@ namespace Launcher
                 
             }
         }
+
+        private void buttonAdv1_Click(object sender, EventArgs e)
+        {
+            Core.Security.Encrypt test = new Core.Security.Encrypt();
+
+            Core.User.Create Usr = new Core.User.Create();
+
+            try
+            {
+                Usr.User(textBoxExt1.Text, textBoxExt2.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace Launcher
             this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
             this.SuspendLayout();
@@ -135,6 +136,21 @@ namespace Launcher
             this.checkBox1.Text = "Husk meg";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // buttonAdv1
+            // 
+            this.buttonAdv1.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.buttonAdv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(90, 35);
+            this.buttonAdv1.ForeColor = System.Drawing.Color.White;
+            this.buttonAdv1.IsBackStageButton = false;
+            this.buttonAdv1.Location = new System.Drawing.Point(429, 78);
+            this.buttonAdv1.Name = "buttonAdv1";
+            this.buttonAdv1.Size = new System.Drawing.Size(90, 35);
+            this.buttonAdv1.TabIndex = 8;
+            this.buttonAdv1.Text = "Logg inn";
+            this.buttonAdv1.UseVisualStyle = true;
+            this.buttonAdv1.Click += new System.EventHandler(this.buttonAdv1_Click);
+            // 
             // frmLaunch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -147,6 +163,7 @@ namespace Launcher
             captionImage1.Size = new System.Drawing.Size(48, 48);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(643, 189);
+            this.Controls.Add(this.buttonAdv1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.toolStripEx1);
             this.Controls.Add(this.btnLogin);
@@ -179,5 +196,6 @@ namespace Launcher
         private Syncfusion.Windows.Forms.ButtonAdv btnLogin;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
     }
 }
