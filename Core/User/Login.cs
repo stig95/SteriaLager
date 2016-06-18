@@ -10,9 +10,10 @@ namespace Core.User
 {
     public class Login
     {
-        DB.DBConnect DB = new Core.DB.DBConnect();
+        DB.DBConnect DB = new DB.DBConnect();
+        Set SetUsr = new Set();
 
-        public bool Check(string username, string password)
+        public int Check(string username, string password)
         {
             DataTable dt = new DataTable();
 
@@ -24,13 +25,19 @@ namespace Core.User
 
             dt = DB.Select("SELECT brukernavn, passord, stilling FROM Brukere WHERE brukernavn='" + username + "' AND passord='" + hashPW + "'");
 
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0 && dt.Rows[0].Field<string>(2) == "admin")
             {
-                return true;
+                SetUsr.User = username;
+                return 1;
+            }
+            else if (dt.Rows.Count > 0 && dt.Rows[0].Field<string>(2) == "ansatt")
+            {
+                SetUsr.User = username;
+                return 2;
             }
             else
             {
-                return false;
+                return 0;
             }
         }
     }

@@ -161,7 +161,7 @@ namespace Launcher
             captionImage1.BackColor = System.Drawing.Color.Transparent;
             captionImage1.Location = new System.Drawing.Point(15, 4);
             captionImage1.Name = "SSLogo";
-            captionImage1.Size = new System.Drawing.Size(48, 48);
+            captionImage1.Size = new System.Drawing.Size(36, 36);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(643, 189);
             this.Controls.Add(this.buttonAdv1);

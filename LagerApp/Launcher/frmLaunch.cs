@@ -83,7 +83,7 @@ namespace Launcher
             {
                 if (!(Debugger.IsAttached))
                 {
-                    System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
+                    Thread t = new Thread(new ThreadStart(CoreMonitor));
                     t.Start();
 
                     Core.Logging.Write.Info("F12 Pressed - Launching Core.Monitor");
@@ -112,18 +112,35 @@ namespace Launcher
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Core.User.Login Login = new Core.User.Login();
-            if (Login.Check(textBoxExt1.Text, textBoxExt2.Text))
+
+            try
             {
-                Thread LagerApp = new Thread(new ThreadStart(
-                delegate
+                if (Login.Check(textBoxExt1.Text, textBoxExt2.Text) == 1)
                 {
-                    Application.Run(new LagerApp.Form1());
-                }));
+                                Thread LagerApp = new Thread(new ThreadStart(
+                                delegate
+                                {
+                                    Application.Run(new Form1());
+                                }));
 
-                LagerApp.SetApartmentState(ApartmentState.STA);
-                LagerApp.Start();
+                                LagerApp.SetApartmentState(ApartmentState.STA);
+                                LagerApp.Start();
 
+
+                    Close();
+                }
+
+                else if (Login.Check(textBoxExt1.Text, textBoxExt2.Text) == 2)
+                {
+                    MessageBox.Show("Yes");
+                }
             }
+            catch (Exception ex)
+            {
+                Core.Logging.Write.Warning("Feil brukernavn og/eller passord - : USER:" + textBoxExt1.Text + " : " + ex.Message + " : " + ex.Data);
+                MessageBox.Show("Feil brukernavn og/eller passord!");
+            }
+            
         }
     }
 }

@@ -92,6 +92,7 @@
     <Compile Include="Security\Encrypt.cs" />
     <Compile Include="User\Create.cs" />
     <Compile Include="User\Login.cs" />
+    <Compile Include="User\Set.cs" />
     <Compile Include="Version\Controller.cs" />
   </ItemGroup>
   <ItemGroup>
