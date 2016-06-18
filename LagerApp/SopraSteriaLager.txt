@@ -16,3 +16,5 @@ Krav:
 	- Liste over lager
 	- Brukerinnlogging
 	- Rapportgenerering
+
+Bruk av EAN Scanner med mulighet for å notere ant. enmheter som skal ut.

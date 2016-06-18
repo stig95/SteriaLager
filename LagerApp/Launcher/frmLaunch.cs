@@ -32,6 +32,8 @@ namespace Launcher
             Font = new Font("Segoe UI", 11, FontStyle.Regular);
 
             Text = "Sopra Steria Lager";
+
+            CaptionImages.FindByName("SSLogo").Image = Core.Properties.Resources.sslogotransparent;
         }
 
         Core.DB.DBConnect db = new Core.DB.DBConnect();
@@ -64,14 +66,28 @@ namespace Launcher
             {
                 MessageBox.Show(ex.Message + ":" + ex.HResult);
             }
-
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.Image = Core.Properties.Resources.sslogotransparent;
+            
         }
 
         private void frmLaunch_FormClosing(object sender, FormClosingEventArgs e)
         {
             db.Delete("DELETE FROM `online` WHERE user='" + Core.Network.User.Get() + "'");
+        }
+
+        private void frmLaunch_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.F12)
+            {
+                if (!(Debugger.IsAttached))
+                {
+                    System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
+                    t.Start();
+
+                    Core.Logging.Write.Info("F12 Pressed - Launching Core.Monitor");
+                }
+                
+            }
         }
     }
 }

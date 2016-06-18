@@ -66,6 +66,7 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logging\Read.cs" />
     <Compile Include="Logging\Write.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>

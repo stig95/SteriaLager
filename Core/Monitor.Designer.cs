@@ -37,6 +37,7 @@
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle6 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle7 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle8 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Monitor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -74,6 +75,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.coreTick = new System.Windows.Forms.Timer(this.components);
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -91,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridDataBoundGrid2)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.toolStripEx3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -533,18 +536,32 @@
             // toolStripEx3
             // 
             this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx3.Image = null;
+            this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton2});
             this.toolStripEx3.Location = new System.Drawing.Point(3, 3);
             this.toolStripEx3.Name = "toolStripEx3";
+            this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Size = new System.Drawing.Size(590, 40);
             this.toolStripEx3.TabIndex = 0;
             this.toolStripEx3.Text = "toolStripEx3";
+            this.toolStripEx3.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
             // 
             // coreTick
             // 
             this.coreTick.Enabled = true;
             this.coreTick.Interval = 500;
             this.coreTick.Tick += new System.EventHandler(this.coreTick_Tick);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.MediumTurquoise;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(114, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // Monitor
             // 
@@ -581,6 +598,8 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.toolStripEx3.ResumeLayout(false);
+            this.toolStripEx3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -624,5 +643,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox listBox1;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

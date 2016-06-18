@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using Microsoft.Win32;
-
+using System.Xml;
 
 namespace Core
 {
@@ -69,10 +69,37 @@ namespace Core
 
             label7.Text = "Server State: " + db.States();
 
-            dt = db.Select("SELECT * FROM online");
+            gridDataBoundGrid2.DataSource = db.Select("SELECT * FROM online");
 
-            gridDataBoundGrid2.DataSource = dt;
+        }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show(Logging.Write.GetFileName(DateTime.Today));
+
+            XmlDocument XMLDocLog = new XmlDocument();
+
+            try
+            {
+                XMLDocLog.Load(Logging.Write.GetFileName(DateTime.Today));
+
+                foreach (XmlNode node in XMLDocLog.DocumentElement)
+                {
+                    listBox1.Items.Add("Date: " + node.Attributes[0].Value);
+                    listBox1.Items.Add("\t Grad: " + node.Attributes[1].Value);
+                    listBox1.Items.Add("\t Source: " + node.Attributes[2].Value);
+                    listBox1.Items.Add("Melding: ");
+                    listBox1.Items.Add("\t" + node["Message"].Value);
+                    listBox1.Items.Add("End Of Entry");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ":" + ex.HResult);
+                
+            }
+            
         }
     }
 }
