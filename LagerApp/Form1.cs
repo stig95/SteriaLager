@@ -30,5 +30,10 @@ namespace LagerApp
             DB.Insert("INSERT INTO VareTrondheim(strekkode, navn, antall) VALUES('" + kodeStrek.Text + "', '" + vareNavn.Text + "', '" + antBoks.Text + "')");
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DB.Insert("UPDATE VareTrondheim SET strekkode = '" + insertboxher + "', navn = '" insertboxher "', antall = '" insertboxher "')");
+        }
     }
 }
