@@ -17,6 +17,8 @@ using Core;
 using System.Diagnostics;
 using System.Security.Principal;
 using System.Net.NetworkInformation;
+using LagerApp;
+using System.Threading;
 
 namespace Launcher
 {
@@ -40,7 +42,7 @@ namespace Launcher
 
         private void CoreMonitor()
         {
-            Application.Run(new Monitor());
+            Application.Run(new Core.Monitor());
         }
         
         private void frmLaunch_Load(object sender, EventArgs e)
@@ -104,6 +106,23 @@ namespace Launcher
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Core.User.Login Login = new Core.User.Login();
+            if (Login.Check(textBoxExt1.Text, textBoxExt2.Text))
+            {
+                Thread LagerApp = new Thread(new ThreadStart(
+                delegate
+                {
+                    Application.Run(new LagerApp.Form1());
+                }));
+
+                LagerApp.SetApartmentState(ApartmentState.STA);
+                LagerApp.Start();
+
             }
         }
     }

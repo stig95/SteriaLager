@@ -98,6 +98,10 @@
       <Project>{be5477b8-e71f-4b69-b8ac-6d5e34b6bdf4}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LagerApp.csproj">
+      <Project>{7e09bb60-f00e-4d7c-a9c2-6776b6830401}</Project>
+      <Name>LagerApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

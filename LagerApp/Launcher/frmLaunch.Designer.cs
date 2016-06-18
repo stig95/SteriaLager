@@ -112,6 +112,7 @@ namespace Launcher
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Logg inn";
             this.btnLogin.UseVisualStyle = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // toolStripEx1
             // 
