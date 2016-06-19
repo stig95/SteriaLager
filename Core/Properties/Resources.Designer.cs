@@ -83,6 +83,16 @@ namespace Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ssLoginRight {
+            get {
+                object obj = ResourceManager.GetObject("ssLoginRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap sslogo {
             get {
                 object obj = ResourceManager.GetObject("sslogo", resourceCulture);
@@ -96,6 +106,16 @@ namespace Core.Properties {
         public static System.Drawing.Bitmap sslogotransparent {
             get {
                 object obj = ResourceManager.GetObject("sslogotransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap usrForgotPW {
+            get {
+                object obj = ResourceManager.GetObject("usrForgotPW", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

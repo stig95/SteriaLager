@@ -124,10 +124,16 @@
   <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ssLoginRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ssLoginRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\sslogo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sslogotransparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\sslogotransparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usrForgotPW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\usrForgotPW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

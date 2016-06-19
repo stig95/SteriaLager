@@ -42,25 +42,25 @@ namespace Launcher
             this.lblUsrName = new System.Windows.Forms.Label();
             this.lblPwd = new System.Windows.Forms.Label();
             this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxExt1
             // 
             this.textBoxExt1.BackColor = System.Drawing.Color.White;
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(219, 27);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.textBoxExt1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt1.BorderSides = System.Windows.Forms.Border3DSide.Bottom;
             this.textBoxExt1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExt1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxExt1.Location = new System.Drawing.Point(26, 63);
+            this.textBoxExt1.Location = new System.Drawing.Point(26, 27);
             this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt1.Name = "textBoxExt1";
-            this.textBoxExt1.Size = new System.Drawing.Size(219, 27);
+            this.textBoxExt1.Size = new System.Drawing.Size(276, 23);
             this.textBoxExt1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
             this.textBoxExt1.TabIndex = 1;
             this.textBoxExt1.Text = "textBoxExt1";
@@ -68,15 +68,15 @@ namespace Launcher
             // textBoxExt2
             // 
             this.textBoxExt2.BackColor = System.Drawing.Color.White;
-            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(219, 27);
+            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.textBoxExt2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt2.BorderSides = System.Windows.Forms.Border3DSide.Bottom;
             this.textBoxExt2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExt2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxExt2.Location = new System.Drawing.Point(26, 116);
+            this.textBoxExt2.Location = new System.Drawing.Point(26, 71);
             this.textBoxExt2.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt2.Name = "textBoxExt2";
-            this.textBoxExt2.Size = new System.Drawing.Size(219, 27);
+            this.textBoxExt2.Size = new System.Drawing.Size(276, 23);
             this.textBoxExt2.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
             this.textBoxExt2.TabIndex = 2;
             this.textBoxExt2.Text = "textBoxExt2";
@@ -84,18 +84,18 @@ namespace Launcher
             // lblUsrName
             // 
             this.lblUsrName.AutoSize = true;
-            this.lblUsrName.Location = new System.Drawing.Point(12, 40);
+            this.lblUsrName.Location = new System.Drawing.Point(12, 9);
             this.lblUsrName.Name = "lblUsrName";
-            this.lblUsrName.Size = new System.Drawing.Size(84, 20);
+            this.lblUsrName.Size = new System.Drawing.Size(70, 15);
             this.lblUsrName.TabIndex = 3;
             this.lblUsrName.Text = "Brukernavn:";
             // 
             // lblPwd
             // 
             this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(12, 93);
+            this.lblPwd.Location = new System.Drawing.Point(12, 53);
             this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(63, 20);
+            this.lblPwd.Size = new System.Drawing.Size(51, 15);
             this.lblPwd.TabIndex = 4;
             this.lblPwd.Text = "Passord:";
             // 
@@ -103,54 +103,35 @@ namespace Launcher
             // 
             this.btnLogin.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnLogin.BeforeTouchSize = new System.Drawing.Size(90, 35);
+            this.btnLogin.BeforeTouchSize = new System.Drawing.Size(159, 35);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.IsBackStageButton = false;
-            this.btnLogin.Location = new System.Drawing.Point(155, 149);
+            this.btnLogin.Location = new System.Drawing.Point(143, 106);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(90, 35);
+            this.btnLogin.Size = new System.Drawing.Size(159, 35);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Logg inn";
             this.btnLogin.UseVisualStyle = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // toolStripEx1
-            // 
-            this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx1.Image = null;
-            this.toolStripEx1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripEx1.Name = "toolStripEx1";
-            this.toolStripEx1.Office12Mode = false;
-            this.toolStripEx1.Size = new System.Drawing.Size(643, 40);
-            this.toolStripEx1.TabIndex = 6;
-            this.toolStripEx1.Text = "Logg inn ";
-            this.toolStripEx1.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(26, 153);
+            this.checkBox1.Location = new System.Drawing.Point(26, 106);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 24);
+            this.checkBox1.Size = new System.Drawing.Size(78, 19);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Husk meg";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // buttonAdv1
+            // pictureBox1
             // 
-            this.buttonAdv1.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.buttonAdv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(90, 35);
-            this.buttonAdv1.ForeColor = System.Drawing.Color.White;
-            this.buttonAdv1.IsBackStageButton = false;
-            this.buttonAdv1.Location = new System.Drawing.Point(429, 78);
-            this.buttonAdv1.Name = "buttonAdv1";
-            this.buttonAdv1.Size = new System.Drawing.Size(90, 35);
-            this.buttonAdv1.TabIndex = 8;
-            this.buttonAdv1.Text = "Logg inn";
-            this.buttonAdv1.UseVisualStyle = true;
-            this.buttonAdv1.Click += new System.EventHandler(this.buttonAdv1_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(462, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLaunch
             // 
@@ -163,16 +144,15 @@ namespace Launcher
             captionImage1.Name = "SSLogo";
             captionImage1.Size = new System.Drawing.Size(36, 36);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(643, 189);
-            this.Controls.Add(this.buttonAdv1);
+            this.ClientSize = new System.Drawing.Size(522, 142);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.toolStripEx1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.lblUsrName);
             this.Controls.Add(this.textBoxExt2);
             this.Controls.Add(this.textBoxExt1);
-            this.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -184,6 +164,7 @@ namespace Launcher
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLaunch_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,8 +176,7 @@ namespace Launcher
         private System.Windows.Forms.Label lblUsrName;
         private System.Windows.Forms.Label lblPwd;
         private Syncfusion.Windows.Forms.ButtonAdv btnLogin;
-        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

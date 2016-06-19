@@ -31,11 +31,13 @@ namespace Launcher
             CenterToScreen();
             ShowIcon = false;
             CaptionBarHeight = 48;
-            Font = new Font("Segoe UI", 11, FontStyle.Regular);
 
             Text = "Sopra Steria Lager";
 
             CaptionImages.FindByName("SSLogo").Image = Core.Properties.Resources.sslogotransparent;
+
+            pictureBox1.Image = Core.Properties.Resources.usrForgotPW;
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 
         Core.DB.DBConnect db = new Core.DB.DBConnect();
@@ -51,7 +53,7 @@ namespace Launcher
 
             if (Debugger.IsAttached)
             {
-                System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(CoreMonitor));
+                Thread t = new Thread(new ThreadStart(CoreMonitor));
                 t.Start();
 
                 Core.Logging.Write.Info("Debugger attached - Launching Core.Monitor");
@@ -92,23 +94,6 @@ namespace Launcher
             }
         }
 
-        private void buttonAdv1_Click(object sender, EventArgs e)
-        {
-            Core.Security.Encrypt test = new Core.Security.Encrypt();
-
-            Core.User.Create Usr = new Core.User.Create();
-
-            try
-            {
-                Usr.User(textBoxExt1.Text, textBoxExt2.Text);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Core.User.Login Login = new Core.User.Login();
@@ -137,10 +122,16 @@ namespace Launcher
             }
             catch (Exception ex)
             {
-                Core.Logging.Write.Warning("Feil brukernavn og/eller passord - : USER:" + textBoxExt1.Text + " : " + ex.Message + " : " + ex.Data);
+                Core.Logging.Write.Warning("Feil brukernavn og/eller passord - : USER:" + textBoxExt1.Text + " : " + ex.Message + " : " + ex.InnerException);
                 MessageBox.Show("Feil brukernavn og/eller passord!");
             }
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmForgotPW frm = new frmForgotPW();
+            frm.Show();
         }
     }
 }

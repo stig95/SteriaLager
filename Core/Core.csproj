@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Logging\Read.cs" />
     <Compile Include="Logging\Write.cs" />
+    <Compile Include="Mail\Send.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,7 @@
     <Compile Include="Security\Encrypt.cs" />
     <Compile Include="User\Create.cs" />
     <Compile Include="User\Login.cs" />
+    <Compile Include="User\Recover.cs" />
     <Compile Include="User\Set.cs" />
     <Compile Include="Version\Controller.cs" />
   </ItemGroup>
@@ -126,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="IMG\frmSplashBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\ssLoginRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\usrForgotPW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

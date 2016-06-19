@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmForgotPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPW.Designer.cs">
+      <DependentUpon>frmForgotPW.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLaunch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmForgotPW.resx">
+      <DependentUpon>frmForgotPW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLaunch.resx">
       <DependentUpon>frmLaunch.cs</DependentUpon>
     </EmbeddedResource>
