@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Core">
+  <logicalClassDesignerModelMoniker Id="34e39fba-79ad-4e43-a8ca-7f96080a487a" />
+  <nestedChildShapes>
+    <classShape Id="ec63543f-8e7d-41d7-9377-4e7e304e5b2a" absoluteBounds="0.625, 0.625, 1.5, 1.7031249602635703" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="0b68a3d8-ebda-4227-8257-31b11f5c8625" LastKnownName="CPU.Get" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="c4fd341d-857c-4d81-9100-281da511a85e" absoluteBounds="0.63999999999999968, 1.0150000000000001, 1.4700000000000002, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="358488ac-ca06-47b2-9953-45558d3f13e7" absoluteBounds="0.64, 1.8667968476812045, 1.4700000000000002, 0.36132811258236575" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa5ff712-803f-4eb9-8cf7-3c72b7130495" absoluteBounds="3.375, 0.625, 1.5, 3.9453123907248173" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="712bd1d8-c83e-4516-b8f8-affb1854c48c" LastKnownName="DB.DBConnect" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="d8f74bcd-3767-471e-be79-708d5ac250d1" absoluteBounds="3.39, 1.0150000000000001, 1.4700000000000002, 1.0019530927141507" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="9f709aa6-fb96-46af-8fcf-e225431ba09a" absoluteBounds="3.39, 2.0269530927141508, 1.4700000000000002, 2.4433592980106669" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
