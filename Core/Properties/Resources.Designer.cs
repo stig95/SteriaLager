@@ -103,6 +103,16 @@ namespace Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ssLogoTop {
+            get {
+                object obj = ResourceManager.GetObject("ssLogoTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap sslogotransparent {
             get {
                 object obj = ResourceManager.GetObject("sslogotransparent", resourceCulture);

@@ -11,9 +11,9 @@ using Core;
 
 namespace LagerApp
 {
-    public partial class Form1 : Form
+    public partial class frmApp : Form
     {
-        public Form1()
+        public frmApp()
         {
             InitializeComponent();
         }
@@ -34,6 +34,17 @@ namespace LagerApp
         private void button1_Click_1(object sender, EventArgs e)
         {
             //DB.Insert("UPDATE VareTrondheim SET strekkode = '" + insertboxher + "', navn = '" insertboxher "', antall = '" insertboxher "')");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmLagerApp frm = new frmLagerApp();
+            frm.Show();
         }
     }
 }

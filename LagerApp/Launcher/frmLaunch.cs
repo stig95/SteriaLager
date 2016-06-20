@@ -105,7 +105,7 @@ namespace Launcher
                                 Thread LagerApp = new Thread(new ThreadStart(
                                 delegate
                                 {
-                                    Application.Run(new Form1());
+                                    Application.Run(new frmApp());
                                 }));
 
                                 LagerApp.SetApartmentState(ApartmentState.STA);
