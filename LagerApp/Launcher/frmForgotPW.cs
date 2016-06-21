@@ -27,6 +27,14 @@ namespace Launcher
             textBoxExt3.Enabled = false;
             textBoxExt4.Enabled = false;
             textBoxExt5.Enabled = false;
+
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = String.Empty;
+                }
+            }
         }
 
         Core.DB.DBConnect DB = new Core.DB.DBConnect();
@@ -60,6 +68,9 @@ namespace Launcher
                 textBoxExt3.Enabled = true;
                 textBoxExt4.Enabled = true;
                 textBoxExt5.Enabled = true;
+
+                textBoxExt1.Enabled = false;
+                textBoxExt2.Enabled = false;
 
                 buttonAdv1.Text = "Endre Passord";
             }

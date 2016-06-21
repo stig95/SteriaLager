@@ -123,7 +123,7 @@ namespace Launcher
             catch (Exception ex)
             {
                 Core.Logging.Write.Warning("Feil brukernavn og/eller passord - : USER:" + textBoxExt1.Text + " : " + ex.Message + " : " + ex.InnerException);
-                MessageBox.Show("Feil brukernavn og/eller passord!");
+                MessageBox.Show("Feil brukernavn og/eller passord!" + Environment.NewLine + ex.Message);
             }
             
         }
