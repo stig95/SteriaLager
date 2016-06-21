@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Diagnostics;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Update
 {
@@ -36,14 +37,22 @@ namespace Update
         private void frmUpdate_Load(object sender, EventArgs e)
         {
 
-            string currentVersion = null;
-
-            getVersion(); 
+            string currentVersion, coreVersion, launcherVersion, updaterVersion = null;
 
             try
             {
                 Assembly Core = Assembly.LoadFrom("Core.dll");
                 autoLabel1.Text = "Core Version: " + Core.GetName().Version;
+                coreVersion = getVersion("https://mrfs.me/sopra/versions/Vcore.txt");
+
+                if (!autoLabel1.Text.Contains(coreVersion))
+                {
+                    autoLabel5.Text = "New Update Available" + " (" + coreVersion + ")";
+                }
+                else
+                {
+                    autoLabel5.Text = "No new version";
+                }
             }
             catch (Exception)
             {
@@ -53,6 +62,17 @@ namespace Update
             try
             {
                 autoLabel2.Text = "Launcher Version: " + FileVersionInfo.GetVersionInfo(Environment.CurrentDirectory + "\\Launcher.exe").FileVersion;
+
+                launcherVersion = getVersion("https://mrfs.me/sopra/versions/Vlauncher.txt");
+
+                if (!autoLabel2.Text.Contains(launcherVersion))
+                {
+                    autoLabel6.Text = "New Update Available" + " (" + launcherVersion + ")";
+                }
+                else
+                {
+                    autoLabel6.Text = "No new version";
+                }
             }
             catch (Exception)
             {
@@ -62,29 +82,62 @@ namespace Update
             try
             {
                 autoLabel3.Text = "Updater Version: " + Assembly.GetExecutingAssembly().GetName().Version;
+
+                updaterVersion = getVersion("https://mrfs.me/sopra/versions/Vupdater.txt");
+
+                if (!autoLabel3.Text.Contains(updaterVersion))
+                {
+                    autoLabel7.Text = "New Update Available" + " (" + updaterVersion + ")";
+                }
+                else
+                {
+                    autoLabel7.Text = "No new version";
+                }
             }
             catch (Exception)
             {
                 autoLabel3.Text = "Updater Version: CND";
             }
 
+            try
+            {
+                autoLabel4.Text = "Main Version: " + FileVersionInfo.GetVersionInfo(Environment.CurrentDirectory + "\\LagerApp.exe").FileVersion;
+
+                currentVersion = getVersion("https://mrfs.me/sopra/versions/Vcurrent.txt");
+
+                if (!autoLabel2.Text.Contains(currentVersion))
+                {
+                    autoLabel8.Text = "New Update Available" + " (" + currentVersion + ")";
+                }
+                else
+                {
+                    autoLabel8.Text = "No new version";
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+
            
         }
 
-        public void getVersion()
+        public static string getVersion(string adress)
         {
             WebClient WC = new WebClient();
-            Uri vString = new Uri("https://mrfs.me/school/oopsa/version.txt");
+            //Uri vString = new Uri(adress);
 
-            string v = null;
+            //WC.DownloadStringCompleted += (sender, e) =>
+            //{
+            
+            //    v = e.Result;
 
-            WC.DownloadStringCompleted += (sender, e) =>
-            {
-                v = e.Result;
-                autoLabel4.Text = v;
-            };
+            //};
 
-            WC.DownloadStringAsync(vString);
+            //WC.DownloadStringAsync(vString);
+
+            return WC.DownloadString(adress);
+            
         }
     }
 }
