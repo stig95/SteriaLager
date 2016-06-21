@@ -49,7 +49,7 @@ namespace Launcher
         
         private void frmLaunch_Load(object sender, EventArgs e)
         {
-
+            Core.Update.Check.For();
 
             if (Debugger.IsAttached)
             {
