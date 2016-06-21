@@ -84,6 +84,7 @@ namespace Core
             Logging.Write.SetLogFile(logDir: ".\\Logfiles", prefix: "SSLagerLogg_", writeText: false);
 
             Logging.Write.Info("Splashscreen Loading - Logging initiated");
+            
         }
 
         protected override void OnPaint(PaintEventArgs e)

@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Core;
 
 namespace Launcher
 {
@@ -33,18 +34,6 @@ namespace Launcher
         private void buttonAdv1_Click(object sender, EventArgs e)
         {
             Core.User.Recover rec = new Core.User.Recover();
-            if (rec.GetToken(textBoxExt1.Text, textBoxExt2.Text))
-            {
-                textBoxExt3.Enabled = true;
-                textBoxExt4.Enabled = true;
-                textBoxExt5.Enabled = true;
-
-                buttonAdv1.Text = "Endre Passord";
-            }
-            else
-            {
-                MessageBox.Show("Ingen registrerte med oppnevnt brukernavn/epost","Feil brukernavn/epost");
-            }
 
             if (buttonAdv1.Text == "Endre Passord")
             {
@@ -57,7 +46,7 @@ namespace Launcher
 
                     string hashPW = Core.Security.Encrypt.Set(textBoxExt5.Text, salt);
 
-                    DB.Update("UPDATE `Brukere` SET `passord`='" + hashPW + "',`sodium_chloride`='" + salt + "' WHERE ResetToken='"+ textBoxExt3.Text + "' AND email='" + textBoxExt2.Text + "'");
+                    DB.Update("UPDATE `Brukere` SET `passord`='" + hashPW + "',`sodium_chloride`='" + salt + "' WHERE ResetToken='" + textBoxExt3.Text + "' AND email='" + textBoxExt2.Text + "'");
 
                     MessageBox.Show("Passord endret for bruker " + textBoxExt1.Text);
                 }
@@ -65,8 +54,20 @@ namespace Launcher
                 {
                     MessageBox.Show("Passordene stemmer ikke og/eller nøkkelen er feil");
                 }
-                
             }
+            else if (rec.GetToken(textBoxExt1.Text, textBoxExt2.Text))
+            {
+                textBoxExt3.Enabled = true;
+                textBoxExt4.Enabled = true;
+                textBoxExt5.Enabled = true;
+
+                buttonAdv1.Text = "Endre Passord";
+            }
+            else
+            {
+                MessageBox.Show("Ingen registrerte med oppnevnt brukernavn/epost", "Feil brukernavn/epost");
+            }
+            
         }
     }
 }
