@@ -73,14 +73,6 @@ namespace LagerApp
 
         }
 
-        
-
-        
-
-
-
-
-
         private void btnVareSlett_Click(object sender, EventArgs e)
         {
 
@@ -91,6 +83,12 @@ namespace LagerApp
             DataTable dt3 = new DataTable();
             dt3 = DB.Select("SELECT * FROM VareTrondheim WHERE navn =" + vareEndre.Text);
 
+            foreach (DataRow raddt3 in dt3.Rows)
+            {
+                endreStrek.Text = raddt3.Field<int>(0).ToString();
+                endreNavn.Text = raddt3.Field<string>(1);
+                endreAnt.Text = raddt3.Field<int>(2).ToString();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
