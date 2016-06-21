@@ -42,6 +42,8 @@ namespace Update
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel6 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel7 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel8 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarAdv1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +65,13 @@ namespace Update
             this.progressBarAdv1.ForegroundImage = null;
             this.progressBarAdv1.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.progressBarAdv1.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.progressBarAdv1.Location = new System.Drawing.Point(12, 90);
+            this.progressBarAdv1.Location = new System.Drawing.Point(12, 110);
             this.progressBarAdv1.MultipleColors = new System.Drawing.Color[] {
         System.Drawing.Color.Empty};
             this.progressBarAdv1.Name = "progressBarAdv1";
             this.progressBarAdv1.ProgressStyle = Syncfusion.Windows.Forms.Tools.ProgressBarStyles.Metro;
             this.progressBarAdv1.SegmentWidth = 12;
-            this.progressBarAdv1.Size = new System.Drawing.Size(400, 23);
+            this.progressBarAdv1.Size = new System.Drawing.Size(400, 25);
             this.progressBarAdv1.TabIndex = 0;
             this.progressBarAdv1.Text = "progressBarAdv1";
             this.progressBarAdv1.TextStyle = Syncfusion.Windows.Forms.Tools.ProgressBarTextStyles.Custom;
@@ -104,7 +106,7 @@ namespace Update
             // 
             // autoLabel4
             // 
-            this.autoLabel4.Location = new System.Drawing.Point(152, 9);
+            this.autoLabel4.Location = new System.Drawing.Point(12, 84);
             this.autoLabel4.Name = "autoLabel4";
             this.autoLabel4.Size = new System.Drawing.Size(60, 13);
             this.autoLabel4.TabIndex = 4;
@@ -112,7 +114,7 @@ namespace Update
             // 
             // autoLabel5
             // 
-            this.autoLabel5.Location = new System.Drawing.Point(152, 34);
+            this.autoLabel5.Location = new System.Drawing.Point(167, 9);
             this.autoLabel5.Name = "autoLabel5";
             this.autoLabel5.Size = new System.Drawing.Size(60, 13);
             this.autoLabel5.TabIndex = 5;
@@ -120,17 +122,35 @@ namespace Update
             // 
             // autoLabel6
             // 
-            this.autoLabel6.Location = new System.Drawing.Point(152, 59);
+            this.autoLabel6.Location = new System.Drawing.Point(167, 34);
             this.autoLabel6.Name = "autoLabel6";
             this.autoLabel6.Size = new System.Drawing.Size(60, 13);
             this.autoLabel6.TabIndex = 6;
             this.autoLabel6.Text = "autoLabel6";
             // 
+            // autoLabel7
+            // 
+            this.autoLabel7.Location = new System.Drawing.Point(167, 59);
+            this.autoLabel7.Name = "autoLabel7";
+            this.autoLabel7.Size = new System.Drawing.Size(60, 13);
+            this.autoLabel7.TabIndex = 8;
+            this.autoLabel7.Text = "autoLabel7";
+            // 
+            // autoLabel8
+            // 
+            this.autoLabel8.Location = new System.Drawing.Point(167, 84);
+            this.autoLabel8.Name = "autoLabel8";
+            this.autoLabel8.Size = new System.Drawing.Size(60, 13);
+            this.autoLabel8.TabIndex = 7;
+            this.autoLabel8.Text = "autoLabel8";
+            // 
             // frmUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 125);
+            this.ClientSize = new System.Drawing.Size(424, 142);
+            this.Controls.Add(this.autoLabel7);
+            this.Controls.Add(this.autoLabel8);
             this.Controls.Add(this.autoLabel6);
             this.Controls.Add(this.autoLabel5);
             this.Controls.Add(this.autoLabel4);
@@ -156,5 +176,7 @@ namespace Update
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel7;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel8;
     }
 }
