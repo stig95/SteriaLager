@@ -63,6 +63,7 @@ namespace LagerApp
                 foreach (DataRow row in dt.Rows)
                 {
                     vareSlett.Items.Add(row.Field<string>(0));
+                    vareEndre.Items.Add(row.Field<string>(0));
                 }
             }
             catch (Exception ex)
@@ -70,25 +71,15 @@ namespace LagerApp
                 MessageBox.Show("is fubar yo" + ex.Message);
             }
 
-            try
-            {
-
-                DataTable dt = new DataTable();
-
-                dt = DB.Select("SELECT navn FROM VareTrondheim");
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    vareEndre.Items.Add(row.Field<string>(0));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("is fubar 2 yo" + ex.Message);
-            }
-
-
         }
+
+        
+
+        
+
+
+
+
 
         private void btnVareSlett_Click(object sender, EventArgs e)
         {
@@ -96,6 +87,13 @@ namespace LagerApp
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            DataTable dt3 = new DataTable();
+            dt3 = DB.Select("SELECT * FROM VareTrondheim WHERE navn =" + vareEndre.Text);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
            
         }
