@@ -40,6 +40,12 @@ namespace LagerApp
             Syncfusion.Windows.Forms.CaptionLabel captionLabel2 = new Syncfusion.Windows.Forms.CaptionLabel();
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.button1 = new System.Windows.Forms.Button();
+            this.endreAnt = new System.Windows.Forms.TextBox();
+            this.endreNavn = new System.Windows.Forms.TextBox();
+            this.endreStrek = new System.Windows.Forms.TextBox();
+            this.vareEndre = new System.Windows.Forms.ComboBox();
+            this.kodeStrek = new System.Windows.Forms.TextBox();
             this.btnVareSlett = new System.Windows.Forms.Button();
             this.vareSlett = new System.Windows.Forms.ComboBox();
             this.vareAdd = new System.Windows.Forms.Button();
@@ -48,12 +54,6 @@ namespace LagerApp
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.kodeStrek = new System.Windows.Forms.TextBox();
-            this.vareEndre = new System.Windows.Forms.ComboBox();
-            this.endreStrek = new System.Windows.Forms.TextBox();
-            this.endreNavn = new System.Windows.Forms.TextBox();
-            this.endreAnt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
@@ -100,9 +100,56 @@ namespace LagerApp
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.ThemesEnabled = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 280);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 34);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Endre Vare";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // endreAnt
+            // 
+            this.endreAnt.Location = new System.Drawing.Point(47, 254);
+            this.endreAnt.Name = "endreAnt";
+            this.endreAnt.Size = new System.Drawing.Size(100, 20);
+            this.endreAnt.TabIndex = 14;
+            // 
+            // endreNavn
+            // 
+            this.endreNavn.Location = new System.Drawing.Point(47, 227);
+            this.endreNavn.Name = "endreNavn";
+            this.endreNavn.Size = new System.Drawing.Size(100, 20);
+            this.endreNavn.TabIndex = 13;
+            // 
+            // endreStrek
+            // 
+            this.endreStrek.Location = new System.Drawing.Point(47, 200);
+            this.endreStrek.Name = "endreStrek";
+            this.endreStrek.Size = new System.Drawing.Size(100, 20);
+            this.endreStrek.TabIndex = 12;
+            // 
+            // vareEndre
+            // 
+            this.vareEndre.FormattingEnabled = true;
+            this.vareEndre.Location = new System.Drawing.Point(47, 172);
+            this.vareEndre.Name = "vareEndre";
+            this.vareEndre.Size = new System.Drawing.Size(121, 21);
+            this.vareEndre.TabIndex = 11;
+            this.vareEndre.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
+            // kodeStrek
+            // 
+            this.kodeStrek.Location = new System.Drawing.Point(515, 239);
+            this.kodeStrek.Name = "kodeStrek";
+            this.kodeStrek.Size = new System.Drawing.Size(76, 20);
+            this.kodeStrek.TabIndex = 10;
+            // 
             // btnVareSlett
             // 
-            this.btnVareSlett.Location = new System.Drawing.Point(548, 93);
+            this.btnVareSlett.Location = new System.Drawing.Point(755, 134);
             this.btnVareSlett.Name = "btnVareSlett";
             this.btnVareSlett.Size = new System.Drawing.Size(121, 33);
             this.btnVareSlett.TabIndex = 9;
@@ -113,7 +160,7 @@ namespace LagerApp
             // vareSlett
             // 
             this.vareSlett.FormattingEnabled = true;
-            this.vareSlett.Location = new System.Drawing.Point(548, 65);
+            this.vareSlett.Location = new System.Drawing.Point(755, 106);
             this.vareSlett.Name = "vareSlett";
             this.vareSlett.Size = new System.Drawing.Size(121, 21);
             this.vareSlett.TabIndex = 8;
@@ -121,7 +168,7 @@ namespace LagerApp
             // 
             // vareAdd
             // 
-            this.vareAdd.Location = new System.Drawing.Point(607, 164);
+            this.vareAdd.Location = new System.Drawing.Point(608, 253);
             this.vareAdd.Margin = new System.Windows.Forms.Padding(2);
             this.vareAdd.Name = "vareAdd";
             this.vareAdd.Size = new System.Drawing.Size(178, 41);
@@ -132,7 +179,7 @@ namespace LagerApp
             // 
             // vareNavn
             // 
-            this.vareNavn.Location = new System.Drawing.Point(514, 175);
+            this.vareNavn.Location = new System.Drawing.Point(515, 264);
             this.vareNavn.Margin = new System.Windows.Forms.Padding(2);
             this.vareNavn.Name = "vareNavn";
             this.vareNavn.Size = new System.Drawing.Size(76, 20);
@@ -144,7 +191,7 @@ namespace LagerApp
             this.antBoks.BeforeTouchSize = new System.Drawing.Size(76, 20);
             this.antBoks.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.antBoks.IntegerValue = ((long)(2));
-            this.antBoks.Location = new System.Drawing.Point(514, 198);
+            this.antBoks.Location = new System.Drawing.Point(515, 287);
             this.antBoks.Margin = new System.Windows.Forms.Padding(2);
             this.antBoks.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.antBoks.Name = "antBoks";
@@ -157,12 +204,15 @@ namespace LagerApp
             // toolStripEx1
             // 
             this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripEx1.Image = null;
             this.toolStripEx1.Location = new System.Drawing.Point(0, 0);
             this.toolStripEx1.Name = "toolStripEx1";
+            this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Size = new System.Drawing.Size(941, 40);
             this.toolStripEx1.TabIndex = 0;
             this.toolStripEx1.Text = "toolStripEx1";
+            this.toolStripEx1.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
             // 
             // tabPageAdv2
             // 
@@ -186,53 +236,6 @@ namespace LagerApp
             this.toolStripEx2.Size = new System.Drawing.Size(941, 40);
             this.toolStripEx2.TabIndex = 1;
             this.toolStripEx2.Text = "toolStripEx2";
-            // 
-            // kodeStrek
-            // 
-            this.kodeStrek.Location = new System.Drawing.Point(514, 150);
-            this.kodeStrek.Name = "kodeStrek";
-            this.kodeStrek.Size = new System.Drawing.Size(76, 20);
-            this.kodeStrek.TabIndex = 10;
-            // 
-            // vareEndre
-            // 
-            this.vareEndre.FormattingEnabled = true;
-            this.vareEndre.Location = new System.Drawing.Point(122, 65);
-            this.vareEndre.Name = "vareEndre";
-            this.vareEndre.Size = new System.Drawing.Size(121, 21);
-            this.vareEndre.TabIndex = 11;
-            this.vareEndre.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
-            // 
-            // endreStrek
-            // 
-            this.endreStrek.Location = new System.Drawing.Point(122, 93);
-            this.endreStrek.Name = "endreStrek";
-            this.endreStrek.Size = new System.Drawing.Size(100, 20);
-            this.endreStrek.TabIndex = 12;
-            // 
-            // endreNavn
-            // 
-            this.endreNavn.Location = new System.Drawing.Point(122, 120);
-            this.endreNavn.Name = "endreNavn";
-            this.endreNavn.Size = new System.Drawing.Size(100, 20);
-            this.endreNavn.TabIndex = 13;
-            // 
-            // endreAnt
-            // 
-            this.endreAnt.Location = new System.Drawing.Point(122, 147);
-            this.endreAnt.Name = "endreAnt";
-            this.endreAnt.Size = new System.Drawing.Size(100, 20);
-            this.endreAnt.TabIndex = 14;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(122, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLagerApp
             // 

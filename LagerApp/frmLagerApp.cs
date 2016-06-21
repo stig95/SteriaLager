@@ -39,11 +39,21 @@ namespace LagerApp
         /// <param name="e"></param>
         private void vareAdd_Click(object sender, EventArgs e)
         {
-            string lol = kodeStrek.Text;
-            lol.Replace(" ", "");
-            DB.Insert("INSERT INTO VareTrondheim(strekkode, navn, antall) VALUES('" + lol + "', '" + vareNavn.Text + "', '" + antBoks.Text + "')");
+            try
+            {
+                string lol = kodeStrek.Text;
+                lol.Replace(" ", "");
+                DB.Insert("INSERT INTO VareTrondheim(strekkode, navn, antall) VALUES('" + lol + "', '" + vareNavn.Text + "', '" + antBoks.Text + "')");
 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Keke");
+
+            }
         }
+         
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -81,19 +91,19 @@ namespace LagerApp
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             DataTable dt3 = new DataTable();
-            dt3 = DB.Select("SELECT * FROM VareTrondheim WHERE navn =" + vareEndre.Text);
+            dt3 = DB.Select("SELECT * FROM VareTrondheim WHERE navn = '" + vareEndre.Text + "'");
 
             foreach (DataRow raddt3 in dt3.Rows)
             {
-                endreStrek.Text = raddt3.Field<int>(0).ToString();
-                endreNavn.Text = raddt3.Field<string>(1);
-                endreAnt.Text = raddt3.Field<int>(2).ToString();
+                endreStrek.Text = raddt3.Field<int>(1).ToString();
+                endreNavn.Text = raddt3.Field<string>(2);
+                endreAnt.Text = raddt3.Field<int>(3).ToString();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            DB.Insert("UPDATE VareTrondheim SET Strekkode = '" + endreStrek.Text + "', navn = '" +  endreNavn.Text + "', antall = '" + endreAnt.Text + "'");
         }
     }
 }
