@@ -27,7 +27,6 @@ namespace LagerApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DB.Insert("INSERT INTO VareTrondheim(strekkode, navn, antall) VALUES('" + kodeStrek.Text + "', '" + vareNavn.Text + "', '" + antBoks.Text + "')");
 
         }
 
@@ -45,6 +44,16 @@ namespace LagerApp
         {
             frmLagerApp frm = new frmLagerApp();
             frm.Show();
+        }
+
+        private void vareNavn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void antBoks_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
