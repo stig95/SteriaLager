@@ -42,7 +42,6 @@ namespace Launcher
             this.lblUsrName = new System.Windows.Forms.Label();
             this.lblPwd = new System.Windows.Forms.Label();
             this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
@@ -62,7 +61,7 @@ namespace Launcher
             this.textBoxExt1.Name = "textBoxExt1";
             this.textBoxExt1.Size = new System.Drawing.Size(276, 23);
             this.textBoxExt1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
-            this.textBoxExt1.TabIndex = 1;
+            this.textBoxExt1.TabIndex = 0;
             this.textBoxExt1.Text = "textBoxExt1";
             // 
             // textBoxExt2
@@ -78,7 +77,7 @@ namespace Launcher
             this.textBoxExt2.Name = "textBoxExt2";
             this.textBoxExt2.Size = new System.Drawing.Size(276, 23);
             this.textBoxExt2.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
-            this.textBoxExt2.TabIndex = 2;
+            this.textBoxExt2.TabIndex = 1;
             this.textBoxExt2.Text = "textBoxExt2";
             // 
             // lblUsrName
@@ -102,34 +101,26 @@ namespace Launcher
             // btnLogin
             // 
             this.btnLogin.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogin.BeforeTouchSize = new System.Drawing.Size(159, 35);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.IsBackStageButton = false;
             this.btnLogin.Location = new System.Drawing.Point(143, 106);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(159, 35);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Logg inn";
-            this.btnLogin.UseVisualStyle = true;
+            this.btnLogin.UseVisualStyle = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(26, 106);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 19);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Husk meg";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(462, 93);
+            this.pictureBox1.Location = new System.Drawing.Point(428, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
@@ -137,6 +128,7 @@ namespace Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.CaptionBarColor = System.Drawing.SystemColors.Control;
             this.CaptionBarHeight = 48;
             this.CaptionFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             captionImage1.BackColor = System.Drawing.Color.Transparent;
@@ -144,9 +136,8 @@ namespace Launcher
             captionImage1.Name = "SSLogo";
             captionImage1.Size = new System.Drawing.Size(36, 36);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(522, 142);
+            this.ClientSize = new System.Drawing.Size(488, 146);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.lblUsrName);
@@ -176,7 +167,6 @@ namespace Launcher
         private System.Windows.Forms.Label lblUsrName;
         private System.Windows.Forms.Label lblPwd;
         private Syncfusion.Windows.Forms.ButtonAdv btnLogin;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

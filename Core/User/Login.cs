@@ -11,7 +11,6 @@ namespace Core.User
     public class Login
     {
         DB.DBConnect DB = new DB.DBConnect();
-        Set SetUsr = new Set();
 
         public int Check(string username, string password)
         {
@@ -24,9 +23,7 @@ namespace Core.User
             dt.Clear();
 
             dt = DB.Select("SELECT brukernavn, passord, stilling FROM Brukere WHERE brukernavn='" + username + "' AND passord='" + hashPW + "'");
-
-            SetUsr.User = username;
-
+            
             DB.Update("UPDATE Brukere Set ResetToken=0 WHERE brukernavn='" + username + "'");
 
             if (dt.Rows.Count > 0 && dt.Rows[0].Field<string>(2) == "admin")

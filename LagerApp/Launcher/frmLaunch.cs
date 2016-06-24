@@ -34,10 +34,15 @@ namespace Launcher
 
             Text = "Sopra Steria Lager";
 
-            CaptionImages.FindByName("SSLogo").Image = Core.Properties.Resources.sslogotransparent;
-
             pictureBox1.Image = Core.Properties.Resources.usrForgotPW;
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = string.Empty;
+                }
+            }
         }
 
         Core.DB.DBConnect db = new Core.DB.DBConnect();
@@ -97,11 +102,13 @@ namespace Launcher
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Core.User.Login Login = new Core.User.Login();
+            Core.User.Set User = new Core.User.Set();
 
             try
             {
                 if (Login.Check(textBoxExt1.Text, textBoxExt2.Text) == 1)
                 {
+                    User.User = textBoxExt1.Text;
                                 Thread LagerApp = new Thread(new ThreadStart(
                                 delegate
                                 {

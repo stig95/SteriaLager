@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{4725
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SopraLager", "..\SopraLager Core\SopraLager.modelproj", "{966B0B4F-29F4-4C22-937D-CB8ED0BAE295}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagerAppWPF", "..\LagerAppWPF\LagerAppWPF.csproj", "{366FF595-43D8-47F4-9C66-383A09CA8654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{966B0B4F-29F4-4C22-937D-CB8ED0BAE295}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{966B0B4F-29F4-4C22-937D-CB8ED0BAE295}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{966B0B4F-29F4-4C22-937D-CB8ED0BAE295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366FF595-43D8-47F4-9C66-383A09CA8654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366FF595-43D8-47F4-9C66-383A09CA8654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366FF595-43D8-47F4-9C66-383A09CA8654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366FF595-43D8-47F4-9C66-383A09CA8654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{87205EFB-F644-4468-9835-62DBD190ACC5} = {44B0A805-26F7-41F5-8191-DFD4367B0C8C}
 		{4725287C-B7E1-450C-A19C-38E6C09D2666} = {E061ADC4-AE1B-49ED-8819-7E96DC6C2A16}
 		{966B0B4F-29F4-4C22-937D-CB8ED0BAE295} = {4725287C-B7E1-450C-A19C-38E6C09D2666}
+		{366FF595-43D8-47F4-9C66-383A09CA8654} = {CD1B105F-F1B7-4BEE-9320-9267575B0231}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 4e57de61-70b4-4886-8762-9376aedb18d3

@@ -14,14 +14,11 @@ namespace Core.User
         {
             get
             {
-                return _user;
+                return _user != null ? _user : "Not Defined";
             }
             set 
             {
-                if (value != null)
-                {
                     _user = value;
-                }
             }
         }
     }

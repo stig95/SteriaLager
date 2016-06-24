@@ -103,6 +103,7 @@
     <Compile Include="Update\Download.cs" />
     <Compile Include="Update\GetVersion.cs" />
     <Compile Include="User\Create.cs" />
+    <Compile Include="User\Get.cs" />
     <Compile Include="User\Login.cs" />
     <Compile Include="User\Recover.cs" />
     <Compile Include="User\Set.cs" />
@@ -151,6 +152,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="IMG\ssLogoTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\overview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\editVare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\userOverview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
