@@ -47,6 +47,8 @@ namespace LagerApp
             this.tsLblTotAntVare = new System.Windows.Forms.ToolStripLabel();
             this.tabStorage = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv2 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.tabControlAdv2 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabAddRemove = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -68,7 +70,18 @@ namespace LagerApp
             this.intKodeStrek = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
             this.tabChange = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tbLagerTsTrd = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.tabUser = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.splitContainerAdv3 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.lstSokRes = new System.Windows.Forms.ListBox();
+            this.cmbSokLager = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.autoLabel7 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel8 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabOverview.SuspendLayout();
@@ -79,8 +92,11 @@ namespace LagerApp
             this.tsOversikt.SuspendLayout();
             this.tabStorage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv2)).BeginInit();
+            this.splitContainerAdv2.Panel1.SuspendLayout();
             this.splitContainerAdv2.Panel2.SuspendLayout();
             this.splitContainerAdv2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv2)).BeginInit();
             this.tabControlAdv2.SuspendLayout();
             this.tabAddRemove.SuspendLayout();
@@ -92,13 +108,18 @@ namespace LagerApp
             ((System.ComponentModel.ISupportInitialize)(this.txtVareNavn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxAdv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intKodeStrek)).BeginInit();
+            this.toolStripEx1.SuspendLayout();
+            this.tabUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).BeginInit();
+            this.splitContainerAdv3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSokLager)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabColor = System.Drawing.SystemColors.Control;
             this.tabControlAdv1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(794, 401);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(775, 271);
             this.tabControlAdv1.Controls.Add(this.tabOverview);
             this.tabControlAdv1.Controls.Add(this.tabStorage);
             this.tabControlAdv1.Controls.Add(this.tabUser);
@@ -109,7 +130,7 @@ namespace LagerApp
             this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.RotateTextWhenVertical = true;
-            this.tabControlAdv1.Size = new System.Drawing.Size(794, 401);
+            this.tabControlAdv1.Size = new System.Drawing.Size(775, 271);
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -124,7 +145,7 @@ namespace LagerApp
             this.tabOverview.Location = new System.Drawing.Point(81, 3);
             this.tabOverview.Name = "tabOverview";
             this.tabOverview.ShowCloseButton = true;
-            this.tabOverview.Size = new System.Drawing.Size(709, 394);
+            this.tabOverview.Size = new System.Drawing.Size(690, 264);
             this.tabOverview.TabIndex = 1;
             this.tabOverview.Text = "tabOverview";
             this.tabOverview.ThemesEnabled = true;
@@ -132,7 +153,6 @@ namespace LagerApp
             // splitContainerAdv1
             // 
             this.splitContainerAdv1.BeforeTouchSize = 7;
-            this.splitContainerAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainerAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerAdv1.IsSplitterFixed = true;
             this.splitContainerAdv1.Location = new System.Drawing.Point(0, 40);
@@ -141,8 +161,8 @@ namespace LagerApp
             // splitContainerAdv1.Panel1
             // 
             this.splitContainerAdv1.Panel1.Controls.Add(this.groupBox1);
-            this.splitContainerAdv1.Size = new System.Drawing.Size(709, 354);
-            this.splitContainerAdv1.SplitterDistance = 221;
+            this.splitContainerAdv1.Size = new System.Drawing.Size(690, 224);
+            this.splitContainerAdv1.SplitterDistance = 214;
             this.splitContainerAdv1.TabIndex = 1;
             this.splitContainerAdv1.Text = "splitContainerAdv1";
             // 
@@ -154,7 +174,7 @@ namespace LagerApp
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 79);
+            this.groupBox1.Size = new System.Drawing.Size(214, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enheter over lager";
@@ -192,7 +212,7 @@ namespace LagerApp
             this.tsOversikt.Location = new System.Drawing.Point(0, 0);
             this.tsOversikt.Name = "tsOversikt";
             this.tsOversikt.Office12Mode = false;
-            this.tsOversikt.Size = new System.Drawing.Size(709, 40);
+            this.tsOversikt.Size = new System.Drawing.Size(690, 40);
             this.tsOversikt.TabIndex = 0;
             this.tsOversikt.Text = "Oversikt";
             this.tsOversikt.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
@@ -213,7 +233,7 @@ namespace LagerApp
             this.tabStorage.Location = new System.Drawing.Point(81, 3);
             this.tabStorage.Name = "tabStorage";
             this.tabStorage.ShowCloseButton = true;
-            this.tabStorage.Size = new System.Drawing.Size(709, 394);
+            this.tabStorage.Size = new System.Drawing.Size(690, 264);
             this.tabStorage.TabIndex = 2;
             this.tabStorage.Text = "tabStorage";
             this.tabStorage.ThemesEnabled = true;
@@ -226,19 +246,52 @@ namespace LagerApp
             this.splitContainerAdv2.Location = new System.Drawing.Point(0, 40);
             this.splitContainerAdv2.Name = "splitContainerAdv2";
             // 
+            // splitContainerAdv2.Panel1
+            // 
+            this.splitContainerAdv2.Panel1.Controls.Add(this.groupBox3);
+            // 
             // splitContainerAdv2.Panel2
             // 
             this.splitContainerAdv2.Panel2.Controls.Add(this.tabControlAdv2);
-            this.splitContainerAdv2.Size = new System.Drawing.Size(709, 354);
-            this.splitContainerAdv2.SplitterDistance = 221;
+            this.splitContainerAdv2.Size = new System.Drawing.Size(690, 224);
+            this.splitContainerAdv2.SplitterDistance = 214;
             this.splitContainerAdv2.TabIndex = 1;
             this.splitContainerAdv2.Text = "splitContainerAdv2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.autoLabel8);
+            this.groupBox3.Controls.Add(this.autoLabel7);
+            this.groupBox3.Controls.Add(this.cmbSokLager);
+            this.groupBox3.Controls.Add(this.lstSokRes);
+            this.groupBox3.Controls.Add(this.textBoxExt1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(214, 224);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Søk etter vare";
+            // 
+            // textBoxExt1
+            // 
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(202, 20);
+            this.textBoxExt1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt1.Location = new System.Drawing.Point(6, 73);
+            this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt1.Name = "textBoxExt1";
+            this.textBoxExt1.Size = new System.Drawing.Size(202, 20);
+            this.textBoxExt1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt1.TabIndex = 0;
+            this.textBoxExt1.Text = "textBoxExt1";
+            this.textBoxExt1.TextChanged += new System.EventHandler(this.textBoxExt1_TextChanged);
+            this.textBoxExt1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxExt1_KeyDown);
             // 
             // tabControlAdv2
             // 
             this.tabControlAdv2.ActiveTabColor = System.Drawing.SystemColors.Control;
             this.tabControlAdv2.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv2.BeforeTouchSize = new System.Drawing.Size(481, 354);
+            this.tabControlAdv2.BeforeTouchSize = new System.Drawing.Size(469, 224);
             this.tabControlAdv2.Controls.Add(this.tabAddRemove);
             this.tabControlAdv2.Controls.Add(this.tabChange);
             this.tabControlAdv2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -246,7 +299,7 @@ namespace LagerApp
             this.tabControlAdv2.InactiveTabColor = System.Drawing.Color.Transparent;
             this.tabControlAdv2.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv2.Name = "tabControlAdv2";
-            this.tabControlAdv2.Size = new System.Drawing.Size(481, 354);
+            this.tabControlAdv2.Size = new System.Drawing.Size(469, 224);
             this.tabControlAdv2.TabIndex = 0;
             this.tabControlAdv2.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -261,7 +314,7 @@ namespace LagerApp
             this.tabAddRemove.Location = new System.Drawing.Point(25, 3);
             this.tabAddRemove.Name = "tabAddRemove";
             this.tabAddRemove.ShowCloseButton = true;
-            this.tabAddRemove.Size = new System.Drawing.Size(452, 347);
+            this.tabAddRemove.Size = new System.Drawing.Size(440, 217);
             this.tabAddRemove.TabIndex = 1;
             this.tabAddRemove.ThemesEnabled = true;
             // 
@@ -276,7 +329,7 @@ namespace LagerApp
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(215, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(237, 347);
+            this.groupBox2.Size = new System.Drawing.Size(225, 217);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Slett Vare";
@@ -287,6 +340,7 @@ namespace LagerApp
             this.lstInfoDelete.FormattingEnabled = true;
             this.lstInfoDelete.Location = new System.Drawing.Point(6, 82);
             this.lstInfoDelete.Name = "lstInfoDelete";
+            this.lstInfoDelete.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstInfoDelete.Size = new System.Drawing.Size(196, 91);
             this.lstInfoDelete.TabIndex = 12;
             // 
@@ -331,6 +385,7 @@ namespace LagerApp
             this.btnSlett.TabIndex = 11;
             this.btnSlett.Text = "Slett Valgt Vare";
             this.btnSlett.UseVisualStyle = true;
+            this.btnSlett.Click += new System.EventHandler(this.btnSlett_Click);
             // 
             // cmbVare
             // 
@@ -367,7 +422,7 @@ namespace LagerApp
             this.gbVareSlett.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbVareSlett.Location = new System.Drawing.Point(0, 0);
             this.gbVareSlett.Name = "gbVareSlett";
-            this.gbVareSlett.Size = new System.Drawing.Size(215, 347);
+            this.gbVareSlett.Size = new System.Drawing.Size(215, 217);
             this.gbVareSlett.TabIndex = 8;
             this.gbVareSlett.TabStop = false;
             this.gbVareSlett.Text = "Legg Til Ny Vare";
@@ -391,7 +446,7 @@ namespace LagerApp
             // intAntall
             // 
             this.intAntall.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intAntall.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.intAntall.BeforeTouchSize = new System.Drawing.Size(202, 20);
             this.intAntall.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intAntall.IntegerValue = ((long)(1));
             this.intAntall.Location = new System.Drawing.Point(71, 95);
@@ -405,7 +460,7 @@ namespace LagerApp
             // 
             // txtVareNavn
             // 
-            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(202, 20);
             this.txtVareNavn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVareNavn.Location = new System.Drawing.Point(71, 28);
             this.txtVareNavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -455,7 +510,7 @@ namespace LagerApp
             this.btnVareAdd.TabIndex = 6;
             this.btnVareAdd.Text = "Legg til ny vare";
             this.btnVareAdd.UseVisualStyle = true;
-            this.btnVareAdd.Click += new System.EventHandler(this.btnVareAdd_Click_1);
+            this.btnVareAdd.Click += new System.EventHandler(this.btnVareAdd_Click);
             // 
             // autoLabel2
             // 
@@ -468,7 +523,7 @@ namespace LagerApp
             // intKodeStrek
             // 
             this.intKodeStrek.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(202, 20);
             this.intKodeStrek.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intKodeStrek.IntegerValue = ((long)(1));
             this.intKodeStrek.Location = new System.Drawing.Point(71, 60);
@@ -487,7 +542,7 @@ namespace LagerApp
             this.tabChange.Location = new System.Drawing.Point(25, 3);
             this.tabChange.Name = "tabChange";
             this.tabChange.ShowCloseButton = true;
-            this.tabChange.Size = new System.Drawing.Size(452, 347);
+            this.tabChange.Size = new System.Drawing.Size(440, 217);
             this.tabChange.TabIndex = 2;
             this.tabChange.ThemesEnabled = true;
             // 
@@ -495,25 +550,128 @@ namespace LagerApp
             // 
             this.toolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.toolStripEx1.Image = null;
+            this.toolStripEx1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbLagerTsTrd,
+            this.toolStripSeparator1,
+            this.toolStripLabel2,
+            this.toolStripSeparator2,
+            this.toolStripLabel3});
             this.toolStripEx1.Location = new System.Drawing.Point(0, 0);
             this.toolStripEx1.Name = "toolStripEx1";
             this.toolStripEx1.Office12Mode = false;
-            this.toolStripEx1.Size = new System.Drawing.Size(709, 40);
+            this.toolStripEx1.Size = new System.Drawing.Size(690, 40);
             this.toolStripEx1.TabIndex = 0;
             this.toolStripEx1.Text = "Lageroversikt";
             this.toolStripEx1.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
             // 
+            // tbLagerTsTrd
+            // 
+            this.tbLagerTsTrd.Name = "tbLagerTsTrd";
+            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 22);
+            this.tbLagerTsTrd.Text = "Trondheim Lager";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(63, 22);
+            this.toolStripLabel2.Text = "Oslo Lager";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(91, 22);
+            this.toolStripLabel3.Text = "Stavanger Lager";
+            // 
             // tabUser
             // 
+            this.tabUser.Controls.Add(this.splitContainerAdv3);
+            this.tabUser.Controls.Add(this.toolStripEx2);
             this.tabUser.Image = null;
             this.tabUser.ImageSize = new System.Drawing.Size(48, 48);
             this.tabUser.Location = new System.Drawing.Point(81, 3);
             this.tabUser.Name = "tabUser";
             this.tabUser.ShowCloseButton = true;
-            this.tabUser.Size = new System.Drawing.Size(709, 394);
+            this.tabUser.Size = new System.Drawing.Size(690, 264);
             this.tabUser.TabIndex = 3;
             this.tabUser.Text = "tabUser";
             this.tabUser.ThemesEnabled = true;
+            // 
+            // splitContainerAdv3
+            // 
+            this.splitContainerAdv3.BeforeTouchSize = 7;
+            this.splitContainerAdv3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerAdv3.Location = new System.Drawing.Point(0, 40);
+            this.splitContainerAdv3.Name = "splitContainerAdv3";
+            this.splitContainerAdv3.Size = new System.Drawing.Size(690, 224);
+            this.splitContainerAdv3.SplitterDistance = 214;
+            this.splitContainerAdv3.TabIndex = 1;
+            this.splitContainerAdv3.Text = "splitContainerAdv3";
+            // 
+            // toolStripEx2
+            // 
+            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx2.Image = null;
+            this.toolStripEx2.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEx2.Name = "toolStripEx2";
+            this.toolStripEx2.Office12Mode = false;
+            this.toolStripEx2.Size = new System.Drawing.Size(690, 40);
+            this.toolStripEx2.TabIndex = 0;
+            this.toolStripEx2.Text = "Brukere";
+            this.toolStripEx2.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // lstSokRes
+            // 
+            this.lstSokRes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstSokRes.FormattingEnabled = true;
+            this.lstSokRes.Location = new System.Drawing.Point(6, 97);
+            this.lstSokRes.Name = "lstSokRes";
+            this.lstSokRes.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstSokRes.Size = new System.Drawing.Size(202, 117);
+            this.lstSokRes.TabIndex = 13;
+            // 
+            // cmbSokLager
+            // 
+            this.cmbSokLager.BackColor = System.Drawing.Color.White;
+            this.cmbSokLager.BeforeTouchSize = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSokLager.Items.AddRange(new object[] {
+            "Trondheim",
+            "Oslo",
+            "Stavanger"});
+            this.cmbSokLager.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cmbSokLager, "Trondheim"));
+            this.cmbSokLager.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cmbSokLager, "Oslo"));
+            this.cmbSokLager.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cmbSokLager, "Stavanger"));
+            this.cmbSokLager.Location = new System.Drawing.Point(52, 30);
+            this.cmbSokLager.Name = "cmbSokLager";
+            this.cmbSokLager.Size = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cmbSokLager.TabIndex = 13;
+            // 
+            // autoLabel7
+            // 
+            this.autoLabel7.Location = new System.Drawing.Point(6, 34);
+            this.autoLabel7.Name = "autoLabel7";
+            this.autoLabel7.Size = new System.Drawing.Size(40, 13);
+            this.autoLabel7.TabIndex = 13;
+            this.autoLabel7.Text = "Lager: ";
+            // 
+            // autoLabel8
+            // 
+            this.autoLabel8.Location = new System.Drawing.Point(6, 57);
+            this.autoLabel8.Name = "autoLabel8";
+            this.autoLabel8.Size = new System.Drawing.Size(50, 13);
+            this.autoLabel8.TabIndex = 13;
+            this.autoLabel8.Text = "Søkeord:";
             // 
             // frmLagerApp
             // 
@@ -521,7 +679,7 @@ namespace LagerApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBarColor = System.Drawing.SystemColors.Control;
             this.CaptionBarHeight = 48;
-            this.ClientSize = new System.Drawing.Size(794, 401);
+            this.ClientSize = new System.Drawing.Size(775, 271);
             this.Controls.Add(this.tabControlAdv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmLagerApp";
@@ -541,9 +699,13 @@ namespace LagerApp
             this.tsOversikt.PerformLayout();
             this.tabStorage.ResumeLayout(false);
             this.tabStorage.PerformLayout();
+            this.splitContainerAdv2.Panel1.ResumeLayout(false);
             this.splitContainerAdv2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv2)).EndInit();
             this.splitContainerAdv2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv2)).EndInit();
             this.tabControlAdv2.ResumeLayout(false);
             this.tabAddRemove.ResumeLayout(false);
@@ -557,6 +719,13 @@ namespace LagerApp
             ((System.ComponentModel.ISupportInitialize)(this.txtVareNavn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxAdv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.intKodeStrek)).EndInit();
+            this.toolStripEx1.ResumeLayout(false);
+            this.toolStripEx1.PerformLayout();
+            this.tabUser.ResumeLayout(false);
+            this.tabUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).EndInit();
+            this.splitContainerAdv3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSokLager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,5 +765,18 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
         private Syncfusion.Windows.Forms.Tools.ComboBoxAdv comboBoxAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabUser;
+        private System.Windows.Forms.ToolStripLabel tbLagerTsTrd;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv3;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel8;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel7;
+        private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbSokLager;
+        private System.Windows.Forms.ListBox lstSokRes;
     }
 }

@@ -108,7 +108,7 @@ namespace Launcher
             {
                 if (Login.Check(textBoxExt1.Text, textBoxExt2.Text) == 1)
                 {
-                    User.User = textBoxExt1.Text;
+                    User._user = textBoxExt1.Text;
                                 Thread LagerApp = new Thread(new ThreadStart(
                                 delegate
                                 {

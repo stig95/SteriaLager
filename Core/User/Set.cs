@@ -9,7 +9,7 @@ namespace Core.User
     public class Set
     {
         
-        private string _user;
+        public string _user;
         public string User
         {
             get
