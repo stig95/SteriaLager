@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Net.Mail;
+using Core.DB;
 
 namespace Core.User
 {

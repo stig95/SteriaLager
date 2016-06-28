@@ -130,7 +130,6 @@ namespace LagerApp
 
         private void cmbVare_SelectedValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(cmbVare.SelectedItem.ToString());
 
             if (!((string)cmbVare.SelectedItem == "Ingen varer å vise"))
             {
@@ -159,7 +158,7 @@ namespace LagerApp
 
                             break;
                     }
-
+                    lstInfoDelete.Items.Clear();
                     lstInfoDelete.Items.Add("Du har valgt følgende vare: ");
                     lstInfoDelete.Items.Add("Navn: " + dt.Rows[0].Field<string>(2));
                     lstInfoDelete.Items.Add("Strekkode: " + dt.Rows[0].Field<int>(1));
@@ -168,7 +167,6 @@ namespace LagerApp
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                    throw;
                 }
                 finally
                 {
@@ -182,9 +180,26 @@ namespace LagerApp
 
         private void btnVareAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cmbSokLager.SelectedIndex.ToString());
-            MessageBox.Show(intKodeStrek.Text);
-            MessageBox.Show(intAntall.IntegerValue.ToString());
+            try
+            {
+                if (txtVareNavn.Text.Length > 3 && !(IsNumeric(txtVareNavn.Text)))
+                {
+                    if (intKodeStrek.IntegerValue.ToString().Length == 13 || intKodeStrek.IntegerValue.ToString().Length == 8)
+                    {
+
+                    }else
+                    {
+                        MessageBox.Show("EAN koden må være 13 eller 8 siffre");
+                    }
+                }else
+                {
+                    MessageBox.Show("Varen må ha ett gyldig navn (NonNumeric)");
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
         private void textBoxExt1_TextChanged(object sender, EventArgs e)
