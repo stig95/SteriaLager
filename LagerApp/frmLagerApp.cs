@@ -35,6 +35,13 @@ namespace LagerApp
             tabAddRemove.Image = Core.Properties.Resources.addVare;
             tabChange.Image = Core.Properties.Resources.editVare;
             tabUser.Image = Core.Properties.Resources.userOverview;
+            tabAddUsr.Image = Core.Properties.Resources.User_Add;
+            tabEditUsr.Image = Core.Properties.Resources.User_Modify;
+            
+
+
+            UsrNfo();
+            PopStorageOverview();
 
         }
 
@@ -182,7 +189,7 @@ namespace LagerApp
         {
             try
             {
-                if (txtVareNavn.Text.Length > 3 && !(IsNumeric(txtVareNavn.Text)))
+                if (txtVareNavn.Text.Length > 2 && !(txtVareNavn.Text.Any(char.IsDigit)))
                 {
                     if (intKodeStrek.IntegerValue.ToString().Length == 13 || intKodeStrek.IntegerValue.ToString().Length == 8)
                     {
@@ -193,7 +200,7 @@ namespace LagerApp
                     }
                 }else
                 {
-                    MessageBox.Show("Varen må ha ett gyldig navn (NonNumeric)");
+                    MessageBox.Show("Varen må ha ett gyldig navn (NonNumeric) > 2");
                 }
             }
             catch (Exception)
@@ -204,113 +211,102 @@ namespace LagerApp
 
         private void textBoxExt1_TextChanged(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            //If true, søk etter EAN | Hvis ikke søk på navn
+            if (IsNumeric(textBoxExt1.Text))
+            {
+                try
+                {
+                    switch (cmbSokLager.SelectedIndex)
+                    {
+                        case 0:
 
-            
+                            dt = DB.Select("SELECT * FROM VareTrondheim WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
+                            break;
+
+                        case 1:
+
+                            dt = DB.Select("SELECT * FROM VareOslo WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
+                            break;
+
+                        case 2:
+
+                            dt = DB.Select("SELECT * FROM VareStavanger WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
+
+                            break;
+                    }
+
+                    lstSokRes.Items.Clear();
+
+                    lstSokRes.Items.Add("Fant " + dt.Rows.Count + " enheter");
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        lstSokRes.Items.Add("Navn:" + row.Field<string>(2));
+                        lstSokRes.Items.Add("Strekkode: " + row.Field<int>(1));
+                        lstSokRes.Items.Add("Antall: " + row.Field<int>(3));
+                        lstSokRes.Items.Add("");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    dt.Dispose();
+                }
+            }
+            else
+            {
+                try
+                {
+                    switch (cmbSokLager.SelectedIndex)
+                    {
+                        case 0:
+
+                            dt = DB.Select("SELECT * FROM VareTrondheim WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
+                            break;
+
+                        case 1:
+
+                            dt = DB.Select("SELECT * FROM VareOslo WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
+                            break;
+
+                        case 2:
+
+                            dt = DB.Select("SELECT * FROM VareStavanger WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
+
+                            break;
+                    }
+
+                    lstSokRes.Items.Clear();
+
+                    lstSokRes.Items.Add("Fant " + dt.Rows.Count + " enheter");
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        lstSokRes.Items.Add("Navn:" + row.Field<string>(2));
+                        lstSokRes.Items.Add("Strekkode: " + row.Field<int>(1));
+                        lstSokRes.Items.Add("Antall: " + row.Field<int>(3));
+                        lstSokRes.Items.Add("");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    dt.Dispose();
+                }
+            }
         }
 
         private bool IsNumeric(string input)
         {
             int output;
             return int.TryParse(input, out output);
-        }
-
-        private void textBoxExt1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                DataTable dt = new DataTable();
-                MessageBox.Show("It works");
-                //If true, søk etter EAN | Hvis ikke søk på navn
-                if (IsNumeric(textBoxExt1.Text))
-                {
-                    try
-                    {
-                        switch (cmbSokLager.SelectedIndex)
-                        {
-                            case 0:
-
-                                dt = DB.Select("SELECT * FROM VareTrondheim WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
-                                break;
-
-                            case 1:
-
-                                dt = DB.Select("SELECT * FROM VareOslo WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
-                                break;
-
-                            case 2:
-
-                                dt = DB.Select("SELECT * FROM VareStavanger WHERE Strekkode LIKE '%" + textBoxExt1.Text + "%'");
-
-                                break;
-                        }
-
-                        lstSokRes.Items.Clear();
-
-                        lstSokRes.Items.Add("Fant " + dt.Rows.Count + " enheter");
-
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            lstSokRes.Items.Add("Navn:" + row.Field<string>(2));
-                            lstSokRes.Items.Add("Strekkode: " + row.Field<int>(1));
-                            lstSokRes.Items.Add("Antall: " + row.Field<int>(3));
-                            lstSokRes.Items.Add("");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt.Dispose();
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        switch (cmbSokLager.SelectedIndex)
-                        {
-                            case 0:
-
-                                dt = DB.Select("SELECT * FROM VareTrondheim WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
-                                break;
-
-                            case 1:
-
-                                dt = DB.Select("SELECT * FROM VareOslo WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
-                                break;
-
-                            case 2:
-
-                                dt = DB.Select("SELECT * FROM VareStavanger WHERE navn LIKE '%" + textBoxExt1.Text + "%'");
-
-                                break;
-                        }
-
-                        lstSokRes.Items.Clear();
-
-                        lstSokRes.Items.Add("Fant " + dt.Rows.Count + " enheter");
-
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            lstSokRes.Items.Add("Navn:" + row.Field<string>(2));
-                            lstSokRes.Items.Add("Strekkode: " + row.Field<int>(1));
-                            lstSokRes.Items.Add("Antall: " + row.Field<int>(3));
-                            lstSokRes.Items.Add("");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt.Dispose();
-                    }
-
-                }
-            }
         }
 
         private void btnSlett_Click(object sender, EventArgs e)
@@ -329,6 +325,73 @@ namespace LagerApp
                         DB.Delete("DELETE FROM VareStavanger WHERE navn='" + cmbVare.SelectedItem.ToString() + "'");
                         break;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void UsrNfo()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                int tot = DB.Count("SELECT COUNT(Bruker_id) FROM Brukere");
+                dt = DB.Select("SELECT Bruker_id, brukernavn, email, kontor, stilling FROM Brukere");
+
+                lstUsrNfo.Items.Add("Brukerinformasjon");
+                lstUsrNfo.Items.Add("Det er totalt " + tot + " registrerte brukere.");
+                lstUsrNfo.Items.Add("");
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    lstUsrNfo.Items.Add("Brukernavn: " + row.Field<string>(1) + " ID: " + row.Field<int>(0));
+                    lstUsrNfo.Items.Add("Epost: " + row.Field<string>(2));
+                    switch (row.Field<int>(3))
+                    {
+                        case 1:
+                            lstUsrNfo.Items.Add("Kontor: Trondheim");
+                            break;
+                        case 2:
+                            lstUsrNfo.Items.Add("Kontor: Oslo");
+                            break;
+                        case 3:
+                            lstUsrNfo.Items.Add("Kontor: Stavanger");
+                            break;
+                        default:
+                            lstUsrNfo.Items.Add("Office undetermined");
+                            break;
+                    }
+                    if (row.Field<string>(4) == "admin")
+                    {
+                        lstUsrNfo.Items.Add("Stilling: Administrator");
+
+                    }else if(row.Field<string>(4) == "ansatt")
+                    {
+                        lstUsrNfo.Items.Add("Stilling: Ansatt");
+
+                    }
+                    lstUsrNfo.Items.Add("");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dt.Dispose();
+            }
+        }
+
+        void PopStorageOverview()
+        {
+            try
+            {
+                DBgridOslo.DataSource = DB.Select("SELECT * FROM VareOslo");
+                DBgridTrondheim.DataSource = DB.Select("SELECT * FROM VareTrondheim");
+                DBgridStavanger.DataSource = DB.Select("SELECT * FROM VareStavanger");
             }
             catch (Exception ex)
             {

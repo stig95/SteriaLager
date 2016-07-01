@@ -87,14 +87,42 @@ namespace LagerApp
             this.tabUser = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv3 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.tabControlAdv3 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.tabAddUsr = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxExt5 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.textBoxExt4 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.textBoxExt3 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.textBoxExt2 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel13 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel12 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.tabEditUsr = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.btnRegUsr = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.lstUsrNfo = new System.Windows.Forms.ListBox();
+            this.lstVareEndre = new System.Windows.Forms.ListBox();
+            this.tabControlAdv4 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.toolStripEx5 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.DBgridOslo = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
+            this.DBgridTrondheim = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
+            this.DBgridStavanger = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabOverview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).BeginInit();
             this.splitContainerAdv1.Panel1.SuspendLayout();
+            this.splitContainerAdv1.Panel2.SuspendLayout();
             this.splitContainerAdv1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tsOversikt.SuspendLayout();
@@ -124,10 +152,28 @@ namespace LagerApp
             this.toolStripEx1.SuspendLayout();
             this.tabUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).BeginInit();
+            this.splitContainerAdv3.Panel1.SuspendLayout();
             this.splitContainerAdv3.Panel2.SuspendLayout();
             this.splitContainerAdv3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv3)).BeginInit();
             this.tabControlAdv3.SuspendLayout();
+            this.tabAddUsr.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv4)).BeginInit();
+            this.tabControlAdv4.SuspendLayout();
+            this.tabPageAdv1.SuspendLayout();
+            this.tabPageAdv2.SuspendLayout();
+            this.tabPageAdv3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridOslo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridTrondheim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridStavanger)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdv1
@@ -176,6 +222,10 @@ namespace LagerApp
             // splitContainerAdv1.Panel1
             // 
             this.splitContainerAdv1.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainerAdv1.Panel2
+            // 
+            this.splitContainerAdv1.Panel2.Controls.Add(this.tabControlAdv4);
             this.splitContainerAdv1.Size = new System.Drawing.Size(690, 224);
             this.splitContainerAdv1.SplitterDistance = 214;
             this.splitContainerAdv1.TabIndex = 1;
@@ -334,7 +384,7 @@ namespace LagerApp
             // 
             // textBoxExt1
             // 
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.textBoxExt1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt1.Location = new System.Drawing.Point(6, 62);
             this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -343,7 +393,6 @@ namespace LagerApp
             this.textBoxExt1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.textBoxExt1.TabIndex = 0;
             this.textBoxExt1.TextChanged += new System.EventHandler(this.textBoxExt1_TextChanged);
-            this.textBoxExt1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxExt1_KeyDown);
             // 
             // tabControlAdv2
             // 
@@ -399,7 +448,7 @@ namespace LagerApp
             this.lstInfoDelete.Location = new System.Drawing.Point(6, 82);
             this.lstInfoDelete.Name = "lstInfoDelete";
             this.lstInfoDelete.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lstInfoDelete.Size = new System.Drawing.Size(196, 91);
+            this.lstInfoDelete.Size = new System.Drawing.Size(196, 78);
             this.lstInfoDelete.TabIndex = 12;
             // 
             // autoLabel4
@@ -434,13 +483,13 @@ namespace LagerApp
             // 
             this.btnSlett.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnSlett.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSlett.BeforeTouchSize = new System.Drawing.Size(100, 23);
+            this.btnSlett.BeforeTouchSize = new System.Drawing.Size(100, 30);
             this.btnSlett.ForeColor = System.Drawing.Color.Black;
             this.btnSlett.IsBackStageButton = false;
-            this.btnSlett.Location = new System.Drawing.Point(102, 182);
+            this.btnSlett.Location = new System.Drawing.Point(102, 175);
             this.btnSlett.MetroColor = System.Drawing.SystemColors.Control;
             this.btnSlett.Name = "btnSlett";
-            this.btnSlett.Size = new System.Drawing.Size(100, 23);
+            this.btnSlett.Size = new System.Drawing.Size(100, 30);
             this.btnSlett.TabIndex = 11;
             this.btnSlett.Text = "Slett Valgt Vare";
             this.btnSlett.UseVisualStyle = true;
@@ -505,7 +554,7 @@ namespace LagerApp
             // intAntall
             // 
             this.intAntall.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intAntall.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.intAntall.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.intAntall.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intAntall.IntegerValue = ((long)(1));
             this.intAntall.Location = new System.Drawing.Point(71, 95);
@@ -520,7 +569,7 @@ namespace LagerApp
             // 
             // txtVareNavn
             // 
-            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.txtVareNavn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVareNavn.Location = new System.Drawing.Point(71, 28);
             this.txtVareNavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -559,13 +608,13 @@ namespace LagerApp
             // 
             this.btnVareAdd.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnVareAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnVareAdd.BeforeTouchSize = new System.Drawing.Size(100, 23);
+            this.btnVareAdd.BeforeTouchSize = new System.Drawing.Size(100, 30);
             this.btnVareAdd.ForeColor = System.Drawing.Color.Black;
             this.btnVareAdd.IsBackStageButton = false;
-            this.btnVareAdd.Location = new System.Drawing.Point(103, 182);
+            this.btnVareAdd.Location = new System.Drawing.Point(103, 175);
             this.btnVareAdd.MetroColor = System.Drawing.SystemColors.Control;
             this.btnVareAdd.Name = "btnVareAdd";
-            this.btnVareAdd.Size = new System.Drawing.Size(100, 23);
+            this.btnVareAdd.Size = new System.Drawing.Size(100, 30);
             this.btnVareAdd.TabIndex = 6;
             this.btnVareAdd.Text = "Legg til ny vare";
             this.btnVareAdd.UseVisualStyle = true;
@@ -582,7 +631,7 @@ namespace LagerApp
             // intKodeStrek
             // 
             this.intKodeStrek.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(132, 20);
+            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(276, 23);
             this.intKodeStrek.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intKodeStrek.IntegerValue = ((long)(1));
             this.intKodeStrek.Location = new System.Drawing.Point(71, 60);
@@ -609,6 +658,7 @@ namespace LagerApp
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lstVareEndre);
             this.groupBox4.Controls.Add(this.autoLabel9);
             this.groupBox4.Controls.Add(this.cmbEndreLager);
             this.groupBox4.Controls.Add(this.cmbEndreVare);
@@ -735,6 +785,10 @@ namespace LagerApp
             this.splitContainerAdv3.Location = new System.Drawing.Point(0, 40);
             this.splitContainerAdv3.Name = "splitContainerAdv3";
             // 
+            // splitContainerAdv3.Panel1
+            // 
+            this.splitContainerAdv3.Panel1.Controls.Add(this.lstUsrNfo);
+            // 
             // splitContainerAdv3.Panel2
             // 
             this.splitContainerAdv3.Panel2.Controls.Add(this.tabControlAdv3);
@@ -748,8 +802,8 @@ namespace LagerApp
             this.tabControlAdv3.ActiveTabColor = System.Drawing.SystemColors.Control;
             this.tabControlAdv3.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlAdv3.BeforeTouchSize = new System.Drawing.Size(469, 224);
-            this.tabControlAdv3.Controls.Add(this.tabPageAdv1);
-            this.tabControlAdv3.Controls.Add(this.tabPageAdv2);
+            this.tabControlAdv3.Controls.Add(this.tabAddUsr);
+            this.tabControlAdv3.Controls.Add(this.tabEditUsr);
             this.tabControlAdv3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv3.FocusOnTabClick = false;
             this.tabControlAdv3.InactiveTabColor = System.Drawing.Color.Transparent;
@@ -761,27 +815,154 @@ namespace LagerApp
             this.tabControlAdv3.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.tabControlAdv3.ThemesEnabled = true;
             // 
-            // tabPageAdv1
+            // tabAddUsr
             // 
-            this.tabPageAdv1.Image = null;
-            this.tabPageAdv1.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabPageAdv1.Location = new System.Drawing.Point(25, 3);
-            this.tabPageAdv1.Name = "tabPageAdv1";
-            this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(440, 217);
-            this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.ThemesEnabled = true;
+            this.tabAddUsr.Controls.Add(this.groupBox5);
+            this.tabAddUsr.Image = null;
+            this.tabAddUsr.ImageSize = new System.Drawing.Size(32, 32);
+            this.tabAddUsr.Location = new System.Drawing.Point(25, 3);
+            this.tabAddUsr.Name = "tabAddUsr";
+            this.tabAddUsr.ShowCloseButton = true;
+            this.tabAddUsr.Size = new System.Drawing.Size(440, 217);
+            this.tabAddUsr.TabIndex = 1;
+            this.tabAddUsr.ThemesEnabled = true;
             // 
-            // tabPageAdv2
+            // groupBox5
             // 
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabPageAdv2.Location = new System.Drawing.Point(25, 3);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(440, 217);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.ThemesEnabled = true;
+            this.groupBox5.Controls.Add(this.btnRegUsr);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.textBoxExt5);
+            this.groupBox5.Controls.Add(this.textBoxExt4);
+            this.groupBox5.Controls.Add(this.textBoxExt3);
+            this.groupBox5.Controls.Add(this.textBoxExt2);
+            this.groupBox5.Controls.Add(this.autoLabel13);
+            this.groupBox5.Controls.Add(this.autoLabel14);
+            this.groupBox5.Controls.Add(this.autoLabel12);
+            this.groupBox5.Controls.Add(this.autoLabel11);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(440, 217);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Registrer ny bruker";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Administrator",
+            "Ansatt"});
+            this.comboBox2.Location = new System.Drawing.Point(267, 49);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(141, 21);
+            this.comboBox2.TabIndex = 11;
+            this.comboBox2.Text = "Velg Stilling";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Trondheim",
+            "Oslo",
+            "Stavanger"});
+            this.comboBox1.Location = new System.Drawing.Point(267, 24);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(141, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "Velg Kontor";
+            // 
+            // textBoxExt5
+            // 
+            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt5.Location = new System.Drawing.Point(95, 102);
+            this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt5.Name = "textBoxExt5";
+            this.textBoxExt5.Size = new System.Drawing.Size(166, 20);
+            this.textBoxExt5.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt5.TabIndex = 9;
+            this.textBoxExt5.Text = "textBoxExt5";
+            // 
+            // textBoxExt4
+            // 
+            this.textBoxExt4.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt4.Location = new System.Drawing.Point(95, 76);
+            this.textBoxExt4.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt4.Name = "textBoxExt4";
+            this.textBoxExt4.Size = new System.Drawing.Size(166, 20);
+            this.textBoxExt4.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt4.TabIndex = 8;
+            this.textBoxExt4.Text = "textBoxExt4";
+            // 
+            // textBoxExt3
+            // 
+            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt3.Location = new System.Drawing.Point(95, 50);
+            this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt3.Name = "textBoxExt3";
+            this.textBoxExt3.Size = new System.Drawing.Size(166, 20);
+            this.textBoxExt3.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt3.TabIndex = 7;
+            this.textBoxExt3.Text = "textBoxExt3";
+            // 
+            // textBoxExt2
+            // 
+            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt2.Location = new System.Drawing.Point(95, 24);
+            this.textBoxExt2.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt2.Name = "textBoxExt2";
+            this.textBoxExt2.Size = new System.Drawing.Size(166, 20);
+            this.textBoxExt2.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt2.TabIndex = 6;
+            this.textBoxExt2.Text = "textBoxExt2";
+            // 
+            // autoLabel13
+            // 
+            this.autoLabel13.Location = new System.Drawing.Point(6, 105);
+            this.autoLabel13.Name = "autoLabel13";
+            this.autoLabel13.Size = new System.Drawing.Size(41, 13);
+            this.autoLabel13.TabIndex = 3;
+            this.autoLabel13.Text = "E-Post:";
+            // 
+            // autoLabel14
+            // 
+            this.autoLabel14.Location = new System.Drawing.Point(6, 79);
+            this.autoLabel14.Name = "autoLabel14";
+            this.autoLabel14.Size = new System.Drawing.Size(82, 13);
+            this.autoLabel14.TabIndex = 2;
+            this.autoLabel14.Text = "Gjenta Passord:";
+            // 
+            // autoLabel12
+            // 
+            this.autoLabel12.Location = new System.Drawing.Point(6, 53);
+            this.autoLabel12.Name = "autoLabel12";
+            this.autoLabel12.Size = new System.Drawing.Size(48, 13);
+            this.autoLabel12.TabIndex = 1;
+            this.autoLabel12.Text = "Passord:";
+            // 
+            // autoLabel11
+            // 
+            this.autoLabel11.Location = new System.Drawing.Point(6, 27);
+            this.autoLabel11.Name = "autoLabel11";
+            this.autoLabel11.Size = new System.Drawing.Size(68, 13);
+            this.autoLabel11.TabIndex = 0;
+            this.autoLabel11.Text = "Brukernavn: ";
+            // 
+            // tabEditUsr
+            // 
+            this.tabEditUsr.Image = null;
+            this.tabEditUsr.ImageSize = new System.Drawing.Size(32, 32);
+            this.tabEditUsr.Location = new System.Drawing.Point(25, 3);
+            this.tabEditUsr.Name = "tabEditUsr";
+            this.tabEditUsr.ShowCloseButton = true;
+            this.tabEditUsr.Size = new System.Drawing.Size(440, 217);
+            this.tabEditUsr.TabIndex = 2;
+            this.tabEditUsr.ThemesEnabled = true;
             // 
             // toolStripEx2
             // 
@@ -794,6 +975,241 @@ namespace LagerApp
             this.toolStripEx2.TabIndex = 0;
             this.toolStripEx2.Text = "Brukere";
             this.toolStripEx2.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // btnRegUsr
+            // 
+            this.btnRegUsr.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.btnRegUsr.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegUsr.BeforeTouchSize = new System.Drawing.Size(87, 30);
+            this.btnRegUsr.ForeColor = System.Drawing.Color.Black;
+            this.btnRegUsr.IsBackStageButton = false;
+            this.btnRegUsr.Location = new System.Drawing.Point(174, 128);
+            this.btnRegUsr.MetroColor = System.Drawing.SystemColors.Control;
+            this.btnRegUsr.Name = "btnRegUsr";
+            this.btnRegUsr.Size = new System.Drawing.Size(87, 30);
+            this.btnRegUsr.TabIndex = 12;
+            this.btnRegUsr.Text = "Registerer";
+            this.btnRegUsr.UseVisualStyle = true;
+            // 
+            // lstUsrNfo
+            // 
+            this.lstUsrNfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstUsrNfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstUsrNfo.FormattingEnabled = true;
+            this.lstUsrNfo.Location = new System.Drawing.Point(0, 0);
+            this.lstUsrNfo.Name = "lstUsrNfo";
+            this.lstUsrNfo.Size = new System.Drawing.Size(214, 224);
+            this.lstUsrNfo.TabIndex = 0;
+            // 
+            // lstVareEndre
+            // 
+            this.lstVareEndre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstVareEndre.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstVareEndre.FormattingEnabled = true;
+            this.lstVareEndre.Location = new System.Drawing.Point(241, 16);
+            this.lstVareEndre.Name = "lstVareEndre";
+            this.lstVareEndre.Size = new System.Drawing.Size(196, 198);
+            this.lstVareEndre.TabIndex = 15;
+            // 
+            // tabControlAdv4
+            // 
+            this.tabControlAdv4.ActiveTabColor = System.Drawing.SystemColors.Control;
+            this.tabControlAdv4.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControlAdv4.BeforeTouchSize = new System.Drawing.Size(469, 224);
+            this.tabControlAdv4.Controls.Add(this.tabPageAdv1);
+            this.tabControlAdv4.Controls.Add(this.tabPageAdv2);
+            this.tabControlAdv4.Controls.Add(this.tabPageAdv3);
+            this.tabControlAdv4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlAdv4.FocusOnTabClick = false;
+            this.tabControlAdv4.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv4.Location = new System.Drawing.Point(0, 0);
+            this.tabControlAdv4.Name = "tabControlAdv4";
+            this.tabControlAdv4.RotateTextWhenVertical = true;
+            this.tabControlAdv4.Size = new System.Drawing.Size(469, 224);
+            this.tabControlAdv4.TabIndex = 0;
+            this.tabControlAdv4.TabPanelBackColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv4.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.tabControlAdv4.ThemesEnabled = true;
+            // 
+            // tabPageAdv1
+            // 
+            this.tabPageAdv1.Controls.Add(this.panel1);
+            this.tabPageAdv1.Controls.Add(this.toolStripEx3);
+            this.tabPageAdv1.Image = null;
+            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv1.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv1.Name = "tabPageAdv1";
+            this.tabPageAdv1.ShowCloseButton = true;
+            this.tabPageAdv1.Size = new System.Drawing.Size(394, 217);
+            this.tabPageAdv1.TabIndex = 1;
+            this.tabPageAdv1.Text = "Oslo";
+            this.tabPageAdv1.ThemesEnabled = true;
+            // 
+            // tabPageAdv2
+            // 
+            this.tabPageAdv2.Controls.Add(this.panel2);
+            this.tabPageAdv2.Controls.Add(this.toolStripEx4);
+            this.tabPageAdv2.Image = null;
+            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv2.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv2.Name = "tabPageAdv2";
+            this.tabPageAdv2.ShowCloseButton = true;
+            this.tabPageAdv2.Size = new System.Drawing.Size(394, 217);
+            this.tabPageAdv2.TabIndex = 2;
+            this.tabPageAdv2.Text = "Trondheim";
+            this.tabPageAdv2.ThemesEnabled = true;
+            // 
+            // tabPageAdv3
+            // 
+            this.tabPageAdv3.Controls.Add(this.panel3);
+            this.tabPageAdv3.Controls.Add(this.toolStripEx5);
+            this.tabPageAdv3.Image = null;
+            this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv3.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv3.Name = "tabPageAdv3";
+            this.tabPageAdv3.ShowCloseButton = true;
+            this.tabPageAdv3.Size = new System.Drawing.Size(394, 217);
+            this.tabPageAdv3.TabIndex = 3;
+            this.tabPageAdv3.Text = "Stavanger";
+            this.tabPageAdv3.ThemesEnabled = true;
+            // 
+            // toolStripEx3
+            // 
+            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx3.Image = null;
+            this.toolStripEx3.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEx3.Name = "toolStripEx3";
+            this.toolStripEx3.Office12Mode = false;
+            this.toolStripEx3.Size = new System.Drawing.Size(394, 40);
+            this.toolStripEx3.TabIndex = 0;
+            this.toolStripEx3.Text = "Lageroversikt : Oslo";
+            this.toolStripEx3.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // toolStripEx4
+            // 
+            this.toolStripEx4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx4.Image = null;
+            this.toolStripEx4.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEx4.Name = "toolStripEx4";
+            this.toolStripEx4.Office12Mode = false;
+            this.toolStripEx4.Size = new System.Drawing.Size(394, 40);
+            this.toolStripEx4.TabIndex = 1;
+            this.toolStripEx4.Text = "Lageroversikt : Trondheim";
+            this.toolStripEx4.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // toolStripEx5
+            // 
+            this.toolStripEx5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx5.Image = null;
+            this.toolStripEx5.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEx5.Name = "toolStripEx5";
+            this.toolStripEx5.Office12Mode = false;
+            this.toolStripEx5.Size = new System.Drawing.Size(394, 40);
+            this.toolStripEx5.TabIndex = 1;
+            this.toolStripEx5.Text = "Lageroversikt : Stavanger";
+            this.toolStripEx5.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DBgridOslo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(394, 177);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DBgridTrondheim);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(394, 177);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.DBgridStavanger);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(394, 177);
+            this.panel3.TabIndex = 2;
+            // 
+            // DBgridOslo
+            // 
+            this.DBgridOslo.AllowDragSelectedCols = true;
+            this.DBgridOslo.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
+            this.DBgridOslo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DBgridOslo.EnableAddNew = false;
+            this.DBgridOslo.EnableEdit = false;
+            this.DBgridOslo.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Metro;
+            this.DBgridOslo.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
+            this.DBgridOslo.Location = new System.Drawing.Point(0, 0);
+            this.DBgridOslo.Name = "DBgridOslo";
+            this.DBgridOslo.OptimizeInsertRemoveCells = true;
+            this.DBgridOslo.Properties.ForceImmediateRepaint = false;
+            this.DBgridOslo.Properties.MarkColHeader = false;
+            this.DBgridOslo.Properties.MarkRowHeader = false;
+            this.DBgridOslo.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.DBgridOslo.Size = new System.Drawing.Size(394, 177);
+            this.DBgridOslo.SmartSizeBox = false;
+            this.DBgridOslo.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
+            this.DBgridOslo.TabIndex = 0;
+            this.DBgridOslo.Text = "gridDataBoundGrid1";
+            this.DBgridOslo.ThemesEnabled = true;
+            this.DBgridOslo.TransparentBackground = true;
+            this.DBgridOslo.UseListChangedEvent = true;
+            this.DBgridOslo.UseRightToLeftCompatibleTextBox = true;
+            // 
+            // DBgridTrondheim
+            // 
+            this.DBgridTrondheim.AllowDragSelectedCols = true;
+            this.DBgridTrondheim.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
+            this.DBgridTrondheim.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DBgridTrondheim.EnableAddNew = false;
+            this.DBgridTrondheim.EnableEdit = false;
+            this.DBgridTrondheim.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Metro;
+            this.DBgridTrondheim.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
+            this.DBgridTrondheim.Location = new System.Drawing.Point(0, 0);
+            this.DBgridTrondheim.Name = "DBgridTrondheim";
+            this.DBgridTrondheim.OptimizeInsertRemoveCells = true;
+            this.DBgridTrondheim.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.DBgridTrondheim.Size = new System.Drawing.Size(394, 177);
+            this.DBgridTrondheim.SmartSizeBox = false;
+            this.DBgridTrondheim.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
+            this.DBgridTrondheim.TabIndex = 1;
+            this.DBgridTrondheim.Text = "gridDataBoundGrid2";
+            this.DBgridTrondheim.ThemesEnabled = true;
+            this.DBgridTrondheim.TransparentBackground = true;
+            this.DBgridTrondheim.UseListChangedEvent = true;
+            this.DBgridTrondheim.UseRightToLeftCompatibleTextBox = true;
+            // 
+            // DBgridStavanger
+            // 
+            this.DBgridStavanger.AllowDragSelectedCols = true;
+            this.DBgridStavanger.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
+            this.DBgridStavanger.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DBgridStavanger.EnableAddNew = false;
+            this.DBgridStavanger.EnableEdit = false;
+            this.DBgridStavanger.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Metro;
+            this.DBgridStavanger.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
+            this.DBgridStavanger.Location = new System.Drawing.Point(0, 0);
+            this.DBgridStavanger.Name = "DBgridStavanger";
+            this.DBgridStavanger.OptimizeInsertRemoveCells = true;
+            this.DBgridStavanger.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.DBgridStavanger.Size = new System.Drawing.Size(394, 177);
+            this.DBgridStavanger.SmartSizeBox = false;
+            this.DBgridStavanger.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
+            this.DBgridStavanger.TabIndex = 1;
+            this.DBgridStavanger.Text = "gridDataBoundGrid3";
+            this.DBgridStavanger.ThemesEnabled = true;
+            this.DBgridStavanger.TransparentBackground = true;
+            this.DBgridStavanger.UseListChangedEvent = true;
+            this.DBgridStavanger.UseRightToLeftCompatibleTextBox = true;
             // 
             // frmLagerApp
             // 
@@ -813,6 +1229,7 @@ namespace LagerApp
             this.tabOverview.ResumeLayout(false);
             this.tabOverview.PerformLayout();
             this.splitContainerAdv1.Panel1.ResumeLayout(false);
+            this.splitContainerAdv1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).EndInit();
             this.splitContainerAdv1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -851,11 +1268,33 @@ namespace LagerApp
             this.toolStripEx1.PerformLayout();
             this.tabUser.ResumeLayout(false);
             this.tabUser.PerformLayout();
+            this.splitContainerAdv3.Panel1.ResumeLayout(false);
             this.splitContainerAdv3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).EndInit();
             this.splitContainerAdv3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv3)).EndInit();
             this.tabControlAdv3.ResumeLayout(false);
+            this.tabAddUsr.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv4)).EndInit();
+            this.tabControlAdv4.ResumeLayout(false);
+            this.tabPageAdv1.ResumeLayout(false);
+            this.tabPageAdv1.PerformLayout();
+            this.tabPageAdv2.ResumeLayout(false);
+            this.tabPageAdv2.PerformLayout();
+            this.tabPageAdv3.ResumeLayout(false);
+            this.tabPageAdv3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridOslo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridTrondheim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DBgridStavanger)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -914,7 +1353,34 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbEndreVare;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel10;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv3;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabAddUsr;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabEditUsr;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt5;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt4;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt3;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt2;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel13;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel14;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel12;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel11;
+        private System.Windows.Forms.ListBox lstVareEndre;
+        private System.Windows.Forms.ListBox lstUsrNfo;
+        private Syncfusion.Windows.Forms.ButtonAdv btnRegUsr;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv4;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
+        private System.Windows.Forms.Panel panel1;
+        private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid DBgridOslo;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private System.Windows.Forms.Panel panel2;
+        private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid DBgridTrondheim;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv3;
+        private System.Windows.Forms.Panel panel3;
+        private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid DBgridStavanger;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx5;
     }
 }
