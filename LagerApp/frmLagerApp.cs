@@ -15,6 +15,10 @@ using System.Text;
 using System.Windows.Forms;
 using Core;
 
+/// <summary>
+/// If at first u dont succeed, call it version 1.0.0
+/// </summary>
+
 namespace LagerApp
 {
     public partial class frmLagerApp : Syncfusion.Windows.Forms.MetroForm
@@ -193,19 +197,61 @@ namespace LagerApp
                 {
                     if (intKodeStrek.IntegerValue.ToString().Length == 13 || intKodeStrek.IntegerValue.ToString().Length == 8)
                     {
+                        if (!(intAntall.IntegerValue == 0))
+                        {
+                            if (!(cmbLagerAddVare.SelectedIndex == -1))
+                            {
+                                switch (cmbLagerAddVare.SelectedIndex)
+                                {
+                                    case 0:
+
+                                        DB.Insert("INSERT INTO `VareTrondheim`(`strekkode`, `navn`, `antall`) VALUES (" + intKodeStrek.IntegerValue.ToString() + ",'"
+                                                                                                                        + txtVareNavn.Text + "',"
+                                                                                                                        + intAntall.IntegerValue.ToString() + ")");
+                                        break;
+
+                                    case 1:
+
+                                        DB.Insert("INSERT INTO `VareOslo`(`strekkode`, `navn`, `antall`) VALUES (" + intKodeStrek.IntegerValue.ToString() + ",'"
+                                                                                                                   + txtVareNavn.Text + "',"
+                                                                                                                   + intAntall.IntegerValue.ToString() + ")");
+                                        break;
+
+                                    case 2:
+
+                                        DB.Insert("INSERT INTO `VareStavanger`(`strekkode`, `navn`, `antall`) VALUES (" + intKodeStrek.IntegerValue.ToString() + ",'"
+                                                                                                                        + txtVareNavn.Text + "',"
+                                                                                                                        + intAntall.IntegerValue.ToString() + ")");
+                                        break;
+                                }
+
+                                MessageBox.Show("Vare '" + txtVareNavn.Text + "' lagt til hos " + cmbLagerAddVare.SelectedItem.ToString());
+                            }
+                            else
+                            {
+                                MessageBox.Show("Du må velge lager");
+                                return;
+                            }
+                        }else
+                        {
+                            MessageBox.Show("Antall kan ikke være 0");
+                            return;
+                        }
 
                     }else
                     {
                         MessageBox.Show("EAN koden må være 13 eller 8 siffre");
+                        return;
                     }
                 }else
                 {
                     MessageBox.Show("Varen må ha ett gyldig navn (NonNumeric) > 2");
+                    return;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                MessageBox.Show(ex.Message);
             }
         }
 
