@@ -79,6 +79,7 @@
     <Compile Include="Logging\Read.cs" />
     <Compile Include="Logging\Write.cs" />
     <Compile Include="Mail\Send.cs" />
+    <Compile Include="Mail\Validate.cs" />
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
     </Compile>

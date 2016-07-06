@@ -41,12 +41,12 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.Grid.Base, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Grid.Windows, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Shared.Base, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Shared.Windows, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Tools.Base, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.Tools.Windows, Version=14.1460.0.41, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Base, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Base, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=14.2460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />

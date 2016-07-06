@@ -444,5 +444,95 @@ namespace LagerApp
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnRegUsr_Click(object sender, EventArgs e)
+        {
+            //txtbox2 = usrname
+            //txtbx3/4 = pw
+            //txtbx5 = epost
+
+            try
+            {
+                if (textBoxExt2.Text.Length > 5)
+                {
+                    if (textBoxExt3.Text == textBoxExt4.Text)
+                    {
+                        if (Core.Mail.Validate.Mail(textBoxExt5.Text))
+                        {
+                            if (cmbKontor.SelectedIndex > -1)
+                            {
+                                if (cmbStilling.SelectedIndex > -1)
+                                {
+                                    Core.User.Create.User(textBoxExt2.Text, textBoxExt3.Text, textBoxExt5.Text, cmbStilling.SelectedIndex, cmbKontor.SelectedIndex);
+                                    MessageBox.Show("Bruker " + textBoxExt2.Text + "opprettet");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Vennligst velg en gyldig stilling");
+                                    return;
+                                }
+                                
+                            }else
+                            {
+                                MessageBox.Show("Vennligst velg gyldig kontor");
+                                return;
+                            }
+                            
+                        }else
+                        {
+                            MessageBox.Show("Eposten er ikke gyldig");
+                            return;
+                        }
+                        
+                    }else
+                    {
+                        MessageBox.Show("Passordene må være like");
+                        return;
+                    }
+                }else
+                {
+                    MessageBox.Show("Brukernavn må være lengre enn 5 bokstaver");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            
+        }
+
+        private void cmbEndreUsrKontor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                switch (cmbEndreUsrKontor.SelectedIndex)
+                {
+                    case 0:
+                        dt = DB.Select("SELECT brukernavn FROM Brukere Where kontor=1");
+                        break;
+                    case 1:
+                        dt = DB.Select("SELECT brukernavn FROM Brukere Where kontor=2");
+                        break;
+                    case 2:
+                        dt = DB.Select("SELECT brukernavn FROM Brukere Where kontor=3");
+                        break;
+                }
+                foreach (DataRow row in dt.Rows)
+                {
+                    cmbUsrEndre.Items.Add(row.Field<string>(0));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dt.Dispose();
+            }
+        }
     }
 }
