@@ -129,24 +129,25 @@ namespace LagerApp
             this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.tabEditUsr = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.cmbUsrEndre = new System.Windows.Forms.ComboBox();
-            this.cmbEndreUsrKontor = new System.Windows.Forms.ComboBox();
-            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.textBoxExt7 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lstUsrEndreNfo = new System.Windows.Forms.ListBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxExt11 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBoxExt8 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.textBoxExt9 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxExt11 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lstUsrEndreNfo = new System.Windows.Forms.ListBox();
+            this.textBoxExt7 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbUsrEndre = new System.Windows.Forms.ComboBox();
+            this.cmbEndreUsrKontor = new System.Windows.Forms.ComboBox();
+            this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabOverview.SuspendLayout();
@@ -206,11 +207,11 @@ namespace LagerApp
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt2)).BeginInit();
             this.tabEditUsr.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdv1
@@ -724,7 +725,7 @@ namespace LagerApp
             // 
             // textBoxExt1
             // 
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt1.Location = new System.Drawing.Point(6, 62);
             this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -894,7 +895,7 @@ namespace LagerApp
             // intAntall
             // 
             this.intAntall.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intAntall.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.intAntall.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.intAntall.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intAntall.IntegerValue = ((long)(1));
             this.intAntall.Location = new System.Drawing.Point(71, 95);
@@ -909,7 +910,7 @@ namespace LagerApp
             // 
             // txtVareNavn
             // 
-            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.txtVareNavn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVareNavn.Location = new System.Drawing.Point(71, 28);
             this.txtVareNavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -968,7 +969,7 @@ namespace LagerApp
             // intKodeStrek
             // 
             this.intKodeStrek.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.intKodeStrek.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intKodeStrek.IntegerValue = ((long)(1));
             this.intKodeStrek.Location = new System.Drawing.Point(71, 60);
@@ -1247,7 +1248,7 @@ namespace LagerApp
             // 
             // textBoxExt5
             // 
-            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt5.Location = new System.Drawing.Point(95, 102);
             this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1259,7 +1260,7 @@ namespace LagerApp
             // 
             // textBoxExt4
             // 
-            this.textBoxExt4.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt4.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt4.Location = new System.Drawing.Point(95, 76);
             this.textBoxExt4.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1271,7 +1272,7 @@ namespace LagerApp
             // 
             // textBoxExt3
             // 
-            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt3.Location = new System.Drawing.Point(95, 50);
             this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1283,7 +1284,7 @@ namespace LagerApp
             // 
             // textBoxExt2
             // 
-            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt2.Location = new System.Drawing.Point(95, 24);
             this.textBoxExt2.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1339,6 +1340,7 @@ namespace LagerApp
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.buttonAdv1);
             this.groupBox6.Controls.Add(this.comboBox2);
             this.groupBox6.Controls.Add(this.comboBox1);
             this.groupBox6.Controls.Add(this.label8);
@@ -1364,94 +1366,64 @@ namespace LagerApp
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Endre bruker";
             // 
-            // cmbUsrEndre
+            // comboBox2
             // 
-            this.cmbUsrEndre.FormattingEnabled = true;
-            this.cmbUsrEndre.Location = new System.Drawing.Point(6, 46);
-            this.cmbUsrEndre.Name = "cmbUsrEndre";
-            this.cmbUsrEndre.Size = new System.Drawing.Size(141, 21);
-            this.cmbUsrEndre.TabIndex = 12;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(300, 78);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 28;
             // 
-            // cmbEndreUsrKontor
+            // comboBox1
             // 
-            this.cmbEndreUsrKontor.FormattingEnabled = true;
-            this.cmbEndreUsrKontor.Items.AddRange(new object[] {
-            "Trondheim",
-            "Oslo",
-            "Stavanger"});
-            this.cmbEndreUsrKontor.Location = new System.Drawing.Point(6, 19);
-            this.cmbEndreUsrKontor.Name = "cmbEndreUsrKontor";
-            this.cmbEndreUsrKontor.Size = new System.Drawing.Size(141, 21);
-            this.cmbEndreUsrKontor.TabIndex = 11;
-            this.cmbEndreUsrKontor.Text = "Velg Kontor";
-            this.cmbEndreUsrKontor.SelectedIndexChanged += new System.EventHandler(this.cmbEndreUsrKontor_SelectedIndexChanged);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(300, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 27;
             // 
-            // toolStripEx2
+            // label8
             // 
-            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx2.Image = null;
-            this.toolStripEx2.Location = new System.Drawing.Point(0, 0);
-            this.toolStripEx2.Name = "toolStripEx2";
-            this.toolStripEx2.Office12Mode = false;
-            this.toolStripEx2.Size = new System.Drawing.Size(760, 40);
-            this.toolStripEx2.TabIndex = 0;
-            this.toolStripEx2.Text = "Brukere";
-            this.toolStripEx2.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(287, 105);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Kontor:";
             // 
-            // label1
+            // textBoxExt11
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Brukernavn:";
+            this.textBoxExt11.BeforeTouchSize = new System.Drawing.Size(121, 20);
+            this.textBoxExt11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt11.Location = new System.Drawing.Point(300, 35);
+            this.textBoxExt11.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt11.Name = "textBoxExt11";
+            this.textBoxExt11.Size = new System.Drawing.Size(121, 20);
+            this.textBoxExt11.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt11.TabIndex = 24;
+            this.textBoxExt11.Text = "textBoxExt11";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Gammelt Passord:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(287, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Stilling:";
             // 
-            // textBoxExt6
+            // label6
             // 
-            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(114, 20);
-            this.textBoxExt6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxExt6.Location = new System.Drawing.Point(166, 35);
-            this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt6.Name = "textBoxExt6";
-            this.textBoxExt6.Size = new System.Drawing.Size(114, 20);
-            this.textBoxExt6.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.textBoxExt6.TabIndex = 15;
-            this.textBoxExt6.Text = "textBoxExt6";
-            // 
-            // textBoxExt7
-            // 
-            this.textBoxExt7.BeforeTouchSize = new System.Drawing.Size(114, 20);
-            this.textBoxExt7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxExt7.Location = new System.Drawing.Point(166, 78);
-            this.textBoxExt7.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt7.Name = "textBoxExt7";
-            this.textBoxExt7.Size = new System.Drawing.Size(114, 20);
-            this.textBoxExt7.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.textBoxExt7.TabIndex = 16;
-            this.textBoxExt7.Text = "textBoxExt7";
-            // 
-            // lstUsrEndreNfo
-            // 
-            this.lstUsrEndreNfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstUsrEndreNfo.FormattingEnabled = true;
-            this.lstUsrEndreNfo.Location = new System.Drawing.Point(6, 73);
-            this.lstUsrEndreNfo.Name = "lstUsrEndreNfo";
-            this.lstUsrEndreNfo.Size = new System.Drawing.Size(141, 130);
-            this.lstUsrEndreNfo.TabIndex = 17;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(287, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Ny Epost:";
             // 
             // textBoxExt8
             // 
-            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt8.Location = new System.Drawing.Point(166, 164);
             this.textBoxExt8.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1463,7 +1435,7 @@ namespace LagerApp
             // 
             // textBoxExt9
             // 
-            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(121, 20);
             this.textBoxExt9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt9.Location = new System.Drawing.Point(166, 121);
             this.textBoxExt9.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1491,60 +1463,106 @@ namespace LagerApp
             this.label4.TabIndex = 18;
             this.label4.Text = "Nytt Passord:";
             // 
-            // textBoxExt11
+            // lstUsrEndreNfo
             // 
-            this.textBoxExt11.BeforeTouchSize = new System.Drawing.Size(114, 20);
-            this.textBoxExt11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxExt11.Location = new System.Drawing.Point(300, 35);
-            this.textBoxExt11.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt11.Name = "textBoxExt11";
-            this.textBoxExt11.Size = new System.Drawing.Size(114, 20);
-            this.textBoxExt11.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.textBoxExt11.TabIndex = 24;
-            this.textBoxExt11.Text = "textBoxExt11";
+            this.lstUsrEndreNfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstUsrEndreNfo.FormattingEnabled = true;
+            this.lstUsrEndreNfo.Location = new System.Drawing.Point(6, 73);
+            this.lstUsrEndreNfo.Name = "lstUsrEndreNfo";
+            this.lstUsrEndreNfo.Size = new System.Drawing.Size(141, 130);
+            this.lstUsrEndreNfo.TabIndex = 17;
             // 
-            // label5
+            // textBoxExt7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(287, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Stilling:";
+            this.textBoxExt7.BeforeTouchSize = new System.Drawing.Size(121, 20);
+            this.textBoxExt7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt7.Location = new System.Drawing.Point(166, 78);
+            this.textBoxExt7.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt7.Name = "textBoxExt7";
+            this.textBoxExt7.Size = new System.Drawing.Size(114, 20);
+            this.textBoxExt7.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt7.TabIndex = 16;
+            this.textBoxExt7.Text = "textBoxExt7";
             // 
-            // label6
+            // textBoxExt6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(287, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Ny Epost:";
+            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(121, 20);
+            this.textBoxExt6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxExt6.Location = new System.Drawing.Point(166, 35);
+            this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt6.Name = "textBoxExt6";
+            this.textBoxExt6.Size = new System.Drawing.Size(114, 20);
+            this.textBoxExt6.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.textBoxExt6.TabIndex = 15;
+            this.textBoxExt6.Text = "textBoxExt6";
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(287, 105);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Kontor:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(153, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Gammelt Passord:";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(300, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 27;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(153, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Brukernavn:";
             // 
-            // comboBox2
+            // cmbUsrEndre
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(300, 78);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 28;
+            this.cmbUsrEndre.FormattingEnabled = true;
+            this.cmbUsrEndre.Location = new System.Drawing.Point(6, 46);
+            this.cmbUsrEndre.Name = "cmbUsrEndre";
+            this.cmbUsrEndre.Size = new System.Drawing.Size(141, 21);
+            this.cmbUsrEndre.TabIndex = 12;
+            this.cmbUsrEndre.SelectedIndexChanged += new System.EventHandler(this.cmbUsrEndre_SelectedIndexChanged);
+            // 
+            // cmbEndreUsrKontor
+            // 
+            this.cmbEndreUsrKontor.FormattingEnabled = true;
+            this.cmbEndreUsrKontor.Items.AddRange(new object[] {
+            "Trondheim",
+            "Oslo",
+            "Stavanger"});
+            this.cmbEndreUsrKontor.Location = new System.Drawing.Point(6, 19);
+            this.cmbEndreUsrKontor.Name = "cmbEndreUsrKontor";
+            this.cmbEndreUsrKontor.Size = new System.Drawing.Size(141, 21);
+            this.cmbEndreUsrKontor.TabIndex = 11;
+            this.cmbEndreUsrKontor.Text = "Velg Kontor";
+            this.cmbEndreUsrKontor.SelectedIndexChanged += new System.EventHandler(this.cmbEndreUsrKontor_SelectedIndexChanged);
+            // 
+            // toolStripEx2
+            // 
+            this.toolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx2.Image = null;
+            this.toolStripEx2.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEx2.Name = "toolStripEx2";
+            this.toolStripEx2.Office12Mode = false;
+            this.toolStripEx2.Size = new System.Drawing.Size(760, 40);
+            this.toolStripEx2.TabIndex = 0;
+            this.toolStripEx2.Text = "Brukere";
+            this.toolStripEx2.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
+            // 
+            // buttonAdv1
+            // 
+            this.buttonAdv1.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.buttonAdv1.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(87, 30);
+            this.buttonAdv1.ForeColor = System.Drawing.Color.Black;
+            this.buttonAdv1.IsBackStageButton = false;
+            this.buttonAdv1.Location = new System.Drawing.Point(334, 154);
+            this.buttonAdv1.MetroColor = System.Drawing.SystemColors.Control;
+            this.buttonAdv1.Name = "buttonAdv1";
+            this.buttonAdv1.Size = new System.Drawing.Size(87, 30);
+            this.buttonAdv1.TabIndex = 29;
+            this.buttonAdv1.Text = "Endre Bruker";
+            this.buttonAdv1.UseVisualStyle = true;
             // 
             // frmLagerApp
             // 
@@ -1633,11 +1651,11 @@ namespace LagerApp
             this.tabEditUsr.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1743,5 +1761,6 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
     }
 }

@@ -534,5 +534,48 @@ namespace LagerApp
                 dt.Dispose();
             }
         }
+
+        private void cmbUsrEndre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                dt = DB.Select("SELECT * FROM Brukere WHERE brukernavn='" + cmbUsrEndre.SelectedItem.ToString() + "'");
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    lstUsrEndreNfo.Items.Add("Brukernavn: " + row.Field<string>(1));
+                    lstUsrEndreNfo.Items.Add("Bruker ID: " + row.Field<int>(0));
+                    lstUsrEndreNfo.Items.Add("Epost: " + row.Field<string>(4));
+
+                    switch (row.Field<int>(5))
+                    {
+                        case 1:
+                            lstUsrEndreNfo.Items.Add("Kontor: Trondheim");
+                            break;
+                        case 2:
+                            lstUsrEndreNfo.Items.Add("Kontor: Oslo");
+                            break;
+                        case 3:
+                            lstUsrEndreNfo.Items.Add("Kontor: Stavanger");
+                            break;
+                        default:
+                            lstUsrEndreNfo.Items.Add("Kontor: N/A");
+                            break;
+                    }
+
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dt.Dispose();
+            }
+        }
     }
 }
