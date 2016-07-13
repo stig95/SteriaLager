@@ -1,0 +1,14 @@
+Disclaimer
+
+This software is written for Sopra Steria Trondheim as pro-bono.
+"Freelance" for Sopra Steria Trondheim
+
+Simply put:
+
+	This code & it's compiled .exe & .dll's is not yours to modify in any way,
+	it belongs to Joachim F. Stamnes & Stig K. Rothaug.
+
+	The only allowed users of this program is the head of Sopra Steria Trondheim
+	and he's approved co-workers.
+
+	If changes want to be made please contact one of the creators and an appointment can be made.
