@@ -499,6 +499,10 @@ namespace LagerApp
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                UsrNfo();
+            }
             
             
         }
