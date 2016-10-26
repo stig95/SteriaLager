@@ -704,7 +704,7 @@ namespace LagerApp
 
         private void cmbEndreVare_SelectedIndexChanged(object sender, EventArgs e)
         {
-                switch (cmbEndreLager.SelectedIndex)
+                switch (cmbEndreVare.SelectedIndex)
             {
                 case 0: //Trondheim
                     lstVareEndre.Items.Clear();
@@ -736,11 +736,59 @@ namespace LagerApp
 
                     break;
                 case 1: //Stavanger
+                    lstVareEndre.Items.Clear();
+                    DataTable dt2 = new DataTable();
 
+                    try
+                    {
+                        dt2 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
+
+                        foreach (DataRow row in dt2.Rows)
+                        {
+                            MessageBox.Show(Convert.ToString(row));
+
+                            foreach (DataColumn column in dt2.Columns)
+                            {
+                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt2.Dispose();
+                    }
 
                     break;
                 case 2: // oslo
+                    lstVareEndre.Items.Clear();
+                    DataTable dt3 = new DataTable();
 
+                    try
+                    {
+                        dt3 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
+
+                        foreach (DataRow row in dt3.Rows)
+                        {
+                            MessageBox.Show(Convert.ToString(row));
+
+                            foreach (DataColumn column in dt3.Columns)
+                            {
+                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt3.Dispose();
+                    }
 
                     break;
                 default:
