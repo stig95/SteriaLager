@@ -661,7 +661,7 @@ namespace LagerApp
                     DataTable dt5 = new DataTable();
                     try
                     {
-                        dt2 = DB.Select("SELECT `navn` FROM `VareStavanger`");
+                        dt2 = DB.Select("SELECT `navn` FROM `VareOslo`");
 
                         foreach (DataRow row in dt2.Rows)
                         {
@@ -670,13 +670,12 @@ namespace LagerApp
                                 cmbEndreVare.Items.Add(Convert.ToString(row[column]));
                             }
                         }
-                            dt5 = DB.Select("SELECT navn, Strekkode, antall from `VareStavanger`");
+                            dt5 = DB.Select("SELECT navn, Strekkode, antall from `VareOslo`");
 
                             foreach (DataRow row in dt5.Rows)
                             {
                                 foreach (DataColumn column in dt5.Columns)
                                 {
-
                                     lstVareEndre.Items.Add(Convert.ToString(row[column]));
                                 }
                             }
@@ -690,9 +689,10 @@ namespace LagerApp
                     finally
                     {
                         dt2.Dispose();
+                        dt5.Dispose();
                     }
                     break;
-                case 2: // oslo
+                case 2: // Stavanger
                     cmbEndreVare.Items.Clear();
                     lstVareEndre.Items.Clear();
                     DataTable dt3 = new DataTable();
@@ -700,7 +700,7 @@ namespace LagerApp
 
                     try
                     {
-                        dt3 = DB.Select("SELECT `navn` FROM `VareOslo`");
+                        dt3 = DB.Select("SELECT `navn` FROM `VareStavanger`");
 
                         foreach (DataRow row in dt3.Rows)
                         {
@@ -710,7 +710,7 @@ namespace LagerApp
                             }
                         }
 
-                        dt6 = DB.Select("SELECT navn, Strekkode, antall from `VareOslo`");
+                        dt6 = DB.Select("SELECT navn, Strekkode, antall from `VareStavanger`");
 
                         foreach (DataRow row in dt6.Rows)
                         {
@@ -730,6 +730,7 @@ namespace LagerApp
                     finally
                     {
                         dt3.Dispose();
+                        dt6.Dispose();
                     }
                     break;
                     
@@ -753,10 +754,6 @@ namespace LagerApp
 
                         foreach (DataRow row in dt.Rows)
                         {
-                            MessageBox.Show(row.Field<string>(0));
-                            MessageBox.Show(row.Field<string>(1));
-                            MessageBox.Show(Convert.ToString(row));
-
                             foreach (DataColumn column in dt.Columns)
                             {
                                 lstVareEndre.Items.Add(Convert.ToString(row[column]));
@@ -780,13 +777,10 @@ namespace LagerApp
 
                     try
                     {
-                        dt2 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
+                        dt2 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
 
                         foreach (DataRow row in dt2.Rows)
                         {
-                            MessageBox.Show(row.Field<string>(0));
-                            MessageBox.Show(row.Field<string>(1));
-
                             foreach (DataColumn column in dt2.Columns)
                             {
                                 lstVareEndre.Items.Add(Convert.ToString(row[column]));
@@ -809,7 +803,7 @@ namespace LagerApp
 
                     try
                     {
-                        dt3 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
+                        dt3 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
 
                         foreach (DataRow row in dt3.Rows)
                         {
@@ -851,95 +845,42 @@ namespace LagerApp
             switch (cmbEndreLager.SelectedIndex)
             {
                 case 0: //Trondheim
+                    cmbEndreVare.Items.Clear();
                     lstVareEndre.Items.Clear();
                     cmbEndreLager.Items.Clear();
                     lstVareEndre.Items.Clear();
-                    DataTable dt = new DataTable();
-                    try
-                    {
-                        dt = DB.Update("'UPDATE VareTrondheim SET navn = "'nyNavn.Text'");
+                    nyAnt.Clear();
+                    nyNavn.Clear();
+                    nyStrek.Clear();
 
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            MessageBox.Show(row.Field<string>(0));
-                            MessageBox.Show(row.Field<string>(1));
-                            MessageBox.Show(Convert.ToString(row));
-
-                            foreach (DataColumn column in dt.Columns)
-                            {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt.Dispose();
-                    }
-
+                    DB.Update("UPDATE VareTrondheim SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
 
                     break;
-                case 1: //Stavanger
+                case 1: //Oslo
+                    cmbEndreVare.Items.Clear();
                     lstVareEndre.Items.Clear();
-                    DataTable dt2 = new DataTable();
-
-                    try
-                    {
-                        dt2 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
-
-                        foreach (DataRow row in dt2.Rows)
-                        {
-                            MessageBox.Show(row.Field<string>(0));
-                            MessageBox.Show(row.Field<string>(1));
-
-                            foreach (DataColumn column in dt2.Columns)
-                            {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt2.Dispose();
-                    }
-
-                    break;
-                case 2: // oslo
+                    cmbEndreLager.Items.Clear();
                     lstVareEndre.Items.Clear();
-                    DataTable dt3 = new DataTable();
+                    nyAnt.Clear();
+                    nyNavn.Clear();
+                    nyStrek.Clear();
 
-                    try
-                    {
-                        dt3 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
-
-                        foreach (DataRow row in dt3.Rows)
-                        {
-                            MessageBox.Show(Convert.ToString(row));
-
-                            foreach (DataColumn column in dt3.Columns)
-                            {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt3.Dispose();
-                    }
+                    DB.Update("UPDATE VareOslo SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
 
                     break;
-                default:
+                    case 2: // Stavanger
+                    cmbEndreVare.Items.Clear();
+                    lstVareEndre.Items.Clear();
+                    cmbEndreLager.Items.Clear();
+                    lstVareEndre.Items.Clear();
+                    nyAnt.Clear();
+                    nyNavn.Clear();
+                    nyStrek.Clear();
+
+                   
+                    DB.Update("UPDATE VareStavanger SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+                    break;
+                  default:
                     //Skriv error
                     break;
             }
