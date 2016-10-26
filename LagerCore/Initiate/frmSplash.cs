@@ -81,7 +81,7 @@ namespace LagerCore.Initiate
         private void frmSplash_Load(object sender, EventArgs e)
         {
             UpdateFormDisplay(BackgroundImage);
-            Log.Write.SetLogFile(logDir: ".\\Logfiles", prefix: "SSLagerLogg_", writeText: false);
+            Log.Write.SetLogFile(logDir: ".\\data\\Logging", prefix: "SSLagerLogg_", writeText: false);
 
             Log.Write.Info("Splashscreen Loading - Logging initiated");
 

@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace LagerCore.Database
 {
-    internal class DBCon
+    public class DBCon
     {
         private MySqlConnection con;
         private string server;

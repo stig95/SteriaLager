@@ -35,7 +35,7 @@ namespace LagerMain.Login
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            
+            LagerCore.Initiate.File.DBRead.InitDBRead();
         }
     }
 }
