@@ -582,9 +582,15 @@ namespace LagerApp
             }
         }
 
-        private void cmbEndreLager_Click(object sender, EventArgs e)
+        private void cmbEndreLager_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
 
+            try
+            {
+                dt = DB.Select("SELECT by FROM kontor");
+
+            }
         }
     }
 }
