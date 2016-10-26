@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace LagerCore.Initiate.File
@@ -52,7 +53,7 @@ namespace LagerCore.Initiate.File
                     UID = dec.ElementAt<string>(5);
                     PW = dec.ElementAt<string>(7);
 
-                    Log.Write.Info("Read from LagerApp Config file - Variables Ready for use");
+                    Log.Write.Info("Read from TIHLDE Config file - Variables Ready for use");
                 }
             }
             catch (Exception ex)
@@ -84,6 +85,11 @@ namespace LagerCore.Initiate.File
         {
             get { return _UID; }
             set { _UID = value; }
+        }
+
+        private static string Clean(string s)
+        {
+            return Regex.Replace(s, " ", string.Empty);
         }
     }
 }

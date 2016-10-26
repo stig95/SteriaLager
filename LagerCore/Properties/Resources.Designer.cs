@@ -61,11 +61,151 @@ namespace LagerCore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3p!G^G#qZjEG^xRxKdAWE@nQ8v@mf8F5gJTrs68?4&amp;@7uq-+Y^w+EK%9RKt5RXNea^jph99TR?h6rmy8TE@ft+a#uYsKg$@Xb7k?sxC*W__FNBy6_e9xZ&amp;WE_=ktfTs3c%@CzJuswB@#Xxf_@e!VTNg3&amp;+9apk4rAtRtXD2YYT_UmD-B!Wfr9HP35nDaPujX7YgcQMLyQWSL4K^gR3!3Ku2m55=kqQeA_H!ngg8e_Mn#KEyx-Y-zjufZ*!#9yXLX.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editVare {
+            get {
+                object obj = ResourceManager.GetObject("editVare", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frmSplashBG {
+            get {
+                object obj = ResourceManager.GetObject("frmSplashBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to penis.
         /// </summary>
         internal static string key {
             get {
                 return ResourceManager.GetString("key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap overview {
+            get {
+                object obj = ResourceManager.GetObject("overview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh {
+            get {
+                object obj = ResourceManager.GetObject("refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssLoginRight {
+            get {
+                object obj = ResourceManager.GetObject("ssLoginRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sslogo {
+            get {
+                object obj = ResourceManager.GetObject("sslogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ssLogoTop {
+            get {
+                object obj = ResourceManager.GetObject("ssLogoTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sslogotransparent {
+            get {
+                object obj = ResourceManager.GetObject("sslogotransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap storage {
+            get {
+                object obj = ResourceManager.GetObject("storage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Add {
+            get {
+                object obj = ResourceManager.GetObject("User_Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Modify {
+            get {
+                object obj = ResourceManager.GetObject("User_Modify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userOverview {
+            get {
+                object obj = ResourceManager.GetObject("userOverview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usrForgotPW {
+            get {
+                object obj = ResourceManager.GetObject("usrForgotPW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

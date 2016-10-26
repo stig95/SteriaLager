@@ -39,22 +39,23 @@ namespace LagerMain.Login
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mainContainer = new System.Windows.Forms.Panel();
-            this.txtBrukernavn = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
             this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtPassord = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtBrukernavn = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStripEx1.SuspendLayout();
             this.mainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBrukernavn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBrukernavn)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripEx1
@@ -83,11 +84,21 @@ namespace LagerMain.Login
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel3
             // 
@@ -115,18 +126,9 @@ namespace LagerMain.Login
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // mainContainer
             // 
+            this.mainContainer.Controls.Add(this.richTextBox1);
             this.mainContainer.Controls.Add(this.btnLogin);
             this.mainContainer.Controls.Add(this.autoLabel2);
             this.mainContainer.Controls.Add(this.txtPassord);
@@ -138,25 +140,21 @@ namespace LagerMain.Login
             this.mainContainer.Size = new System.Drawing.Size(529, 144);
             this.mainContainer.TabIndex = 1;
             // 
-            // txtBrukernavn
+            // btnLogin
             // 
-            this.txtBrukernavn.BeforeTouchSize = new System.Drawing.Size(296, 23);
-            this.txtBrukernavn.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBrukernavn.Location = new System.Drawing.Point(32, 29);
-            this.txtBrukernavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtBrukernavn.Name = "txtBrukernavn";
-            this.txtBrukernavn.Size = new System.Drawing.Size(296, 23);
-            this.txtBrukernavn.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.txtBrukernavn.TabIndex = 0;
-            this.txtBrukernavn.Text = "textBoxExt1";
-            // 
-            // autoLabel1
-            // 
-            this.autoLabel1.Location = new System.Drawing.Point(12, 11);
-            this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(70, 15);
-            this.autoLabel1.TabIndex = 1;
-            this.autoLabel1.Text = "Br&ukernavn:";
+            this.btnLogin.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.BeforeTouchSize = new System.Drawing.Size(88, 30);
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.IsBackStageButton = false;
+            this.btnLogin.KeepFocusRectangle = false;
+            this.btnLogin.Location = new System.Drawing.Point(240, 102);
+            this.btnLogin.MetroColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(88, 30);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Logg inn";
+            this.btnLogin.UseVisualStyle = true;
             // 
             // autoLabel2
             // 
@@ -178,21 +176,33 @@ namespace LagerMain.Login
             this.txtPassord.TabIndex = 2;
             this.txtPassord.Text = "textBoxExt2";
             // 
-            // btnLogin
+            // autoLabel1
             // 
-            this.btnLogin.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.BeforeTouchSize = new System.Drawing.Size(88, 30);
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.IsBackStageButton = false;
-            this.btnLogin.KeepFocusRectangle = false;
-            this.btnLogin.Location = new System.Drawing.Point(240, 102);
-            this.btnLogin.MetroColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(88, 30);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Logg inn";
-            this.btnLogin.UseVisualStyle = true;
+            this.autoLabel1.Location = new System.Drawing.Point(12, 11);
+            this.autoLabel1.Name = "autoLabel1";
+            this.autoLabel1.Size = new System.Drawing.Size(70, 15);
+            this.autoLabel1.TabIndex = 1;
+            this.autoLabel1.Text = "Br&ukernavn:";
+            // 
+            // txtBrukernavn
+            // 
+            this.txtBrukernavn.BeforeTouchSize = new System.Drawing.Size(296, 23);
+            this.txtBrukernavn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBrukernavn.Location = new System.Drawing.Point(32, 29);
+            this.txtBrukernavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtBrukernavn.Name = "txtBrukernavn";
+            this.txtBrukernavn.Size = new System.Drawing.Size(296, 23);
+            this.txtBrukernavn.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.txtBrukernavn.TabIndex = 0;
+            this.txtBrukernavn.Text = "textBoxExt1";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(334, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(192, 129);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
             // 
             // frmLogin
             // 
@@ -216,8 +226,8 @@ namespace LagerMain.Login
             this.toolStripEx1.PerformLayout();
             this.mainContainer.ResumeLayout(false);
             this.mainContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBrukernavn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBrukernavn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +249,6 @@ namespace LagerMain.Login
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtBrukernavn;
         private Syncfusion.Windows.Forms.ButtonAdv btnLogin;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

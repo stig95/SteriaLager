@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using MySql.Data;
 using System.Net.NetworkInformation;
 using System.Data;
 using System.IO;
@@ -12,19 +13,19 @@ using System.Diagnostics;
 
 namespace LagerCore.Database
 {
-    public class DBCon
+    public class Connect
     {
-        private MySqlConnection con;
+        private MySqlConnection con = new MySqlConnection();
         private string server;
         private string database;
         private string uid;
         private string password;
 
-        public DBCon(string _server, string _db, string _uid, string _pwd)
+        public Connect()
         {
             try
             {
-                Initialize(_server, _db, _uid, _pwd);
+                Initialize();
             }
             catch (Exception e)
             {
@@ -35,17 +36,30 @@ namespace LagerCore.Database
         }
 
         //Initialize values
-        private void Initialize(string _server, string _db, string _uid, string _pwd)
+        private void Initialize()
         {
-            server = _server;
-            database = _db;
-            uid = _uid;
-            password = _pwd;
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            server = LagerCore.Initiate.File.DBRead.Server;
+            database = LagerCore.Initiate.File.DBRead.DB;
+            uid = LagerCore.Initiate.File.DBRead.UID;
+            password = LagerCore.Initiate.File.DBRead.PW;
 
-            con = new MySqlConnection(connectionString);
+            //server = "colargol.tihlde.org";
+            //database = "stigkr";
+            //uid = "stigkr";
+            //password = "Test123";
+
+            string connectionString;
+            //connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            //database + ";" + "UID=" + uid + ";" + "Password=" + password + ";";
+
+            connectionString = "server = " + server + ";" +
+                               "database = " + database + ";" +
+                               "uid = " + uid + ";" +
+                               "password = " + password + ";";
+
+            //con = new MySqlConnection(connectionString);
+
+            con.ConnectionString = connectionString;
 
             Log.Write.Info("Initializes connection to database " + server);
         }
@@ -151,7 +165,10 @@ namespace LagerCore.Database
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.InnerException.ToString());
+                MessageBox.Show(ex.Data.ToString());
                 return "Unable to retrieve DBv" + Environment.NewLine + ex.Message;
+                
                 throw;
             }
             finally

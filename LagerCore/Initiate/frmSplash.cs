@@ -17,6 +17,7 @@ namespace LagerCore.Initiate
         public frmSplash()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         #region Egendefinert 'Paint'
@@ -83,6 +84,8 @@ namespace LagerCore.Initiate
             UpdateFormDisplay(BackgroundImage);
             Log.Write.SetLogFile(logDir: ".\\data\\Logging", prefix: "SSLagerLogg_", writeText: false);
 
+            LagerCore.Initiate.StartUp.Run();
+            
             Log.Write.Info("Splashscreen Loading - Logging initiated");
 
         }
