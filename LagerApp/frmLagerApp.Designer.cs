@@ -151,6 +151,13 @@ namespace LagerApp
             this.cmbEndreUsrKontor = new System.Windows.Forms.ComboBox();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.autoCompleteEndreVare = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nyAnt = new System.Windows.Forms.TextBox();
+            this.nyStrek = new System.Windows.Forms.TextBox();
+            this.nyNavn = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabOverview.SuspendLayout();
@@ -827,7 +834,7 @@ namespace LagerApp
             // 
             this.cmbLager.AllowNewText = false;
             this.cmbLager.BackColor = System.Drawing.Color.White;
-            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLager.Items.AddRange(new object[] {
             "Trondheim",
@@ -835,7 +842,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLager.Location = new System.Drawing.Point(56, 27);
             this.cmbLager.Name = "cmbLager";
-            this.cmbLager.Size = new System.Drawing.Size(146, 21);
+            this.cmbLager.Size = new System.Drawing.Size(146, 19);
             this.cmbLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLager.TabIndex = 7;
             this.cmbLager.SelectedValueChanged += new System.EventHandler(this.cmbLager_SelectedValueChanged);
@@ -860,11 +867,11 @@ namespace LagerApp
             // 
             this.cmbVare.AllowNewText = false;
             this.cmbVare.BackColor = System.Drawing.Color.White;
-            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVare.Location = new System.Drawing.Point(56, 54);
             this.cmbVare.Name = "cmbVare";
-            this.cmbVare.Size = new System.Drawing.Size(146, 21);
+            this.cmbVare.Size = new System.Drawing.Size(146, 19);
             this.cmbVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbVare.TabIndex = 9;
             this.cmbVare.SelectedValueChanged += new System.EventHandler(this.cmbVare_SelectedValueChanged);
@@ -950,7 +957,7 @@ namespace LagerApp
             // cmbLagerAddVare
             // 
             this.cmbLagerAddVare.BackColor = System.Drawing.Color.White;
-            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLagerAddVare.Items.AddRange(new object[] {
             "Trondheim",
@@ -958,7 +965,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLagerAddVare.Location = new System.Drawing.Point(71, 126);
             this.cmbLagerAddVare.Name = "cmbLagerAddVare";
-            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLagerAddVare.TabIndex = 9;
             // 
@@ -1016,6 +1023,13 @@ namespace LagerApp
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.nyNavn);
+            this.groupBox4.Controls.Add(this.nyStrek);
+            this.groupBox4.Controls.Add(this.nyAnt);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.lstVareEndre);
             this.groupBox4.Controls.Add(this.autoLabel9);
             this.groupBox4.Controls.Add(this.cmbEndreLager);
@@ -1038,6 +1052,7 @@ namespace LagerApp
             this.lstVareEndre.Name = "lstVareEndre";
             this.lstVareEndre.Size = new System.Drawing.Size(196, 198);
             this.lstVareEndre.TabIndex = 15;
+            this.lstVareEndre.SelectedIndexChanged += new System.EventHandler(this.lstVareEndre_SelectedIndexChanged);
             // 
             // autoLabel9
             // 
@@ -1102,29 +1117,29 @@ namespace LagerApp
             // tbLagerTsTrd
             // 
             this.tbLagerTsTrd.Name = "tbLagerTsTrd";
-            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 37);
+            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 22);
             this.tbLagerTsTrd.Text = "Trondheim Lager";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(63, 37);
+            this.toolStripLabel2.Size = new System.Drawing.Size(63, 22);
             this.toolStripLabel2.Text = "Oslo Lager";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(91, 37);
+            this.toolStripLabel3.Size = new System.Drawing.Size(91, 22);
             this.toolStripLabel3.Text = "Stavanger Lager";
             // 
             // tabUser
@@ -1592,6 +1607,64 @@ namespace LagerApp
             this.autoCompleteEndreVare.ParentForm = this;
             this.autoCompleteEndreVare.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Metro;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Endre vare";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Nytt navn";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Ny Strekkode";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Nytt antall";
+            // 
+            // nyAnt
+            // 
+            this.nyAnt.Location = new System.Drawing.Point(76, 135);
+            this.nyAnt.Name = "nyAnt";
+            this.nyAnt.Size = new System.Drawing.Size(100, 20);
+            this.nyAnt.TabIndex = 20;
+            // 
+            // nyStrek
+            // 
+            this.nyStrek.Location = new System.Drawing.Point(83, 108);
+            this.nyStrek.Name = "nyStrek";
+            this.nyStrek.Size = new System.Drawing.Size(100, 20);
+            this.nyStrek.TabIndex = 21;
+            // 
+            // nyNavn
+            // 
+            this.nyNavn.Location = new System.Drawing.Point(76, 83);
+            this.nyNavn.Name = "nyNavn";
+            this.nyNavn.Size = new System.Drawing.Size(100, 20);
+            this.nyNavn.TabIndex = 22;
+            // 
             // frmLagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1793,5 +1866,12 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoCompleteEndreVare;
+        private System.Windows.Forms.TextBox nyNavn;
+        private System.Windows.Forms.TextBox nyStrek;
+        private System.Windows.Forms.TextBox nyAnt;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
