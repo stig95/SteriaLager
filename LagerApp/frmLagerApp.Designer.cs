@@ -1053,15 +1053,12 @@ namespace LagerApp
             this.cmbEndreLager.BackColor = System.Drawing.Color.White;
             this.cmbEndreLager.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbEndreLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEndreLager.Items.AddRange(new object[] {
-            "Trondheim",
-            "Oslo",
-            "Stavanger"});
             this.cmbEndreLager.Location = new System.Drawing.Point(56, 17);
             this.cmbEndreLager.Name = "cmbEndreLager";
             this.cmbEndreLager.Size = new System.Drawing.Size(146, 19);
             this.cmbEndreLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbEndreLager.TabIndex = 11;
+            this.cmbEndreLager.Click += new System.EventHandler(this.cmbEndreLager_Click);
             // 
             // cmbEndreVare
             // 

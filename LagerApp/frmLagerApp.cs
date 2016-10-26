@@ -581,5 +581,10 @@ namespace LagerApp
                 dt.Dispose();
             }
         }
+
+        private void cmbEndreLager_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
