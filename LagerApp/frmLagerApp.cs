@@ -581,11 +581,5 @@ namespace LagerApp
                 dt.Dispose();
             }
         }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            frmReports rep = new frmReports();
-            rep.Show();
-        }
     }
 }

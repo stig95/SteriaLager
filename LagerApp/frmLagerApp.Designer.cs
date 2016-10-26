@@ -220,7 +220,7 @@ namespace LagerApp
             // 
             // tabControlAdv1
             // 
-            this.tabControlAdv1.ActiveTabColor = System.Drawing.SystemColors.Control;
+            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(775, 271);
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -232,10 +232,12 @@ namespace LagerApp
             this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.ImageAlignmentR = Syncfusion.Windows.Forms.Tools.RelativeImageAlignment.AboveText;
-            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.RotateTextWhenVertical = true;
+            this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv1.ShowSeparator = false;
             this.tabControlAdv1.Size = new System.Drawing.Size(775, 271);
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Transparent;
@@ -314,7 +316,7 @@ namespace LagerApp
             // 
             // tabControlAdv4
             // 
-            this.tabControlAdv4.ActiveTabColor = System.Drawing.SystemColors.Control;
+            this.tabControlAdv4.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv4.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlAdv4.BeforeTouchSize = new System.Drawing.Size(518, 224);
             this.tabControlAdv4.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -325,10 +327,12 @@ namespace LagerApp
             this.tabControlAdv4.Controls.Add(this.tabPageAdv3);
             this.tabControlAdv4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv4.FocusOnTabClick = false;
-            this.tabControlAdv4.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv4.InActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv4.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv4.Name = "tabControlAdv4";
             this.tabControlAdv4.RotateTextWhenVertical = true;
+            this.tabControlAdv4.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv4.ShowSeparator = false;
             this.tabControlAdv4.Size = new System.Drawing.Size(518, 224);
             this.tabControlAdv4.TabIndex = 0;
             this.tabControlAdv4.TabPanelBackColor = System.Drawing.Color.Transparent;
@@ -647,7 +651,6 @@ namespace LagerApp
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(126, 22);
             this.toolStripButton1.Text = "Rapportgenerering";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tabStorage
             // 
@@ -716,7 +719,7 @@ namespace LagerApp
             // cmbSokLager
             // 
             this.cmbSokLager.BackColor = System.Drawing.Color.White;
-            this.cmbSokLager.BeforeTouchSize = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.BeforeTouchSize = new System.Drawing.Size(156, 19);
             this.cmbSokLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSokLager.Items.AddRange(new object[] {
             "Trondheim",
@@ -724,7 +727,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbSokLager.Location = new System.Drawing.Point(52, 19);
             this.cmbSokLager.Name = "cmbSokLager";
-            this.cmbSokLager.Size = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.Size = new System.Drawing.Size(156, 19);
             this.cmbSokLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbSokLager.TabIndex = 13;
             // 
@@ -752,7 +755,7 @@ namespace LagerApp
             // 
             // tabControlAdv2
             // 
-            this.tabControlAdv2.ActiveTabColor = System.Drawing.SystemColors.Control;
+            this.tabControlAdv2.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv2.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlAdv2.BeforeTouchSize = new System.Drawing.Size(518, 224);
             this.tabControlAdv2.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -762,9 +765,11 @@ namespace LagerApp
             this.tabControlAdv2.Controls.Add(this.tabChange);
             this.tabControlAdv2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv2.FocusOnTabClick = false;
-            this.tabControlAdv2.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv2.InActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv2.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv2.Name = "tabControlAdv2";
+            this.tabControlAdv2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv2.ShowSeparator = false;
             this.tabControlAdv2.Size = new System.Drawing.Size(518, 224);
             this.tabControlAdv2.TabIndex = 0;
             this.tabControlAdv2.TabPanelBackColor = System.Drawing.Color.Transparent;
@@ -822,7 +827,7 @@ namespace LagerApp
             // 
             this.cmbLager.AllowNewText = false;
             this.cmbLager.BackColor = System.Drawing.Color.White;
-            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLager.Items.AddRange(new object[] {
             "Trondheim",
@@ -830,7 +835,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLager.Location = new System.Drawing.Point(56, 27);
             this.cmbLager.Name = "cmbLager";
-            this.cmbLager.Size = new System.Drawing.Size(146, 21);
+            this.cmbLager.Size = new System.Drawing.Size(146, 19);
             this.cmbLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLager.TabIndex = 7;
             this.cmbLager.SelectedValueChanged += new System.EventHandler(this.cmbLager_SelectedValueChanged);
@@ -855,11 +860,11 @@ namespace LagerApp
             // 
             this.cmbVare.AllowNewText = false;
             this.cmbVare.BackColor = System.Drawing.Color.White;
-            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVare.Location = new System.Drawing.Point(56, 54);
             this.cmbVare.Name = "cmbVare";
-            this.cmbVare.Size = new System.Drawing.Size(146, 21);
+            this.cmbVare.Size = new System.Drawing.Size(146, 19);
             this.cmbVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbVare.TabIndex = 9;
             this.cmbVare.SelectedValueChanged += new System.EventHandler(this.cmbVare_SelectedValueChanged);
@@ -945,7 +950,7 @@ namespace LagerApp
             // cmbLagerAddVare
             // 
             this.cmbLagerAddVare.BackColor = System.Drawing.Color.White;
-            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLagerAddVare.Items.AddRange(new object[] {
             "Trondheim",
@@ -953,7 +958,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLagerAddVare.Location = new System.Drawing.Point(71, 126);
             this.cmbLagerAddVare.Name = "cmbLagerAddVare";
-            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLagerAddVare.TabIndex = 9;
             // 
@@ -1099,29 +1104,29 @@ namespace LagerApp
             // tbLagerTsTrd
             // 
             this.tbLagerTsTrd.Name = "tbLagerTsTrd";
-            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 22);
+            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 37);
             this.tbLagerTsTrd.Text = "Trondheim Lager";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(63, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(63, 37);
             this.toolStripLabel2.Text = "Oslo Lager";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(91, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(91, 37);
             this.toolStripLabel3.Text = "Stavanger Lager";
             // 
             // tabUser
@@ -1168,7 +1173,7 @@ namespace LagerApp
             // 
             // tabControlAdv3
             // 
-            this.tabControlAdv3.ActiveTabColor = System.Drawing.SystemColors.Control;
+            this.tabControlAdv3.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv3.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlAdv3.BeforeTouchSize = new System.Drawing.Size(518, 224);
             this.tabControlAdv3.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -1178,9 +1183,11 @@ namespace LagerApp
             this.tabControlAdv3.Controls.Add(this.tabEditUsr);
             this.tabControlAdv3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv3.FocusOnTabClick = false;
-            this.tabControlAdv3.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.tabControlAdv3.InActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv3.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv3.Name = "tabControlAdv3";
+            this.tabControlAdv3.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv3.ShowSeparator = false;
             this.tabControlAdv3.Size = new System.Drawing.Size(518, 224);
             this.tabControlAdv3.TabIndex = 1;
             this.tabControlAdv3.TabPanelBackColor = System.Drawing.Color.Transparent;
