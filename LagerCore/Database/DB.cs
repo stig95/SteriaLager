@@ -1,40 +1,53 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System.Data;
-using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
 using System.Net.NetworkInformation;
+using System.Data;
+using System.IO;
+using System.Windows.Forms;
+using System.Diagnostics;
 
-namespace Core.DB
+namespace LagerCore.Database
 {
-    public class DBConnect : IDisposable
+    internal class DBCon
     {
-
         private MySqlConnection con;
         private string server;
         private string database;
         private string uid;
         private string password;
 
-        //Constructor
-        public DBConnect()
+        public DBCon(string _server, string _db, string _uid, string _pwd)
         {
-            Initialize();
+            try
+            {
+                Initialize(_server, _db, _uid, _pwd);
+            }
+            catch (Exception e)
+            {
+
+                Log.Write.Error(e.Message);
+            }
+            
         }
 
         //Initialize values
-        private void Initialize()
+        private void Initialize(string _server, string _db, string _uid, string _pwd)
         {
-            server = "colargol.tihlde.org";
-            database = "stigkr";
-            uid = "stigkr";
-            password = "Test123";
+            server = _server;
+            database = _db;
+            uid = _uid;
+            password = _pwd;
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-            
+
             con = new MySqlConnection(connectionString);
+
+            Log.Write.Info("Initializes connection to database " + server);
         }
 
         //open connection to database
@@ -43,11 +56,11 @@ namespace Core.DB
             try
             {
                 con.Open();
+                Log.Write.Info("Opening connection to " + server);
                 return true;
             }
             catch (MySqlException ex)
             {
-                //The two most common error numbers when connecting are as follows:
                 //0: Cannot connect to server.
                 //1045: Invalid user name and/or password.
                 switch (ex.Number)
@@ -60,6 +73,9 @@ namespace Core.DB
                         MessageBox.Show("Invalid username/password, please try again");
                         break;
                 }
+
+                Log.Write.Log(ex);
+
                 return false;
             }
         }
@@ -70,46 +86,17 @@ namespace Core.DB
             try
             {
                 con.Close();
+                Log.Write.Info("Closing connection to " + server);
                 return true;
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                Log.Write.Log(ex);
                 return false;
             }
         }
 
-        //PING
-
-        public int DBPing()
-        {
-            Ping p = new Ping();
-
-            return (int)p.Send(server).RoundtripTime;
-        }
-
-        //DB Version
-
-        public string DBv()
-        {
-            try
-            {
-                con.Open();
-
-                return con.ServerVersion;
-
-            }
-            catch (Exception ex)
-            {
-                return "Error: " + ex.HResult;
-                throw;
-            }
-            finally
-            {
-                con.Close();
-            }
-
-        }
+        //State statement
 
         public ConnectionState States()
         {
@@ -123,6 +110,48 @@ namespace Core.DB
                 Debug.Write(ex.Message);
 
                 return ConnectionState.Broken + ex.HResult;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        //PING
+
+        public int DBPing()
+        {
+            try
+            {
+                Ping pong = new Ping();
+                PingReply reply = pong.Send(server);
+
+                if (reply.Status == IPStatus.Success)
+                {
+                    return (int)reply.RoundtripTime;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Write.Log(ex);
+            }
+
+            return -1;
+        }
+
+        //DB Version
+
+        public string DBv()
+        {
+            try
+            {
+                con.Open();
+
+                return con.ServerVersion;
+            }
+            catch (Exception ex)
+            {
+                return "Unable to retrieve DBv" + Environment.NewLine + ex.Message;
                 throw;
             }
             finally
@@ -131,10 +160,11 @@ namespace Core.DB
             }
         }
 
-
         //Insert statement
         public void Insert(string query)
         {
+            //string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
+            Log.Write.Info("Running insert query for " + server);
             //open connection
             if (this.OpenConnection() == true)
             {
@@ -147,11 +177,15 @@ namespace Core.DB
                 //close connection
                 this.CloseConnection();
             }
+
+            Log.Write.Info("Finished insert query for " + server);
         }
 
         //Update statement
         public void Update(string query)
         {
+            //string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+            Log.Write.Info("Running update query for " + server);
             //Open connection
             if (this.OpenConnection() == true)
             {
@@ -162,28 +196,39 @@ namespace Core.DB
                 //Assign the connection using Connection
                 cmd.Connection = con;
 
-                //Execute
+                //Execute query
                 cmd.ExecuteNonQuery();
 
                 //close connection
                 this.CloseConnection();
             }
+
+            Log.Write.Info("Finished update query for " + server);
         }
 
         //Delete statement
         public void Delete(string query)
         {
+            //string query = "DELETE FROM tableinfo WHERE name='John Smith'";
+
+            Log.Write.Info("Running delete query for " + server);
+
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 this.CloseConnection();
             }
+
+            Log.Write.Info("Finished delete query for " + server);
         }
 
         //Select statement
         public DataTable Select(string query)
         {
+            //string query = "SELECT * FROM tableinfo";
+            Log.Write.Info("Running select query for " + server);
+            //Create a datatable to store the result
             DataTable dt = new DataTable();
 
             //Open connection
@@ -194,20 +239,36 @@ namespace Core.DB
                 //Create a data reader and Execute the command
                 //MySqlDataReader dataReader = cmd.ExecuteReader();
                 MySqlDataAdapter da = new MySqlDataAdapter();
-                
+
+                //Read the data and store them in the list
+                //while (dataReader.Read())
+                //{
+                //    list[0].Add(dataReader["id"] + "");
+                //    list[1].Add(dataReader["name"] + "");
+                //    list[2].Add(dataReader["age"] + "");
+                //}
+
                 da.SelectCommand = cmd;
                 da.Fill(dt);
-                 
+
+                //close Data Reader
+                //dataReader.Close();
+
                 //close Connection
                 this.CloseConnection();
 
-                //return dt to be displayed
+                //return list to be displayed
+
+                Log.Write.Info("Finished select query for " + server);
+
                 return dt;
             }
             else
             {
                 dt.Columns.Add("Error", typeof(string));
                 dt.Rows.Add("Unable to retrieve database info");
+
+                Log.Write.Error("(Failed to retrieve) Finished insert query for " + server);
                 return dt;
             }
         }
@@ -215,6 +276,9 @@ namespace Core.DB
         //Count statement
         public int Count(string query)
         {
+            //string query = "SELECT Count(*) FROM tableinfo";
+
+            Log.Write.Info("Running count query for " + server);
             int Count = -1;
 
             //Open Connection
@@ -229,10 +293,13 @@ namespace Core.DB
                 //close Connection
                 this.CloseConnection();
 
+                Log.Write.Info("Finished count query for " + server);
+
                 return Count;
             }
             else
             {
+                Log.Write.Error("(Error getting count) Finished insert query for " + server);
                 return Count;
             }
         }
@@ -242,6 +309,13 @@ namespace Core.DB
         {
             try
             {
+                Log.Write.Info("Starting backup procedure for " + database + " @" + server);
+
+                if (!System.IO.Directory.Exists(@"data\database\backup\"))
+                {
+                    System.IO.Directory.CreateDirectory(@"data\database\backup\");
+                }
+
                 DateTime Time = DateTime.Now;
                 int year = Time.Year;
                 int month = Time.Month;
@@ -253,31 +327,27 @@ namespace Core.DB
 
                 //Save file to C:\ with the current date as a filename
                 string path;
-                path = "C:\\MySqlBackup" + year + "-" + month + "-" + day +
+                path = @"data\database\backup\SQL" + year + "-" + month + "-" + day +
             "-" + hour + "-" + minute + "-" + second + "-" + millisecond + ".sql";
-                StreamWriter file = new StreamWriter(path);
 
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlBackup mb = new MySqlBackup(cmd))
+                    {
+                        cmd.Connection = con;
+                        OpenConnection();
+                        mb.ExportToFile(path);
+                        CloseConnection();
+                    }
+                }
 
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = "mysqldump";
-                psi.RedirectStandardInput = false;
-                psi.RedirectStandardOutput = true;
-                psi.Arguments = string.Format(@"-u{0} -p{1} -h{2} {3}",
-                    uid, password, server, database);
-                psi.UseShellExecute = false;
-
-                Process process = Process.Start(psi);
-
-                string output;
-                output = process.StandardOutput.ReadToEnd();
-                file.WriteLine(output);
-                process.WaitForExit();
-                file.Close();
-                process.Close();
+                Log.Write.Info("Finished backup procedure for " + database + " @" + server);
             }
             catch (IOException ex)
             {
-                MessageBox.Show("Error , unable to backup!" + Environment.NewLine + ex.Message);
+                Log.Write.Log(ex);
+                Log.Write.Flush();
+                MessageBox.Show("(See log) Error, unable to backup! " + ex.Message);
             }
         }
 
@@ -286,69 +356,35 @@ namespace Core.DB
         {
             try
             {
-                //Read file from C:\
-                string path;
-                path = "C:\\MySqlBackup.sql";
-                StreamReader file = new StreamReader(path);
-                string input = file.ReadToEnd();
-                file.Close();
+                Log.Write.Warning("Running restore for " + database + " @" + server);
 
-                ProcessStartInfo psi = new ProcessStartInfo();
-                psi.FileName = "mysql";
-                psi.RedirectStandardInput = true;
-                psi.RedirectStandardOutput = false;
-                psi.Arguments = string.Format(@"-u{0} -p{1} -h{2} {3}",
-                    uid, password, server, database);
-                psi.UseShellExecute = false;
+                Log.Write.Info("Retrieving newest SQL file from directory 'data\\database\\backup'");
 
+                var directory = new DirectoryInfo(@"data\database\backup");
 
-                Process process = Process.Start(psi);
-                process.StandardInput.WriteLine(input);
-                process.StandardInput.Close();
-                process.WaitForExit();
-                process.Close();
+                var newest = directory.GetFiles()
+                .OrderByDescending(f => f.LastWriteTime)
+                .First();
+
+                Log.Write.Info("Retrieved newest SQL file - " + newest.Name);
+
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlBackup mb = new MySqlBackup(cmd))
+                    {
+                        cmd.Connection = con;
+                        OpenConnection();
+                        mb.ImportFromFile(newest.FullName);
+                        CloseConnection();
+                    }
+                }
+
+                Log.Write.Info("Finished restoring database from newest directoryfile - " + newest.FullName);
             }
             catch (IOException ex)
             {
-                MessageBox.Show("Error , unable to Restore!" + Environment.NewLine + ex.Message);
+                MessageBox.Show("Error , unable to Restore! " + ex.Message);
             }
         }
-
-        #region IDisposable Support
-        private bool disposedValue = false; // To detect redundant calls
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    // TODO: dispose managed state (managed objects).
-                    con.Dispose();
-                }
-
-                // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
-                // TODO: set large fields to null.
-
-                disposedValue = true;
-            }
-        }
-
-        // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
-        // ~DBConnect() {
-        //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-        //   Dispose(false);
-        // }
-
-        // This code added to correctly implement the disposable pattern.
-        public void Dispose()
-        {
-            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
-            Dispose(true);
-            // TODO: uncomment the following line if the finalizer is overridden above.
-            // GC.SuppressFinalize(this);
-        }
-        #endregion
-
     }
 }

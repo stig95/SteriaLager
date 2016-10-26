@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LagerCore.Log;
 using System.Runtime.InteropServices;
 
-namespace Core
+namespace LagerCore.Initiate
 {
     public partial class frmSplash : Form
     {
@@ -80,10 +81,10 @@ namespace Core
         private void frmSplash_Load(object sender, EventArgs e)
         {
             UpdateFormDisplay(BackgroundImage);
-            Logging.Write.SetLogFile(logDir: ".\\Logfiles", prefix: "SSLagerLogg_", writeText: false);
+            Log.Write.SetLogFile(logDir: ".\\Logfiles", prefix: "SSLagerLogg_", writeText: false);
 
-            Logging.Write.Info("Splashscreen Loading - Logging initiated");
-            
+            Log.Write.Info("Splashscreen Loading - Logging initiated");
+
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -132,7 +133,5 @@ namespace Core
             [DllImport("gdi32.dll", ExactSpelling = true, SetLastError = true)]
             public static extern bool DeleteObject(IntPtr hObject);
         }
-
-
     }
 }

@@ -716,7 +716,7 @@ namespace LagerApp
             // cmbSokLager
             // 
             this.cmbSokLager.BackColor = System.Drawing.Color.White;
-            this.cmbSokLager.BeforeTouchSize = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.BeforeTouchSize = new System.Drawing.Size(156, 19);
             this.cmbSokLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSokLager.Items.AddRange(new object[] {
             "Trondheim",
@@ -724,7 +724,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbSokLager.Location = new System.Drawing.Point(52, 19);
             this.cmbSokLager.Name = "cmbSokLager";
-            this.cmbSokLager.Size = new System.Drawing.Size(156, 21);
+            this.cmbSokLager.Size = new System.Drawing.Size(156, 19);
             this.cmbSokLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbSokLager.TabIndex = 13;
             // 
@@ -822,7 +822,7 @@ namespace LagerApp
             // 
             this.cmbLager.AllowNewText = false;
             this.cmbLager.BackColor = System.Drawing.Color.White;
-            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbLager.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLager.Items.AddRange(new object[] {
             "Trondheim",
@@ -830,7 +830,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLager.Location = new System.Drawing.Point(56, 27);
             this.cmbLager.Name = "cmbLager";
-            this.cmbLager.Size = new System.Drawing.Size(146, 21);
+            this.cmbLager.Size = new System.Drawing.Size(146, 19);
             this.cmbLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLager.TabIndex = 7;
             this.cmbLager.SelectedValueChanged += new System.EventHandler(this.cmbLager_SelectedValueChanged);
@@ -855,11 +855,11 @@ namespace LagerApp
             // 
             this.cmbVare.AllowNewText = false;
             this.cmbVare.BackColor = System.Drawing.Color.White;
-            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbVare.BeforeTouchSize = new System.Drawing.Size(146, 19);
             this.cmbVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVare.Location = new System.Drawing.Point(56, 54);
             this.cmbVare.Name = "cmbVare";
-            this.cmbVare.Size = new System.Drawing.Size(146, 21);
+            this.cmbVare.Size = new System.Drawing.Size(146, 19);
             this.cmbVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbVare.TabIndex = 9;
             this.cmbVare.SelectedValueChanged += new System.EventHandler(this.cmbVare_SelectedValueChanged);
@@ -945,7 +945,7 @@ namespace LagerApp
             // cmbLagerAddVare
             // 
             this.cmbLagerAddVare.BackColor = System.Drawing.Color.White;
-            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.BeforeTouchSize = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLagerAddVare.Items.AddRange(new object[] {
             "Trondheim",
@@ -953,7 +953,7 @@ namespace LagerApp
             "Stavanger"});
             this.cmbLagerAddVare.Location = new System.Drawing.Point(71, 126);
             this.cmbLagerAddVare.Name = "cmbLagerAddVare";
-            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 21);
+            this.cmbLagerAddVare.Size = new System.Drawing.Size(132, 19);
             this.cmbLagerAddVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbLagerAddVare.TabIndex = 9;
             // 
@@ -1099,29 +1099,29 @@ namespace LagerApp
             // tbLagerTsTrd
             // 
             this.tbLagerTsTrd.Name = "tbLagerTsTrd";
-            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 22);
+            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 37);
             this.tbLagerTsTrd.Text = "Trondheim Lager";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(63, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(63, 37);
             this.toolStripLabel2.Text = "Oslo Lager";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(91, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(91, 37);
             this.toolStripLabel3.Text = "Stavanger Lager";
             // 
             // tabUser
