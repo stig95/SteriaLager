@@ -590,7 +590,28 @@ namespace LagerApp
             {
                 dt = DB.Select("SELECT by FROM kontor");
 
+                foreach(DataRow row in dt.Rows)
+                {
+                    cmbEndreLager.Items.Add(row.Field<string>(0));
+                    cmbEndreLager.Items.Add(row.Field<string>(1));
+                    cmbEndreLager.Items.Add(row.Field<string>(2));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dt.Dispose();
             }
         }
+
+        private void cmbEndreLager_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+
