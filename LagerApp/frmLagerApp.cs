@@ -582,20 +582,23 @@ namespace LagerApp
             }
         }
 
-        private void cmbEndreLager_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbEndreLager_Click(object sender, EventArgs e)
         {
+            cmbEndreLager.Items.Clear();
             DataTable dt = new DataTable();
 
             try
             {
-                dt = DB.Select("SELECT by FROM kontor");
+                dt = DB.Select("SELECT `by` FROM `kontor`");
 
                 foreach(DataRow row in dt.Rows)
                 {
-                    cmbEndreLager.Items.Add(row.Field<string>(0));
-                    cmbEndreLager.Items.Add(row.Field<string>(1));
-                    cmbEndreLager.Items.Add(row.Field<string>(2));
+                    foreach (DataColumn column in dt.Columns)
+                    {
+                        cmbEndreLager.Items.Add(Convert.ToString(row[column]));
+                    }
                 }
+                
 
             }
             catch (Exception ex)
@@ -608,10 +611,148 @@ namespace LagerApp
             }
         }
 
-        private void cmbEndreLager_Click(object sender, EventArgs e)
+        private void cmbEndreVare_Click(object sender, EventArgs e)
         {
+            switch (cmbEndreLager.SelectedIndex)
+                
+            {
+                case 0: //Trondheim
+                    cmbEndreVare.Items.Clear();
+                    DataTable dt = new DataTable();
+
+                    try
+                    {
+                        dt = DB.Select("SELECT `navn` FROM `VareTrondheim`");
+
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            foreach (DataColumn column in dt.Columns)
+                            {
+                                cmbEndreVare.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt.Dispose();
+                    }
+
+                    break;
+                case 1: //Stavanger
+                    cmbEndreVare.Items.Clear();
+                    DataTable dt2 = new DataTable();
+
+                    try
+                    {
+                        dt2 = DB.Select("SELECT `navn` FROM `VareStavanger`");
+
+                        foreach (DataRow row in dt2.Rows)
+                        {
+                            foreach (DataColumn column in dt2.Columns)
+                            { 
+                                cmbEndreVare.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt2.Dispose();
+                    }
+                    break;
+                case 2: // oslo
+                    cmbEndreVare.Items.Clear();
+                    DataTable dt3 = new DataTable();
+
+                    try
+                    {
+                        dt3 = DB.Select("SELECT `navn` FROM `VareOslo`");
+
+                        foreach (DataRow row in dt3.Rows)
+                        {
+                            foreach (DataColumn column in dt3.Columns)
+                            {
+                                cmbEndreVare.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt3.Dispose();
+                    }
+                    break;
+                    
+                default:
+                    //Skriv error
+                    break;
+            }
+        }
+
+        private void cmbEndreVare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                switch (cmbEndreLager.SelectedIndex)
+            {
+                case 0: //Trondheim
+                    lstVareEndre.Items.Clear();
+                    DataTable dt = new DataTable();
+
+                    try
+                    {
+                        dt = DB.Select("SELECT navn, Strekkode, antall from vareTrondheim where navn = " + cmbEndreVare.Text);
+
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            MessageBox.Show(Convert.ToString(row));
+
+                            foreach (DataColumn column in dt.Columns)
+                            {
+                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        dt.Dispose();
+                    }
+
+
+                    break;
+                case 1: //Stavanger
+
+
+                    break;
+                case 2: // oslo
+
+
+                    break;
+                default:
+                    //Skriv error
+                    break;
+            }
+
+
+
 
         }
     }
     }
+    
 
