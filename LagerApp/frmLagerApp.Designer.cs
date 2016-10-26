@@ -101,6 +101,13 @@ namespace LagerApp
             this.intKodeStrek = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
             this.tabChange = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.nyNavn = new System.Windows.Forms.TextBox();
+            this.nyStrek = new System.Windows.Forms.TextBox();
+            this.nyAnt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.lstVareEndre = new System.Windows.Forms.ListBox();
             this.autoLabel9 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cmbEndreLager = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
@@ -1016,6 +1023,13 @@ namespace LagerApp
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.nyNavn);
+            this.groupBox4.Controls.Add(this.nyStrek);
+            this.groupBox4.Controls.Add(this.nyAnt);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.lstVareEndre);
             this.groupBox4.Controls.Add(this.autoLabel9);
             this.groupBox4.Controls.Add(this.cmbEndreLager);
@@ -1029,6 +1043,64 @@ namespace LagerApp
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Endre Vare";
             // 
+            // nyNavn
+            // 
+            this.nyNavn.Location = new System.Drawing.Point(76, 83);
+            this.nyNavn.Name = "nyNavn";
+            this.nyNavn.Size = new System.Drawing.Size(100, 20);
+            this.nyNavn.TabIndex = 22;
+            // 
+            // nyStrek
+            // 
+            this.nyStrek.Location = new System.Drawing.Point(83, 108);
+            this.nyStrek.Name = "nyStrek";
+            this.nyStrek.Size = new System.Drawing.Size(100, 20);
+            this.nyStrek.TabIndex = 21;
+            // 
+            // nyAnt
+            // 
+            this.nyAnt.Location = new System.Drawing.Point(76, 135);
+            this.nyAnt.Name = "nyAnt";
+            this.nyAnt.Size = new System.Drawing.Size(100, 20);
+            this.nyAnt.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Nytt antall";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Ny Strekkode";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Nytt navn";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Endre vare";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lstVareEndre
             // 
             this.lstVareEndre.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1038,6 +1110,7 @@ namespace LagerApp
             this.lstVareEndre.Name = "lstVareEndre";
             this.lstVareEndre.Size = new System.Drawing.Size(196, 198);
             this.lstVareEndre.TabIndex = 15;
+            this.lstVareEndre.SelectedIndexChanged += new System.EventHandler(this.lstVareEndre_SelectedIndexChanged);
             // 
             // autoLabel9
             // 
@@ -1197,10 +1270,10 @@ namespace LagerApp
             this.tabAddUsr.Controls.Add(this.groupBox5);
             this.tabAddUsr.Image = null;
             this.tabAddUsr.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabAddUsr.Location = new System.Drawing.Point(25, 3);
+            this.tabAddUsr.Location = new System.Drawing.Point(2, 3);
             this.tabAddUsr.Name = "tabAddUsr";
             this.tabAddUsr.ShowCloseButton = true;
-            this.tabAddUsr.Size = new System.Drawing.Size(489, 217);
+            this.tabAddUsr.Size = new System.Drawing.Size(512, 217);
             this.tabAddUsr.TabIndex = 1;
             this.tabAddUsr.ThemesEnabled = true;
             // 
@@ -1220,7 +1293,7 @@ namespace LagerApp
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(489, 217);
+            this.groupBox5.Size = new System.Drawing.Size(512, 217);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Registrer ny bruker";
@@ -1351,10 +1424,10 @@ namespace LagerApp
             this.tabEditUsr.Controls.Add(this.groupBox6);
             this.tabEditUsr.Image = null;
             this.tabEditUsr.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabEditUsr.Location = new System.Drawing.Point(25, 3);
+            this.tabEditUsr.Location = new System.Drawing.Point(2, 3);
             this.tabEditUsr.Name = "tabEditUsr";
             this.tabEditUsr.ShowCloseButton = true;
-            this.tabEditUsr.Size = new System.Drawing.Size(489, 217);
+            this.tabEditUsr.Size = new System.Drawing.Size(512, 217);
             this.tabEditUsr.TabIndex = 2;
             this.tabEditUsr.ThemesEnabled = true;
             // 
@@ -1381,7 +1454,7 @@ namespace LagerApp
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(489, 217);
+            this.groupBox6.Size = new System.Drawing.Size(512, 217);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Endre bruker";
@@ -1793,5 +1866,12 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoCompleteEndreVare;
+        private System.Windows.Forms.TextBox nyNavn;
+        private System.Windows.Forms.TextBox nyStrek;
+        private System.Windows.Forms.TextBox nyAnt;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
