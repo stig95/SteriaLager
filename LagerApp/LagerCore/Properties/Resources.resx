@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Phrase" xml:space="preserve">
+    <value>CZADqQ1YuDk5eGjlMryTZPNO5hEWaqYO</value>
+    <comment>//PPhrase</comment>
+  </data>
+  <data name="Vector" xml:space="preserve">
+    <value>KLVEQbdC8eb8L87R</value>
+    <comment>//IVector</comment>
+  </data>
 </root>

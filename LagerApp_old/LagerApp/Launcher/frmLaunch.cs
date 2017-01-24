@@ -43,6 +43,9 @@ namespace Launcher
                     ((TextBox)ctrl).Text = string.Empty;
                 }
             }
+
+            textBoxExt2.PasswordChar = '*';
+
         }
 
         Core.DB.DBConnect db = new Core.DB.DBConnect();
@@ -54,7 +57,7 @@ namespace Launcher
         
         private void frmLaunch_Load(object sender, EventArgs e)
         {
-            Core.Update.Check.For();
+            //Core.Update.Check.For();
 
             if (Debugger.IsAttached)
             {

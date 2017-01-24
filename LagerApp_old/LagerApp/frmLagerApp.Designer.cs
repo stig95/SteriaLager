@@ -36,18 +36,18 @@ namespace LagerApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle13 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle14 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle15 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle16 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle17 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle18 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle19 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle20 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle21 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle22 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle23 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle24 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle1 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle5 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle6 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle7 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle8 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle9 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle10 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle11 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle12 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLagerApp));
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabOverview = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -101,13 +101,9 @@ namespace LagerApp
             this.intKodeStrek = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
             this.tabChange = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.nyNavn = new System.Windows.Forms.TextBox();
-            this.nyStrek = new System.Windows.Forms.TextBox();
-            this.nyAnt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lstVareEndre = new System.Windows.Forms.ListBox();
             this.autoLabel9 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cmbEndreLager = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
@@ -158,6 +154,10 @@ namespace LagerApp
             this.cmbEndreUsrKontor = new System.Windows.Forms.ComboBox();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.autoCompleteEndreVare = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
+            this.txtEndreVareNavn = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtEndreStrekkode = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtEndreAntall = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.btnEndreVare = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabOverview.SuspendLayout();
@@ -223,13 +223,16 @@ namespace LagerApp
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoCompleteEndreVare)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreVareNavn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreStrekkode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreAntall)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(775, 271);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(775, 303);
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -245,7 +248,7 @@ namespace LagerApp
             this.tabControlAdv1.RotateTextWhenVertical = true;
             this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(775, 271);
+            this.tabControlAdv1.Size = new System.Drawing.Size(775, 303);
             this.tabControlAdv1.TabIndex = 0;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -260,7 +263,7 @@ namespace LagerApp
             this.tabOverview.Location = new System.Drawing.Point(11, 3);
             this.tabOverview.Name = "tabOverview";
             this.tabOverview.ShowCloseButton = true;
-            this.tabOverview.Size = new System.Drawing.Size(760, 264);
+            this.tabOverview.Size = new System.Drawing.Size(760, 296);
             this.tabOverview.TabIndex = 1;
             this.tabOverview.ThemesEnabled = true;
             // 
@@ -279,7 +282,7 @@ namespace LagerApp
             // splitContainerAdv1.Panel2
             // 
             this.splitContainerAdv1.Panel2.Controls.Add(this.tabControlAdv4);
-            this.splitContainerAdv1.Size = new System.Drawing.Size(760, 224);
+            this.splitContainerAdv1.Size = new System.Drawing.Size(760, 256);
             this.splitContainerAdv1.SplitterDistance = 235;
             this.splitContainerAdv1.TabIndex = 1;
             this.splitContainerAdv1.Text = "splitContainerAdv1";
@@ -324,8 +327,7 @@ namespace LagerApp
             // tabControlAdv4
             // 
             this.tabControlAdv4.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv4.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv4.BeforeTouchSize = new System.Drawing.Size(518, 224);
+            this.tabControlAdv4.BeforeTouchSize = new System.Drawing.Size(518, 256);
             this.tabControlAdv4.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv4.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv4.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -340,7 +342,7 @@ namespace LagerApp
             this.tabControlAdv4.RotateTextWhenVertical = true;
             this.tabControlAdv4.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv4.ShowSeparator = false;
-            this.tabControlAdv4.Size = new System.Drawing.Size(518, 224);
+            this.tabControlAdv4.Size = new System.Drawing.Size(518, 256);
             this.tabControlAdv4.TabIndex = 0;
             this.tabControlAdv4.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv4.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -352,10 +354,10 @@ namespace LagerApp
             this.tabPageAdv1.Controls.Add(this.toolStripEx3);
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv1.Location = new System.Drawing.Point(3, 24);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(443, 217);
+            this.tabPageAdv1.Size = new System.Drawing.Size(511, 228);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "Oslo";
             this.tabPageAdv1.ThemesEnabled = true;
@@ -366,42 +368,42 @@ namespace LagerApp
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 177);
+            this.panel1.Size = new System.Drawing.Size(511, 188);
             this.panel1.TabIndex = 1;
             // 
             // DBgridOslo
             // 
             this.DBgridOslo.AllowDragSelectedCols = true;
             this.DBgridOslo.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
-            gridBaseStyle13.Name = "Column Header";
-            gridBaseStyle13.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle13.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle13.StyleInfo.Enabled = false;
-            gridBaseStyle13.StyleInfo.Font.Bold = true;
-            gridBaseStyle13.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle14.Name = "Header";
-            gridBaseStyle14.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle14.StyleInfo.CellType = "Header";
-            gridBaseStyle14.StyleInfo.Font.Bold = true;
-            gridBaseStyle14.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle14.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle15.Name = "Standard";
-            gridBaseStyle15.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle15.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle15.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle16.Name = "Row Header";
-            gridBaseStyle16.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle16.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle16.StyleInfo.Enabled = true;
-            gridBaseStyle16.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle1.Name = "Column Header";
+            gridBaseStyle1.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle1.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle1.StyleInfo.Enabled = false;
+            gridBaseStyle1.StyleInfo.Font.Bold = true;
+            gridBaseStyle1.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle2.Name = "Header";
+            gridBaseStyle2.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.CellType = "Header";
+            gridBaseStyle2.StyleInfo.Font.Bold = true;
+            gridBaseStyle2.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle2.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle3.Name = "Standard";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle3.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle4.Name = "Row Header";
+            gridBaseStyle4.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle4.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle4.StyleInfo.Enabled = true;
+            gridBaseStyle4.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.DBgridOslo.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle13,
-            gridBaseStyle14,
-            gridBaseStyle15,
-            gridBaseStyle16});
+            gridBaseStyle1,
+            gridBaseStyle2,
+            gridBaseStyle3,
+            gridBaseStyle4});
             this.DBgridOslo.DefaultRowHeight = 20;
             this.DBgridOslo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DBgridOslo.EnableAddNew = false;
@@ -417,7 +419,7 @@ namespace LagerApp
             this.DBgridOslo.Properties.MarkColHeader = false;
             this.DBgridOslo.Properties.MarkRowHeader = false;
             this.DBgridOslo.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.DBgridOslo.Size = new System.Drawing.Size(443, 177);
+            this.DBgridOslo.Size = new System.Drawing.Size(511, 188);
             this.DBgridOslo.SmartSizeBox = false;
             this.DBgridOslo.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
             this.DBgridOslo.TabIndex = 0;
@@ -435,7 +437,7 @@ namespace LagerApp
             this.toolStripEx3.Location = new System.Drawing.Point(0, 0);
             this.toolStripEx3.Name = "toolStripEx3";
             this.toolStripEx3.Office12Mode = false;
-            this.toolStripEx3.Size = new System.Drawing.Size(443, 40);
+            this.toolStripEx3.Size = new System.Drawing.Size(511, 40);
             this.toolStripEx3.TabIndex = 0;
             this.toolStripEx3.Text = "Lageroversikt : Oslo";
             this.toolStripEx3.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
@@ -446,10 +448,10 @@ namespace LagerApp
             this.tabPageAdv2.Controls.Add(this.toolStripEx4);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv2.Location = new System.Drawing.Point(3, 24);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(443, 217);
+            this.tabPageAdv2.Size = new System.Drawing.Size(511, 228);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "Trondheim";
             this.tabPageAdv2.ThemesEnabled = true;
@@ -460,42 +462,42 @@ namespace LagerApp
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(443, 177);
+            this.panel2.Size = new System.Drawing.Size(511, 188);
             this.panel2.TabIndex = 2;
             // 
             // DBgridTrondheim
             // 
             this.DBgridTrondheim.AllowDragSelectedCols = true;
             this.DBgridTrondheim.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
-            gridBaseStyle17.Name = "Column Header";
-            gridBaseStyle17.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle17.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle17.StyleInfo.Enabled = false;
-            gridBaseStyle17.StyleInfo.Font.Bold = true;
-            gridBaseStyle17.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle18.Name = "Header";
-            gridBaseStyle18.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle18.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle18.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle18.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle18.StyleInfo.CellType = "Header";
-            gridBaseStyle18.StyleInfo.Font.Bold = true;
-            gridBaseStyle18.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle18.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle19.Name = "Standard";
-            gridBaseStyle19.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle19.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle19.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle20.Name = "Row Header";
-            gridBaseStyle20.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle20.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle20.StyleInfo.Enabled = true;
-            gridBaseStyle20.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle5.Name = "Column Header";
+            gridBaseStyle5.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle5.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle5.StyleInfo.Enabled = false;
+            gridBaseStyle5.StyleInfo.Font.Bold = true;
+            gridBaseStyle5.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle6.Name = "Header";
+            gridBaseStyle6.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.CellType = "Header";
+            gridBaseStyle6.StyleInfo.Font.Bold = true;
+            gridBaseStyle6.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle6.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle7.Name = "Standard";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle7.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle8.Name = "Row Header";
+            gridBaseStyle8.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle8.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle8.StyleInfo.Enabled = true;
+            gridBaseStyle8.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.DBgridTrondheim.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle17,
-            gridBaseStyle18,
-            gridBaseStyle19,
-            gridBaseStyle20});
+            gridBaseStyle5,
+            gridBaseStyle6,
+            gridBaseStyle7,
+            gridBaseStyle8});
             this.DBgridTrondheim.DefaultRowHeight = 20;
             this.DBgridTrondheim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DBgridTrondheim.EnableAddNew = false;
@@ -511,7 +513,7 @@ namespace LagerApp
             this.DBgridTrondheim.Properties.MarkColHeader = false;
             this.DBgridTrondheim.Properties.MarkRowHeader = false;
             this.DBgridTrondheim.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.DBgridTrondheim.Size = new System.Drawing.Size(443, 177);
+            this.DBgridTrondheim.Size = new System.Drawing.Size(511, 188);
             this.DBgridTrondheim.SmartSizeBox = false;
             this.DBgridTrondheim.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
             this.DBgridTrondheim.TabIndex = 1;
@@ -529,7 +531,7 @@ namespace LagerApp
             this.toolStripEx4.Location = new System.Drawing.Point(0, 0);
             this.toolStripEx4.Name = "toolStripEx4";
             this.toolStripEx4.Office12Mode = false;
-            this.toolStripEx4.Size = new System.Drawing.Size(443, 40);
+            this.toolStripEx4.Size = new System.Drawing.Size(511, 40);
             this.toolStripEx4.TabIndex = 1;
             this.toolStripEx4.Text = "Lageroversikt : Trondheim";
             this.toolStripEx4.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
@@ -540,10 +542,10 @@ namespace LagerApp
             this.tabPageAdv3.Controls.Add(this.toolStripEx5);
             this.tabPageAdv3.Image = null;
             this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv3.Location = new System.Drawing.Point(71, 3);
+            this.tabPageAdv3.Location = new System.Drawing.Point(3, 24);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(443, 217);
+            this.tabPageAdv3.Size = new System.Drawing.Size(511, 228);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "Stavanger";
             this.tabPageAdv3.ThemesEnabled = true;
@@ -554,42 +556,42 @@ namespace LagerApp
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(443, 177);
+            this.panel3.Size = new System.Drawing.Size(511, 188);
             this.panel3.TabIndex = 2;
             // 
             // DBgridStavanger
             // 
             this.DBgridStavanger.AllowDragSelectedCols = true;
             this.DBgridStavanger.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(94)))), ((int)(((byte)(171)))), ((int)(((byte)(222)))));
-            gridBaseStyle21.Name = "Column Header";
-            gridBaseStyle21.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle21.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle21.StyleInfo.Enabled = false;
-            gridBaseStyle21.StyleInfo.Font.Bold = true;
-            gridBaseStyle21.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle22.Name = "Header";
-            gridBaseStyle22.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle22.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle22.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle22.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle22.StyleInfo.CellType = "Header";
-            gridBaseStyle22.StyleInfo.Font.Bold = true;
-            gridBaseStyle22.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle22.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle23.Name = "Standard";
-            gridBaseStyle23.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle23.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle23.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle24.Name = "Row Header";
-            gridBaseStyle24.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle24.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle24.StyleInfo.Enabled = true;
-            gridBaseStyle24.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle9.Name = "Column Header";
+            gridBaseStyle9.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle9.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle9.StyleInfo.Enabled = false;
+            gridBaseStyle9.StyleInfo.Font.Bold = true;
+            gridBaseStyle9.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle10.Name = "Header";
+            gridBaseStyle10.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle10.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle10.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle10.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle10.StyleInfo.CellType = "Header";
+            gridBaseStyle10.StyleInfo.Font.Bold = true;
+            gridBaseStyle10.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle10.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle11.Name = "Standard";
+            gridBaseStyle11.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle11.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle11.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle12.Name = "Row Header";
+            gridBaseStyle12.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle12.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle12.StyleInfo.Enabled = true;
+            gridBaseStyle12.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.DBgridStavanger.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle21,
-            gridBaseStyle22,
-            gridBaseStyle23,
-            gridBaseStyle24});
+            gridBaseStyle9,
+            gridBaseStyle10,
+            gridBaseStyle11,
+            gridBaseStyle12});
             this.DBgridStavanger.DefaultRowHeight = 20;
             this.DBgridStavanger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DBgridStavanger.EnableAddNew = false;
@@ -605,7 +607,7 @@ namespace LagerApp
             this.DBgridStavanger.Properties.MarkColHeader = false;
             this.DBgridStavanger.Properties.MarkRowHeader = false;
             this.DBgridStavanger.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.DBgridStavanger.Size = new System.Drawing.Size(443, 177);
+            this.DBgridStavanger.Size = new System.Drawing.Size(511, 188);
             this.DBgridStavanger.SmartSizeBox = false;
             this.DBgridStavanger.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
             this.DBgridStavanger.TabIndex = 1;
@@ -623,7 +625,7 @@ namespace LagerApp
             this.toolStripEx5.Location = new System.Drawing.Point(0, 0);
             this.toolStripEx5.Name = "toolStripEx5";
             this.toolStripEx5.Office12Mode = false;
-            this.toolStripEx5.Size = new System.Drawing.Size(443, 40);
+            this.toolStripEx5.Size = new System.Drawing.Size(511, 40);
             this.toolStripEx5.TabIndex = 1;
             this.toolStripEx5.Text = "Lageroversikt : Stavanger";
             this.toolStripEx5.VisualStyle = Syncfusion.Windows.Forms.Tools.ToolStripExStyle.Metro;
@@ -658,6 +660,7 @@ namespace LagerApp
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(126, 22);
             this.toolStripButton1.Text = "Rapportgenerering";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tabStorage
             // 
@@ -668,7 +671,7 @@ namespace LagerApp
             this.tabStorage.Location = new System.Drawing.Point(11, 3);
             this.tabStorage.Name = "tabStorage";
             this.tabStorage.ShowCloseButton = true;
-            this.tabStorage.Size = new System.Drawing.Size(760, 264);
+            this.tabStorage.Size = new System.Drawing.Size(760, 296);
             this.tabStorage.TabIndex = 2;
             this.tabStorage.ThemesEnabled = true;
             // 
@@ -687,7 +690,7 @@ namespace LagerApp
             // splitContainerAdv2.Panel2
             // 
             this.splitContainerAdv2.Panel2.Controls.Add(this.tabControlAdv2);
-            this.splitContainerAdv2.Size = new System.Drawing.Size(760, 224);
+            this.splitContainerAdv2.Size = new System.Drawing.Size(760, 256);
             this.splitContainerAdv2.SplitterDistance = 235;
             this.splitContainerAdv2.TabIndex = 1;
             this.splitContainerAdv2.Text = "splitContainerAdv2";
@@ -702,7 +705,7 @@ namespace LagerApp
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(235, 224);
+            this.groupBox3.Size = new System.Drawing.Size(235, 256);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Søk etter vare";
@@ -750,7 +753,7 @@ namespace LagerApp
             // 
             // textBoxExt1
             // 
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt1.Location = new System.Drawing.Point(6, 62);
             this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -763,8 +766,7 @@ namespace LagerApp
             // tabControlAdv2
             // 
             this.tabControlAdv2.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv2.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv2.BeforeTouchSize = new System.Drawing.Size(518, 224);
+            this.tabControlAdv2.BeforeTouchSize = new System.Drawing.Size(518, 256);
             this.tabControlAdv2.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv2.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv2.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -777,7 +779,7 @@ namespace LagerApp
             this.tabControlAdv2.Name = "tabControlAdv2";
             this.tabControlAdv2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv2.ShowSeparator = false;
-            this.tabControlAdv2.Size = new System.Drawing.Size(518, 224);
+            this.tabControlAdv2.Size = new System.Drawing.Size(518, 256);
             this.tabControlAdv2.TabIndex = 0;
             this.tabControlAdv2.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -788,12 +790,13 @@ namespace LagerApp
             this.tabAddRemove.Controls.Add(this.groupBox2);
             this.tabAddRemove.Controls.Add(this.gbVareSlett);
             this.tabAddRemove.Image = null;
-            this.tabAddRemove.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabAddRemove.Location = new System.Drawing.Point(25, 3);
+            this.tabAddRemove.ImageSize = new System.Drawing.Size(24, 24);
+            this.tabAddRemove.Location = new System.Drawing.Point(3, 24);
             this.tabAddRemove.Name = "tabAddRemove";
             this.tabAddRemove.ShowCloseButton = true;
-            this.tabAddRemove.Size = new System.Drawing.Size(489, 217);
+            this.tabAddRemove.Size = new System.Drawing.Size(511, 228);
             this.tabAddRemove.TabIndex = 1;
+            this.tabAddRemove.Text = "Legg til / Fjern Vare";
             this.tabAddRemove.ThemesEnabled = true;
             // 
             // groupBox2
@@ -807,7 +810,7 @@ namespace LagerApp
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(215, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 217);
+            this.groupBox2.Size = new System.Drawing.Size(296, 228);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Slett Vare";
@@ -898,7 +901,7 @@ namespace LagerApp
             this.gbVareSlett.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbVareSlett.Location = new System.Drawing.Point(0, 0);
             this.gbVareSlett.Name = "gbVareSlett";
-            this.gbVareSlett.Size = new System.Drawing.Size(215, 217);
+            this.gbVareSlett.Size = new System.Drawing.Size(215, 228);
             this.gbVareSlett.TabIndex = 8;
             this.gbVareSlett.TabStop = false;
             this.gbVareSlett.Text = "Legg Til Ny Vare";
@@ -922,7 +925,7 @@ namespace LagerApp
             // intAntall
             // 
             this.intAntall.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intAntall.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.intAntall.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.intAntall.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intAntall.IntegerValue = ((long)(1));
             this.intAntall.Location = new System.Drawing.Point(71, 95);
@@ -937,7 +940,7 @@ namespace LagerApp
             // 
             // txtVareNavn
             // 
-            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.txtVareNavn.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.txtVareNavn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVareNavn.Location = new System.Drawing.Point(71, 28);
             this.txtVareNavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -996,7 +999,7 @@ namespace LagerApp
             // intKodeStrek
             // 
             this.intKodeStrek.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.intKodeStrek.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.intKodeStrek.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.intKodeStrek.IntegerValue = ((long)(1));
             this.intKodeStrek.Location = new System.Drawing.Point(71, 60);
@@ -1013,23 +1016,24 @@ namespace LagerApp
             // 
             this.tabChange.Controls.Add(this.groupBox4);
             this.tabChange.Image = null;
-            this.tabChange.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabChange.Location = new System.Drawing.Point(25, 3);
+            this.tabChange.ImageSize = new System.Drawing.Size(24, 24);
+            this.tabChange.Location = new System.Drawing.Point(3, 24);
             this.tabChange.Name = "tabChange";
             this.tabChange.ShowCloseButton = true;
-            this.tabChange.Size = new System.Drawing.Size(489, 217);
+            this.tabChange.Size = new System.Drawing.Size(511, 228);
             this.tabChange.TabIndex = 2;
+            this.tabChange.Text = "Endre Vare";
             this.tabChange.ThemesEnabled = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.nyNavn);
-            this.groupBox4.Controls.Add(this.nyStrek);
-            this.groupBox4.Controls.Add(this.nyAnt);
+            this.groupBox4.Controls.Add(this.btnEndreVare);
+            this.groupBox4.Controls.Add(this.txtEndreAntall);
+            this.groupBox4.Controls.Add(this.txtEndreStrekkode);
+            this.groupBox4.Controls.Add(this.txtEndreVareNavn);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.lstVareEndre);
             this.groupBox4.Controls.Add(this.autoLabel9);
             this.groupBox4.Controls.Add(this.cmbEndreLager);
@@ -1038,36 +1042,15 @@ namespace LagerApp
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(489, 217);
+            this.groupBox4.Size = new System.Drawing.Size(511, 228);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Endre Vare";
             // 
-            // nyNavn
-            // 
-            this.nyNavn.Location = new System.Drawing.Point(76, 83);
-            this.nyNavn.Name = "nyNavn";
-            this.nyNavn.Size = new System.Drawing.Size(100, 20);
-            this.nyNavn.TabIndex = 22;
-            // 
-            // nyStrek
-            // 
-            this.nyStrek.Location = new System.Drawing.Point(83, 108);
-            this.nyStrek.Name = "nyStrek";
-            this.nyStrek.Size = new System.Drawing.Size(100, 20);
-            this.nyStrek.TabIndex = 21;
-            // 
-            // nyAnt
-            // 
-            this.nyAnt.Location = new System.Drawing.Point(76, 135);
-            this.nyAnt.Name = "nyAnt";
-            this.nyAnt.Size = new System.Drawing.Size(100, 20);
-            this.nyAnt.TabIndex = 20;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 135);
+            this.label10.Location = new System.Drawing.Point(6, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 19;
@@ -1076,7 +1059,7 @@ namespace LagerApp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 108);
+            this.label9.Location = new System.Drawing.Point(6, 116);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 13);
             this.label9.TabIndex = 18;
@@ -1085,30 +1068,20 @@ namespace LagerApp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 83);
+            this.label7.Location = new System.Drawing.Point(6, 90);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Nytt navn";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Endre vare";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lstVareEndre
             // 
             this.lstVareEndre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstVareEndre.Dock = System.Windows.Forms.DockStyle.Right;
             this.lstVareEndre.FormattingEnabled = true;
-            this.lstVareEndre.Location = new System.Drawing.Point(290, 16);
+            this.lstVareEndre.Location = new System.Drawing.Point(312, 16);
             this.lstVareEndre.Name = "lstVareEndre";
-            this.lstVareEndre.Size = new System.Drawing.Size(196, 198);
+            this.lstVareEndre.Size = new System.Drawing.Size(196, 209);
             this.lstVareEndre.TabIndex = 15;
             this.lstVareEndre.SelectedIndexChanged += new System.EventHandler(this.lstVareEndre_SelectedIndexChanged);
             // 
@@ -1124,11 +1097,11 @@ namespace LagerApp
             // 
             this.cmbEndreLager.AllowNewText = false;
             this.cmbEndreLager.BackColor = System.Drawing.Color.White;
-            this.cmbEndreLager.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbEndreLager.BeforeTouchSize = new System.Drawing.Size(182, 21);
             this.cmbEndreLager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndreLager.Location = new System.Drawing.Point(56, 17);
             this.cmbEndreLager.Name = "cmbEndreLager";
-            this.cmbEndreLager.Size = new System.Drawing.Size(146, 21);
+            this.cmbEndreLager.Size = new System.Drawing.Size(182, 21);
             this.cmbEndreLager.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbEndreLager.TabIndex = 11;
             this.cmbEndreLager.Click += new System.EventHandler(this.cmbEndreLager_Click);
@@ -1137,11 +1110,11 @@ namespace LagerApp
             // 
             this.cmbEndreVare.AllowNewText = false;
             this.cmbEndreVare.BackColor = System.Drawing.Color.White;
-            this.cmbEndreVare.BeforeTouchSize = new System.Drawing.Size(146, 21);
+            this.cmbEndreVare.BeforeTouchSize = new System.Drawing.Size(182, 21);
             this.cmbEndreVare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEndreVare.Location = new System.Drawing.Point(56, 44);
             this.cmbEndreVare.Name = "cmbEndreVare";
-            this.cmbEndreVare.Size = new System.Drawing.Size(146, 21);
+            this.cmbEndreVare.Size = new System.Drawing.Size(182, 21);
             this.cmbEndreVare.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbEndreVare.TabIndex = 13;
             this.cmbEndreVare.Click += new System.EventHandler(this.cmbEndreVare_Click);
@@ -1175,29 +1148,29 @@ namespace LagerApp
             // tbLagerTsTrd
             // 
             this.tbLagerTsTrd.Name = "tbLagerTsTrd";
-            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 37);
+            this.tbLagerTsTrd.Size = new System.Drawing.Size(97, 22);
             this.tbLagerTsTrd.Text = "Trondheim Lager";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(63, 37);
+            this.toolStripLabel2.Size = new System.Drawing.Size(63, 22);
             this.toolStripLabel2.Text = "Oslo Lager";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(91, 37);
+            this.toolStripLabel3.Size = new System.Drawing.Size(91, 22);
             this.toolStripLabel3.Text = "Stavanger Lager";
             // 
             // tabUser
@@ -1209,7 +1182,7 @@ namespace LagerApp
             this.tabUser.Location = new System.Drawing.Point(11, 3);
             this.tabUser.Name = "tabUser";
             this.tabUser.ShowCloseButton = true;
-            this.tabUser.Size = new System.Drawing.Size(760, 264);
+            this.tabUser.Size = new System.Drawing.Size(760, 296);
             this.tabUser.TabIndex = 3;
             this.tabUser.ThemesEnabled = true;
             // 
@@ -1227,7 +1200,7 @@ namespace LagerApp
             // splitContainerAdv3.Panel2
             // 
             this.splitContainerAdv3.Panel2.Controls.Add(this.tabControlAdv3);
-            this.splitContainerAdv3.Size = new System.Drawing.Size(760, 224);
+            this.splitContainerAdv3.Size = new System.Drawing.Size(760, 256);
             this.splitContainerAdv3.SplitterDistance = 235;
             this.splitContainerAdv3.TabIndex = 1;
             this.splitContainerAdv3.Text = "splitContainerAdv3";
@@ -1239,14 +1212,13 @@ namespace LagerApp
             this.lstUsrNfo.FormattingEnabled = true;
             this.lstUsrNfo.Location = new System.Drawing.Point(0, 0);
             this.lstUsrNfo.Name = "lstUsrNfo";
-            this.lstUsrNfo.Size = new System.Drawing.Size(235, 224);
+            this.lstUsrNfo.Size = new System.Drawing.Size(235, 256);
             this.lstUsrNfo.TabIndex = 0;
             // 
             // tabControlAdv3
             // 
             this.tabControlAdv3.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv3.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlAdv3.BeforeTouchSize = new System.Drawing.Size(518, 224);
+            this.tabControlAdv3.BeforeTouchSize = new System.Drawing.Size(518, 256);
             this.tabControlAdv3.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv3.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv3.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -1259,7 +1231,7 @@ namespace LagerApp
             this.tabControlAdv3.Name = "tabControlAdv3";
             this.tabControlAdv3.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv3.ShowSeparator = false;
-            this.tabControlAdv3.Size = new System.Drawing.Size(518, 224);
+            this.tabControlAdv3.Size = new System.Drawing.Size(518, 256);
             this.tabControlAdv3.TabIndex = 1;
             this.tabControlAdv3.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tabControlAdv3.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -1269,12 +1241,13 @@ namespace LagerApp
             // 
             this.tabAddUsr.Controls.Add(this.groupBox5);
             this.tabAddUsr.Image = null;
-            this.tabAddUsr.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabAddUsr.Location = new System.Drawing.Point(2, 3);
+            this.tabAddUsr.ImageSize = new System.Drawing.Size(24, 24);
+            this.tabAddUsr.Location = new System.Drawing.Point(3, 24);
             this.tabAddUsr.Name = "tabAddUsr";
             this.tabAddUsr.ShowCloseButton = true;
-            this.tabAddUsr.Size = new System.Drawing.Size(512, 217);
+            this.tabAddUsr.Size = new System.Drawing.Size(511, 228);
             this.tabAddUsr.TabIndex = 1;
+            this.tabAddUsr.Text = "Ny Bruker";
             this.tabAddUsr.ThemesEnabled = true;
             // 
             // groupBox5
@@ -1293,7 +1266,7 @@ namespace LagerApp
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(512, 217);
+            this.groupBox5.Size = new System.Drawing.Size(511, 228);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Registrer ny bruker";
@@ -1341,7 +1314,7 @@ namespace LagerApp
             // 
             // textBoxExt5
             // 
-            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt5.Location = new System.Drawing.Point(95, 102);
             this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1353,7 +1326,7 @@ namespace LagerApp
             // 
             // textBoxExt4
             // 
-            this.textBoxExt4.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt4.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt4.Location = new System.Drawing.Point(95, 76);
             this.textBoxExt4.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1365,7 +1338,7 @@ namespace LagerApp
             // 
             // textBoxExt3
             // 
-            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt3.Location = new System.Drawing.Point(95, 50);
             this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1377,7 +1350,7 @@ namespace LagerApp
             // 
             // textBoxExt2
             // 
-            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt2.Location = new System.Drawing.Point(95, 24);
             this.textBoxExt2.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1423,12 +1396,13 @@ namespace LagerApp
             // 
             this.tabEditUsr.Controls.Add(this.groupBox6);
             this.tabEditUsr.Image = null;
-            this.tabEditUsr.ImageSize = new System.Drawing.Size(32, 32);
-            this.tabEditUsr.Location = new System.Drawing.Point(2, 3);
+            this.tabEditUsr.ImageSize = new System.Drawing.Size(24, 24);
+            this.tabEditUsr.Location = new System.Drawing.Point(3, 24);
             this.tabEditUsr.Name = "tabEditUsr";
             this.tabEditUsr.ShowCloseButton = true;
-            this.tabEditUsr.Size = new System.Drawing.Size(512, 217);
+            this.tabEditUsr.Size = new System.Drawing.Size(511, 228);
             this.tabEditUsr.TabIndex = 2;
+            this.tabEditUsr.Text = "Endre Bruker";
             this.tabEditUsr.ThemesEnabled = true;
             // 
             // groupBox6
@@ -1454,7 +1428,7 @@ namespace LagerApp
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(512, 217);
+            this.groupBox6.Size = new System.Drawing.Size(511, 228);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Endre bruker";
@@ -1501,7 +1475,7 @@ namespace LagerApp
             // 
             // textBoxExt11
             // 
-            this.textBoxExt11.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt11.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt11.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt11.Location = new System.Drawing.Point(300, 35);
             this.textBoxExt11.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1531,7 +1505,7 @@ namespace LagerApp
             // 
             // textBoxExt8
             // 
-            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt8.Location = new System.Drawing.Point(166, 164);
             this.textBoxExt8.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1543,7 +1517,7 @@ namespace LagerApp
             // 
             // textBoxExt9
             // 
-            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt9.Location = new System.Drawing.Point(166, 121);
             this.textBoxExt9.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1582,7 +1556,7 @@ namespace LagerApp
             // 
             // textBoxExt7
             // 
-            this.textBoxExt7.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt7.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt7.Location = new System.Drawing.Point(166, 78);
             this.textBoxExt7.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1594,7 +1568,7 @@ namespace LagerApp
             // 
             // textBoxExt6
             // 
-            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(114, 20);
+            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxExt6.Location = new System.Drawing.Point(166, 35);
             this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -1665,13 +1639,62 @@ namespace LagerApp
             this.autoCompleteEndreVare.ParentForm = this;
             this.autoCompleteEndreVare.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Metro;
             // 
+            // txtEndreVareNavn
+            // 
+            this.txtEndreVareNavn.BeforeTouchSize = new System.Drawing.Size(155, 20);
+            this.txtEndreVareNavn.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEndreVareNavn.Location = new System.Drawing.Point(83, 83);
+            this.txtEndreVareNavn.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtEndreVareNavn.Name = "txtEndreVareNavn";
+            this.txtEndreVareNavn.Size = new System.Drawing.Size(155, 20);
+            this.txtEndreVareNavn.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.txtEndreVareNavn.TabIndex = 14;
+            // 
+            // txtEndreStrekkode
+            // 
+            this.txtEndreStrekkode.BeforeTouchSize = new System.Drawing.Size(155, 20);
+            this.txtEndreStrekkode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEndreStrekkode.Location = new System.Drawing.Point(83, 109);
+            this.txtEndreStrekkode.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtEndreStrekkode.Name = "txtEndreStrekkode";
+            this.txtEndreStrekkode.Size = new System.Drawing.Size(155, 20);
+            this.txtEndreStrekkode.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.txtEndreStrekkode.TabIndex = 22;
+            // 
+            // txtEndreAntall
+            // 
+            this.txtEndreAntall.BeforeTouchSize = new System.Drawing.Size(155, 20);
+            this.txtEndreAntall.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEndreAntall.Location = new System.Drawing.Point(83, 135);
+            this.txtEndreAntall.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtEndreAntall.Name = "txtEndreAntall";
+            this.txtEndreAntall.Size = new System.Drawing.Size(155, 20);
+            this.txtEndreAntall.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.txtEndreAntall.TabIndex = 23;
+            // 
+            // btnEndreVare
+            // 
+            this.btnEndreVare.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.btnEndreVare.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEndreVare.BeforeTouchSize = new System.Drawing.Size(87, 30);
+            this.btnEndreVare.ForeColor = System.Drawing.Color.Black;
+            this.btnEndreVare.IsBackStageButton = false;
+            this.btnEndreVare.Location = new System.Drawing.Point(151, 161);
+            this.btnEndreVare.MetroColor = System.Drawing.SystemColors.Control;
+            this.btnEndreVare.Name = "btnEndreVare";
+            this.btnEndreVare.Size = new System.Drawing.Size(87, 30);
+            this.btnEndreVare.TabIndex = 24;
+            this.btnEndreVare.Text = "Endre Vare";
+            this.btnEndreVare.UseVisualStyle = true;
+            this.btnEndreVare.Click += new System.EventHandler(this.btnEndreVare_Click);
+            // 
             // frmLagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBarColor = System.Drawing.SystemColors.Control;
             this.CaptionBarHeight = 48;
-            this.ClientSize = new System.Drawing.Size(775, 271);
+            this.ClientSize = new System.Drawing.Size(775, 303);
             this.Controls.Add(this.tabControlAdv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmLagerApp";
@@ -1758,6 +1781,9 @@ namespace LagerApp
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoCompleteEndreVare)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreVareNavn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreStrekkode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndreAntall)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1866,12 +1892,12 @@ namespace LagerApp
         private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoCompleteEndreVare;
-        private System.Windows.Forms.TextBox nyNavn;
-        private System.Windows.Forms.TextBox nyStrek;
-        private System.Windows.Forms.TextBox nyAnt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private Syncfusion.Windows.Forms.ButtonAdv btnEndreVare;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtEndreAntall;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtEndreStrekkode;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtEndreVareNavn;
     }
 }

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Launcher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Laget av Stig Rothaug & Joachim F. Stamnes")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Launcher")]

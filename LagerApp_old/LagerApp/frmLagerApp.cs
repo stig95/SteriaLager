@@ -248,6 +248,8 @@ namespace LagerApp
                     MessageBox.Show("Varen må ha ett gyldig navn (NonNumeric) > 2");
                     return;
                 }
+
+                MessageBox.Show("Ny vare lagt til");
             }
             catch (Exception ex)
             {
@@ -371,6 +373,8 @@ namespace LagerApp
                         DB.Delete("DELETE FROM VareStavanger WHERE navn='" + cmbVare.SelectedItem.ToString() + "'");
                         break;
                 }
+
+                MessageBox.Show("Valgt vare slettet fra oversikt");
             }
             catch (Exception ex)
             {
@@ -742,93 +746,102 @@ namespace LagerApp
 
         private void cmbEndreVare_SelectedIndexChanged(object sender, EventArgs e)
         {
-                switch (cmbEndreLager.SelectedIndex)
+            try
             {
-                case 0: //Trondheim
-                    lstVareEndre.Items.Clear();
-                    DataTable dt = new DataTable();
+                switch (cmbEndreLager.SelectedIndex)
+                {
+                    case 0: //Trondheim
+                        lstVareEndre.Items.Clear();
+                        DataTable dt = new DataTable();
 
-                    try
-                    {
-                        dt = DB.Select("SELECT `navn`, `Strekkode`, `antall` from `vareTrondheim` where navn = " + cmbEndreVare.Text);
-
-                        foreach (DataRow row in dt.Rows)
+                        try
                         {
-                            foreach (DataColumn column in dt.Columns)
+                            dt = DB.Select("SELECT `navn`, `Strekkode`, `antall` from `vareTrondheim` where navn = " + cmbEndreVare.Text);
+
+                            foreach (DataRow row in dt.Rows)
                             {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                foreach (DataColumn column in dt.Columns)
+                                {
+                                    lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                }
                             }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt.Dispose();
-                    }
-
-
-                    break;
-                case 1: //Stavanger
-                    lstVareEndre.Items.Clear();
-                    DataTable dt2 = new DataTable();
-
-                    try
-                    {
-                        dt2 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
-
-                        foreach (DataRow row in dt2.Rows)
+                        catch (Exception ex)
                         {
-                            foreach (DataColumn column in dt2.Columns)
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            dt.Dispose();
+                        }
+
+
+                        break;
+                    case 1: //Stavanger
+                        lstVareEndre.Items.Clear();
+                        DataTable dt2 = new DataTable();
+
+                        try
+                        {
+                            dt2 = DB.Select("SELECT navn, Strekkode, antall from vareOslo where navn = " + cmbEndreVare.Text);
+
+                            foreach (DataRow row in dt2.Rows)
                             {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                foreach (DataColumn column in dt2.Columns)
+                                {
+                                    lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                }
                             }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt2.Dispose();
-                    }
-
-                    break;
-                case 2: // oslo
-                    lstVareEndre.Items.Clear();
-                    DataTable dt3 = new DataTable();
-
-                    try
-                    {
-                        dt3 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
-
-                        foreach (DataRow row in dt3.Rows)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show(Convert.ToString(row));
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            dt2.Dispose();
+                        }
 
-                            foreach (DataColumn column in dt3.Columns)
+                        break;
+                    case 2: // oslo
+                        lstVareEndre.Items.Clear();
+                        DataTable dt3 = new DataTable();
+
+                        try
+                        {
+                            dt3 = DB.Select("SELECT navn, Strekkode, antall from vareStavanger where navn = " + cmbEndreVare.Text);
+
+                            foreach (DataRow row in dt3.Rows)
                             {
-                                lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                MessageBox.Show(Convert.ToString(row));
+
+                                foreach (DataColumn column in dt3.Columns)
+                                {
+                                    lstVareEndre.Items.Add(Convert.ToString(row[column]));
+                                }
                             }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        dt3.Dispose();
-                    }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            dt3.Dispose();
+                        }
 
-                    break;
-                default:
-                    //Skriv error
-                    break;
+                        break;
+                    default:
+                        //Skriv error
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
 
 
 
@@ -842,48 +855,118 @@ namespace LagerApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (cmbEndreLager.SelectedIndex)
+            try
             {
-                case 0: //Trondheim
-                    cmbEndreVare.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    cmbEndreLager.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    nyAnt.Clear();
-                    nyNavn.Clear();
-                    nyStrek.Clear();
+                switch (cmbEndreLager.SelectedIndex)
+                {
+                    case 0: //Trondheim
+                        cmbEndreVare.Items.Clear();
+                        lstVareEndre.Items.Clear();
+                        cmbEndreLager.Items.Clear();
+                        lstVareEndre.Items.Clear();
 
-                    DB.Update("UPDATE VareTrondheim SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+                        txtEndreAntall.Clear();
+                        txtEndreStrekkode.Clear();
+                        txtEndreVareNavn.Clear();
 
-                    break;
-                case 1: //Oslo
-                    cmbEndreVare.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    cmbEndreLager.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    nyAnt.Clear();
-                    nyNavn.Clear();
-                    nyStrek.Clear();
+                        DB.Update("UPDATE VareTrondheim SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
 
-                    DB.Update("UPDATE VareOslo SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+                        break;
+                    case 1: //Oslo
+                        cmbEndreVare.Items.Clear();
+                        lstVareEndre.Items.Clear();
+                        cmbEndreLager.Items.Clear();
+                        lstVareEndre.Items.Clear();
 
-                    break;
+                        txtEndreAntall.Clear();
+                        txtEndreStrekkode.Clear();
+                        txtEndreVareNavn.Clear();
+
+                        DB.Update("UPDATE VareOslo SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+
+                        break;
                     case 2: // Stavanger
-                    cmbEndreVare.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    cmbEndreLager.Items.Clear();
-                    lstVareEndre.Items.Clear();
-                    nyAnt.Clear();
-                    nyNavn.Clear();
-                    nyStrek.Clear();
+                        cmbEndreVare.Items.Clear();
+                        lstVareEndre.Items.Clear();
+                        cmbEndreLager.Items.Clear();
+                        lstVareEndre.Items.Clear();
 
-                   
-                    DB.Update("UPDATE VareStavanger SET navn = '" + nyNavn.Text + "', Strekkode ='" + nyStrek.Text + "', antall = '" + nyAnt.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
-                    break;
-                  default:
-                    //Skriv error
-                    break;
+                        txtEndreAntall.Clear();
+                        txtEndreStrekkode.Clear();
+                        txtEndreVareNavn.Clear();
+
+
+                        DB.Update("UPDATE VareStavanger SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+                        break;
+                    default:
+                        //Skriv error
+                        throw new ArgumentException("Ingen gyldige verdier ble funnet under oppdateringen av valgt vare");
+                        
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("En feil oppsto: " + ex.Message);
+            }
+            
+        }
+
+        private void btnEndreVare_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cmbEndreLager.SelectedIndex)
+                {
+                    case 0: //Trondheim
+                        
+                        //UPDATE `VareStavanger` SET `vareID`=[value-1],`strekkode`=[value-2],`navn`=[value-3],`antall`=[value-4] WHERE 1
+                        DB.Update("UPDATE VareTrondheim SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+
+                        MessageBox.Show("UPDATE VareTrondheim SET navn = '" + txtEndreVareNavn.Text + "', Strekkode = '" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+
+                        break;
+                    case 1: //Oslo
+                        
+
+                        DB.Update("UPDATE VareOslo SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+
+                        break;
+                    case 2: // Stavanger
+                        
+
+
+                        DB.Update("UPDATE VareStavanger SET navn = '" + txtEndreVareNavn.Text + "', Strekkode ='" + txtEndreStrekkode.Text + "', antall = '" + txtEndreAntall.Text + "' WHERE navn = '" + cmbEndreVare.Text + "'");
+                        
+                        break;
+                    default:
+                        //Skriv error
+                        throw new ArgumentException("Ingen gyldige verdier ble funnet under oppdateringen av valgt vare");
+
+
+                     
+                }
+
+                cmbEndreVare.Items.Clear();
+                lstVareEndre.Items.Clear();
+                cmbEndreLager.Items.Clear();
+                lstVareEndre.Items.Clear();
+
+                txtEndreAntall.Clear();
+                txtEndreStrekkode.Clear();
+                txtEndreVareNavn.Clear();
+
+                MessageBox.Show("Vare endret");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("En feil oppsto: " + ex.Message);
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Byte[] array = { 0x70, 0x34, 0x33, 0x79 };
+            MessageBox.Show(System.Text.Encoding.GetEncoding(1252).GetString(array) + "\nTriste nyheter, rapporter eksisterer ikke");
         }
     }
     }

@@ -31,6 +31,8 @@ namespace Core.Version
                 int bui = dt.Rows[0].Field<int>(3);
                 int rev = dt.Rows[0].Field<int>(4);
 
+                //System.Windows.Forms.MessageBox.Show(Convert.ToString(maj + min + bui + rev));
+
                 if (rev < 30)
                 {
                     rev++;

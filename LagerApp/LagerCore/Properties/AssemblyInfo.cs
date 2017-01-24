@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LagerMain")]
+[assembly: AssemblyTitle("LagerCore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LagerMain")]
+[assembly: AssemblyProduct("LagerCore")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f183ddaa-6d87-4800-98f0-8a2bfa84f3d8")]
+[assembly: Guid("3d77c499-ed7b-44e0-9549-99cd483f7517")]
 
 // Version information for an assembly consists of the following four values:
 //

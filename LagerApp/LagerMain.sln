@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagerMain", "LagerMain\LagerMain.csproj", "{F183DDAA-6D87-4800-98F0-8A2BFA84F3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagerCore", "LagerCore\LagerCore.csproj", "{3D77C499-ED7B-44E0-9549-99CD483F7517}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F183DDAA-6D87-4800-98F0-8A2BFA84F3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F183DDAA-6D87-4800-98F0-8A2BFA84F3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F183DDAA-6D87-4800-98F0-8A2BFA84F3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F183DDAA-6D87-4800-98F0-8A2BFA84F3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D77C499-ED7B-44E0-9549-99CD483F7517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D77C499-ED7B-44E0-9549-99CD483F7517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D77C499-ED7B-44E0-9549-99CD483F7517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D77C499-ED7B-44E0-9549-99CD483F7517}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = c2822c72-260e-4b61-b97e-9fb47706d704
+	EndGlobalSection
+EndGlobal

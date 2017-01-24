@@ -51,7 +51,7 @@ namespace Launcher
             // textBoxExt1
             // 
             this.textBoxExt1.BackColor = System.Drawing.Color.White;
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt1.BorderSides = System.Windows.Forms.Border3DSide.Bottom;
             this.textBoxExt1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -67,7 +67,7 @@ namespace Launcher
             // textBoxExt2
             // 
             this.textBoxExt2.BackColor = System.Drawing.Color.White;
-            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(276, 23);
+            this.textBoxExt2.BeforeTouchSize = new System.Drawing.Size(155, 20);
             this.textBoxExt2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt2.BorderSides = System.Windows.Forms.Border3DSide.Bottom;
             this.textBoxExt2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
